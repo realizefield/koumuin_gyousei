@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第7章 行政行為の種類・効力 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch07">
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第7章 / 行政作用</div>
+  <h1>行政行為の種類・効力<span class="stars">★★★</span></h1>
+  <p class="sub">公務員試験の<strong>超頻出テーマ</strong>です。行政行為の分類(許可・特許・認可)と5つの効力(公定力・自力執行力など)は絶対に落とせません。</p>
+</header>
+<main>
+
+<!-- 穴埋めチャレンジバー -->
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<!-- 重要ポイント先出し -->
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li><strong>行政行為の3大分類</strong>:<span class="pk">許可</span>(禁止解除)・<span class="pk">特許</span>(権利設定)・<span class="pk">認可</span>(効力補完)の違いを具体例で押さえる</li>
+    <li><strong>5つの効力</strong>の代表は<span class="pk">公定力</span>(違法でも有効)と<span class="pk">自力執行力</span>(裁判なしで強制可)</li>
+    <li><span class="pk">公定力は国家賠償請求訴訟には及ばない</span>(=取消判決を得ずにいきなり国賠OK)</li>
+  </ol>
+</section>
+
+<!-- 音声プレイヤー -->
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none">
+    <source src="audio/ch07.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div class="sec"><span class="num">1</span>行政行為とは?</div>
+
+<div class="card">
+  <p><span class="kw" data-tip="公権力の主体たる国又は公共団体が行う行為のうち、その行為によって直接国民の権利義務を形成し、又はその範囲を確定することが法律上認められているもの">行政行為</span>(=行政処分)とは、ものすごくざっくり言うと <strong>「行政が一方的に国民の権利義務を決めちゃう行為」</strong> のことです。代表例は<span class="pk">課税処分</span>や<span class="pk">営業許可</span>。</p>
+  <p>判例の定義はややこしいですが、要素は次の4つです。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>要素</th><th>中身</th></tr>
+      <tr><td>①公権力性</td><td>行政庁の<span class="pk">一方的判断</span>であること</td></tr>
+      <tr><td>②外部性</td><td><span class="pk">私人に対して</span>行われるものであること</td></tr>
+      <tr><td>③法的効果性</td><td><span class="pk">権利義務を形成</span>するものであること</td></tr>
+      <tr><td>④個別具体性</td><td><span class="pk">個別具体的</span>であること(一般的・抽象的ではない)</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">例え話</span><p>「お前、今日から10万円払えよ」って行政が言う → これが一方的で、権利義務に影響して、特定のあなたに向けられている。これが行政行為!</p></div>
+</div>
+
+<div class="card">
+  <h3>❓ 行政行為 vs 行政立法の違い</h3>
+  <p>第3章で学んだ<span class="kw" data-tip="行政機関が制定する法規命令や行政規則">行政立法</span>と混同しやすいので整理しておきましょう。</p>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th>行政立法</th><th>行政行為</th></tr>
+      <tr><td>性質</td><td>一般的・抽象的</td><td><span class="pk">個別的・具体的</span></td></tr>
+      <tr><td>対象</td><td>不特定多数</td><td><span class="pk">特定の人</span></td></tr>
+      <tr><td>例</td><td>省令・政令</td><td>課税処分・営業許可</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政行為(行政処分)の要素は、公権力性・外部性・法的効果性・個別具体性の4つである。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ ①一方的判断②私人に対して③権利義務を形成④個別具体的の4要素を全部満たすものが行政行為。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 行政行為と行政立法は、いずれも一般的・抽象的な性質を持ち、不特定多数の者を対象とする。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 一般的・抽象的なのは<span class="pk">行政立法</span>。行政行為は<span class="pk">個別的・具体的</span>で特定の人を対象とする。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 課税処分や営業許可は、典型的な行政行為(行政処分)にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ いずれも特定の人に対する個別具体的な行為で、権利義務を形成するため行政行為に該当する。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div class="sec"><span class="num">2</span>行政行為の分類</div>
+
+<div class="card">
+  <p>行政行為はさらに大きく2つに分けられます。</p>
+  <div class="svg-box">
+    <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+      <rect x="10" y="10" width="580" height="180" fill="#fff" stroke="#1B2A4A" stroke-width="2" rx="6"/>
+      <text x="300" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B2A4A">行政行為の2大分類</text>
+      <rect x="40" y="60" width="250" height="110" fill="#e8eef5" stroke="#1B2A4A" stroke-width="1.5" rx="4"/>
+      <text x="165" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B2A4A">法律行為的行政行為</text>
+      <text x="165" y="110" text-anchor="middle" font-size="12" fill="#333">意思表示→効果発生</text>
+      <text x="165" y="130" text-anchor="middle" font-size="11" fill="#C0392B">裁量を入れる余地あり</text>
+      <text x="165" y="155" text-anchor="middle" font-size="11" fill="#555">下命・禁止・許可・免除・特許・認可・代理</text>
+      <rect x="310" y="60" width="250" height="110" fill="#fbeae7" stroke="#C0392B" stroke-width="1.5" rx="4"/>
+      <text x="435" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#C0392B">準法律行為的行政行為</text>
+      <text x="435" y="110" text-anchor="middle" font-size="12" fill="#333">法律で自動的に効果発生</text>
+      <text x="435" y="130" text-anchor="middle" font-size="11" fill="#1B2A4A">裁量を入れる余地なし</text>
+      <text x="435" y="155" text-anchor="middle" font-size="11" fill="#555">確認・公証・通知・受理</text>
+    </svg>
+  </div>
+  <div class="memo-box"><span class="label">ゴロ</span><p>法律行為的=「<span class="pk">下禁許免特認代</span>(かきんきょめんとくにんだい)」7つ/準=「<span class="pk">確公通受</span>(かくこうつうじゅ)」4つ</p></div>
+</div>
+
+<!-- 法律行為的行政行為 -->
+<div class="card">
+  <h3>🎯 法律行為的行政行為(7種類)</h3>
+  <p>試験で特に大事なのは「<strong>許可</strong>」「<strong>特許</strong>」「<strong>認可</strong>」の3つ。まずは全体像を押さえましょう。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th><th>具体例</th></tr>
+      <tr><td><strong>下命</strong></td><td>作為義務を課す(~しなさい)</td><td>租税の賦課・違法建築物の除却命令</td></tr>
+      <tr><td><strong>禁止</strong></td><td>不作為義務を課す(~するな)</td><td>道路の通行禁止・営業停止命令</td></tr>
+      <tr><td><span class="pk">許可</span></td><td><span class="pk">一般的禁止を特定の場合に解除</span></td><td><span class="pk">自動車運転免許</span>・医師免許・営業許可</td></tr>
+      <tr><td><strong>免除</strong></td><td>作為義務を解除</td><td>納税義務の免除・就学義務の免除</td></tr>
+      <tr><td><span class="pk">特許</span></td><td><span class="pk">人が本来有しない権利・地位を設定</span></td><td><span class="pk">公有水面埋立の免許</span>・河川占用許可・鉱業権設定の許可・公益法人設立の認可</td></tr>
+      <tr><td><span class="pk">認可</span></td><td><span class="pk">第三者の法律行為の効力を補充</span></td><td><span class="pk">農地の権利移転の許可</span>・銀行合併の認可・公共料金値上げの認可</td></tr>
+      <tr><td>代理</td><td>第三者が本来行うべき行為を行政が代わってなす</td><td>土地収用裁決</td></tr>
+    </table>
+  </div>
+  <div class="tip-box"><span class="label">注意!</span><p>「名前」と「実態」がズレることがあります!<br>・公有水面埋立<strong>の免許</strong> → 実は「特許」<br>・農地の権利移転<strong>の許可</strong> → 実は「認可」<br>法令上の用語ではなく、<span class="pk">講学上の分類</span>で判断しましょう。</p></div>
+</div>
+
+<!-- 許可の深掘り -->
+<div class="card">
+  <h3>🔑 許可(一般的禁止の解除)</h3>
+  <p>運転免許をイメージしてください。<strong>本来、車の運転は誰でも自由にできるはず</strong>ですが、事故が起きると危ないので、法律で「運転はしちゃダメ」と一般的に禁止しておく。その上で、試験に合格した人だけ禁止を解除してあげる。これが許可の構造です。</p>
+  <div class="ex-box"><span class="label">覚え方</span><p>許可は「<strong>預かっていた自由を返してあげる</strong>」行為。新しい権利を与えるわけではない!</p></div>
+
+  <h4 style="color:#C0392B;margin-top:12px;">📌 許可の論点3つ</h4>
+  <ul style="margin-top:8px;">
+    <li><strong>無許可行為の私法上の効力</strong>:<span class="pk">有効</span>です。無許可で営業した人は処罰されますが、その営業で結んだ契約自体は生きます。取引相手を守るためです。</li>
+    <li><strong>申請が競合したとき</strong>:<span class="pk">先願主義</span>(早い者勝ち)。公衆浴場の営業許可などは、先に申請した人が勝ちます。これは裏を返せば「行政に裁量の余地が少ない」ことを意味します。</li>
+    <li><strong>対人許可 vs 対物許可</strong>:運転免許(対人)は<span class="pk">譲渡不可</span>/車体検査(対物)は<span class="pk">譲渡可能</span>。</li>
+  </ul>
+</div>
+
+<!-- 特許の深掘り -->
+<div class="card">
+  <h3>🎖 特許(権利の設定)</h3>
+  <p>特許とは、<strong>人が本来有しない権利・地位を与える</strong>行為。キーワードは「<span class="pk">権利</span>」「<span class="pk">地位</span>」「<span class="pk">権利能力</span>」です。特別扱いをする、というイメージ。</p>
+  <h4 style="color:#C0392B;margin-top:12px;">📌 特許の論点3つ</h4>
+  <ul style="margin-top:8px;">
+    <li><strong>無特許行為の私法上の効力</strong>:<span class="pk">無効</span>。権利がない以上、有効な行為はできません。</li>
+    <li><strong>申請が競合したとき</strong>:<span class="pk">能力主義</span>(行政庁が自由に選べる)。特別扱いを与える相手を慎重に選ぶので、<span class="pk">行政の裁量の幅が広い(自由裁量)</span>。</li>
+    <li><strong>試験頻出の具体例</strong>:公有水面埋立の免許、河川の占用許可、鉱業権設定の許可、公益法人設立の認可、公務員の任命、外国人の帰化の許可</li>
+  </ul>
+</div>
+
+<!-- 認可の深掘り -->
+<div class="card">
+  <h3>✅ 認可(第三者の法律行為の効力を補充)</h3>
+  <p>認可とは、<strong>すでに成立している私人間の法律行為に、行政がGOサインを出して効果を完成させる</strong>行為。</p>
+  <p>代表例が<span class="pk">農地の権利移転の許可</span>。農地の売買は、当事者間で契約するだけでは所有権が移転せず、<strong>知事の許可</strong>があって初めて効果が発生します。</p>
+  <h4 style="color:#C0392B;margin-top:12px;">📌 認可の論点3つ</h4>
+  <ul style="margin-top:8px;">
+    <li><strong>瑕疵の治癒はできない</strong>:もともとキズのある私人間契約に認可を与えても、契約が有効になるわけではありません。取消しや無効を主張できます。</li>
+    <li><strong>無認可行為の私法上の効力</strong>:<span class="pk">無効</span>。GOサインがない以上、効果は発生しません。</li>
+    <li><strong>認可の対象</strong>:<span class="pk">法律行為のみ</span>(事実行為は対象外)。</li>
+  </ul>
+</div>
+
+<!-- 3者比較 -->
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 超重要:許可・特許・認可の比較</h3>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th>許可</th><th>特許</th><th>認可</th></tr>
+      <tr><td>意味</td><td>禁止の解除</td><td>権利の設定</td><td>効力の補充</td></tr>
+      <tr><td>違反した行為の効力</td><td><span class="pk">有効</span></td><td><span class="pk">無効</span></td><td><span class="pk">無効</span></td></tr>
+      <tr><td>競合時</td><td>先願主義</td><td>能力主義</td><td>-</td></tr>
+      <tr><td>裁量</td><td>狭い</td><td><span class="pk">広い(自由裁量)</span></td><td>狭い</td></tr>
+      <tr><td>対象</td><td>法律行為・事実行為</td><td>-</td><td><span class="pk">法律行為のみ</span></td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">ゴロ</span><p>「<strong>許可は有効・特認は無効</strong>」(無許可営業はOK、無特許・無認可は×)</p></div>
+</div>
+
+<!-- 準法律行為的行政行為 -->
+<div class="card">
+  <h3>📋 準法律行為的行政行為(4種類)</h3>
+  <p>意思表示ではなく、<strong>法律が自動的に効果を発生させる</strong>タイプ。裁量を入れる余地がありません。試験で特に重要なのは <span class="pk">確認</span>と<span class="pk">公証</span>の2つ。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th><th>具体例</th></tr>
+      <tr><td><span class="pk">確認</span></td><td>特定の事実・法律関係の存否について<span class="pk">公の権威をもって判断し確定</span>する</td><td>建築確認・<span class="pk">所得税額の決定・更正</span>・<span class="pk">当選人の決定</span>・市町村の境界の裁定</td></tr>
+      <tr><td><span class="pk">公証</span></td><td>特定の事実・法律関係の存在を<span class="pk">公に証明</span>する</td><td>選挙人名簿への登録・<span class="pk">不動産登記簿への登録</span>・戸籍への記載・<span class="pk">住民票等の交付</span>・運転免許証の交付</td></tr>
+      <tr><td>通知</td><td>一定事項を知らせる</td><td>納税の督促・代執行の戒告</td></tr>
+      <tr><td>受理</td><td>申請や届出を有効なものとして受領</td><td>婚姻届の受理</td></tr>
+    </table>
+  </div>
+  <div class="tip-box"><span class="label">試験ポイント</span><p>「所得税額の決定・更正」は<strong>確認</strong>、「納税の督促」は<strong>通知</strong>。混同しやすいので区別を!</p></div>
+</div>
+
+<!-- ミニテスト Section 2(★★★最重要) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・許可特許認可)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 自動車運転免許や医師免許は、講学上の「許可」(一般的禁止の解除)にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 許可=「預かっていた自由を返してあげる」行為。本来自由なものを法律で禁止しておき、特定の場合に解除する。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 公有水面埋立の免許は、講学上の「許可」にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 法令上は「免許」だが、講学上は<span class="pk">特許</span>(本来有しない権利を新たに設定する行為)。名前ではなく実態で判断する超頻出ひっかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 農地の権利移転の許可は、講学上の「許可」にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 法令上は「許可」だが、講学上は<span class="pk">認可</span>(私人間契約の効力を補充する)。これも頻出ひっかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 無許可行為の私法上の効力は有効、無特許・無認可行為の私法上の効力は無効である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「許可は有効、特認は無効」がゴロ。無許可営業の契約は処罰対象でも私法上は生きる(取引相手保護)。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問5 特許の場合、申請が競合したときは行政庁が能力主義で選び、行政の裁量の幅が広い。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 特別な権利・地位を与える特許では、相手選びに行政の自由裁量が広く認められる。許可は先願主義(早い者勝ち)。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問6 認可は事実行為に対しても与えられ、その効力を補充することができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 認可の対象は<span class="pk">法律行為のみ</span>。事実行為は対象外。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問7 確認・公証・通知・受理は、いずれも準法律行為的行政行為に分類される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 準法律行為的=「確公通受(かくこうつうじゅ)」の4種類。法律で自動的に効果が発生し、裁量の余地なし。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問8 所得税額の決定・更正は、講学上の「公証」にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 所得税額の決定・更正は<span class="pk">確認</span>(事実・法律関係の存否を公の権威で確定)。公証は不動産登記簿への登録・住民票の交付など。区別は試験頻出。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div class="sec"><span class="num">3</span>行政行為の5つの効力</div>
+
+<div class="card">
+  <p>行政行為には私法上の行為とは異なる <strong>特殊な効力</strong> が5つあります。それぞれの意味をしっかり押さえましょう。</p>
+  <div class="memo-box"><span class="label">5つの効力</span><p>①<span class="pk">拘束力</span> ②<span class="pk">公定力</span> ③<span class="pk">自力執行力</span> ④<span class="pk">不可争力</span> ⑤<span class="pk">不可変更力</span></p></div>
+</div>
+
+<!-- 拘束力 -->
+<div class="card">
+  <h3>① 拘束力</h3>
+  <p><strong>適法な行政行為が相手方と行政庁を拘束する</strong>という一般的な効力。試験で問われることは少ないので、「あぁ、そんな効力もあるのね」くらいでOK。</p>
+</div>
+
+<!-- 公定力 -->
+<div class="card">
+  <h3>② 公定力 ⭐最重要</h3>
+  <p><span class="pk">公定力</span>とは、たとえ<span class="pk">違法</span>な行政行為であっても、権限ある国家機関によって取り消されるまでは、<span class="pk">一応有効</span>なものとして取り扱われる効力です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>違法な課税処分を受けた → 本来なら従う必要ないはず → でも公定力があるから従わないといけない → 「違法だけど有効」という不思議な状態</p></div>
+  <p>公定力を排除するには3つの手段があります。</p>
+  <div class="svg-box">
+    <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+      <rect x="10" y="10" width="580" height="200" fill="#fff" stroke="#1B2A4A" stroke-width="2" rx="6"/>
+      <text x="300" y="35" text-anchor="middle" font-size="15" font-weight="bold" fill="#1B2A4A">公定力を排除する3つの手段</text>
+      <rect x="240" y="60" width="120" height="40" fill="#e8eef5" stroke="#1B2A4A" rx="4"/>
+      <text x="300" y="85" text-anchor="middle" font-size="13" fill="#1B2A4A">行政庁</text>
+      <rect x="240" y="150" width="120" height="40" fill="#fbeae7" stroke="#C0392B" rx="4"/>
+      <text x="300" y="175" text-anchor="middle" font-size="13" fill="#C0392B">国民A</text>
+      <line x1="300" y1="100" x2="300" y2="150" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <text x="310" y="128" font-size="11" fill="#333">違法な処分</text>
+      <path d="M 240 80 Q 100 80 100 170 L 240 170" fill="none" stroke="#2d7a4e" stroke-dasharray="4,3" stroke-width="1.5"/>
+      <text x="20" y="105" font-size="11" fill="#2d7a4e" font-weight="bold">①職権取消し</text>
+      <text x="40" y="122" font-size="10" fill="#555">行政庁自ら</text>
+      <path d="M 360 170 Q 480 170 480 100 L 360 80" fill="none" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arrow2)"/>
+      <text x="490" y="95" font-size="11" fill="#C0392B" font-weight="bold">②不服申立て</text>
+      <text x="490" y="112" font-size="10" fill="#555">審査請求</text>
+      <rect x="470" y="150" width="120" height="40" fill="#fff9ed" stroke="#f4a62a" rx="4"/>
+      <text x="530" y="175" text-anchor="middle" font-size="13" fill="#333">裁判所</text>
+      <line x1="360" y1="170" x2="470" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow3)"/>
+      <text x="380" y="165" font-size="11" fill="#333">③取消訴訟</text>
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#C0392B"/></marker>
+        <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+      </defs>
+    </svg>
+  </div>
+  <p>公定力の根拠は条文上明記されていません。もっとも、行政事件訴訟法で<span class="pk">取消訴訟</span>が用意されていることの裏返しとして認められる、と解されています(=<span class="pk">取消訴訟の排他的管轄</span>)。</p>
+
+  <h4 style="color:#C0392B;margin-top:12px;">⚠️ 公定力が生じない場合</h4>
+  <p>瑕疵が<span class="pk">重大かつ明白</span>になると、違法を通り越して<span class="pk">無効</span>になります。無効な行政行為には<span class="pk">公定力は生じません</span>。したがって、国民は従う必要がありません。</p>
+</div>
+
+<!-- 公定力と国賠 -->
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 超頻出:公定力と国家賠償請求訴訟</h3>
+  <p>公定力は<strong>取消訴訟のための効力</strong>。他の訴訟には及びません。</p>
+  <div class="memo-box"><span class="label">結論</span><p><span class="pk">公定力は国賠訴訟・刑事訴訟には及ばない</span>!<br>→ 国賠請求する前に、<span class="pk">取消判決や無効確認判決を得ておく必要はない</span></p></div>
+  <div class="hanrei">
+    <h4>【国賠と取消訴訟】(最判昭36・4・21)</h4>
+    <p><span class="label">事案</span>違法な課税処分について、先に取消訴訟で勝たないと国家賠償請求訴訟を起こせないのかが争われた事案。</p>
+    <p><span class="label">判旨</span>国家賠償請求訴訟を提起する前に、取消訴訟等を提起して取消判決(ないし無効確認判決)を得ておく<strong>必要はない</strong>。いきなり国家賠償請求訴訟を提起しても構わない。</p>
+    <p><span class="label">理由</span>取消訴訟は「公定力を排除するため」の訴訟。国賠訴訟は「違法性を確認してお金を請求するため」の訴訟であり、<span class="pk">公定力を争う訴訟ではない</span>から。</p>
+  </div>
+</div>
+
+<!-- 自力執行力 -->
+<div class="card">
+  <h3>③ 自力執行力(執行力)</h3>
+  <p><span class="pk">自力執行力</span>とは、国民が行政上の義務を履行しない場合、<span class="pk">裁判の過程を経ずに</span>強制執行できるという効力です。私人間のトラブルでは裁判で勝って債務名義を得ないと強制執行できないのと対照的です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>AがBに金を貸した → Bが返さない → Aは胸ぐらつかんで「返せ!」はできない(自力救済禁止)<br>一方、行政は裁判抜きで強制できる!</p></div>
+
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">重要な制約</span><p>自力執行力を行使するには、<span class="pk">行政行為の根拠法とは別の根拠法</span>が必要です。強制執行の根拠を行政行為の根拠法に置くのはダメで、<span class="pk">執行専門の法律</span>(行政代執行法など)が別途必要ということ。</p></div>
+</div>
+
+<!-- 不可争力 -->
+<div class="card">
+  <h3>④ 不可争力(形式的確定力)</h3>
+  <p><span class="pk">不可争力</span>とは、<span class="pk">一定期間が経過すると、国民(私人)の側から行政行為を争うことができなくなる</span>効力。いわゆる「時間切れで争えなくなる」効力です。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>争う方法</th><th>期間</th></tr>
+      <tr><td>取消訴訟</td><td>処分を知った日から<span class="pk">6か月</span>でOUT</td></tr>
+      <tr><td>不服申立て(審査請求)</td><td>処分を知った日の翌日から起算して<span class="pk">3か月</span>でOUT</td></tr>
+    </table>
+  </div>
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">超重要</span><p>不可争力は、あくまで<span class="pk">国民側</span>から争えなくなるだけ。<br>→ <span class="pk">行政庁側の職権取消しは制限されない</span>!10年後・20年後でも職権取消しはOK。</p></div>
+</div>
+
+<!-- 不可変更力 -->
+<div class="card">
+  <h3>⑤ 不可変更力(実質的確定力)</h3>
+  <p><span class="pk">不可変更力</span>とは、行政行為のうち<span class="pk">争訟裁断行為(裁決など)</span>についてのみ生じる効力で、一度裁決をした以上、判断を下した行政庁自らが当該裁決を変更できないという効力です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>営業停止処分を受けたAが不服申立て → 行政庁が「ごめん、間違ってたわ」と取消裁決<br>→ その後「やっぱりあの裁決取り消します」と言ってきたら? → Aから見たら「ふざけるな!」<br>このような矛盾を防ぐのが不可変更力!</p></div>
+  <div class="tip-box"><span class="label">注意</span><p>不可変更力は<strong>すべての行政行為に備わっているわけではない</strong>。<span class="pk">争訟裁断行為(裁決など)だけ</span>!</p></div>
+  <div class="hanrei">
+    <h4>【不可変更力違反】(最判昭30・12・26)</h4>
+    <p>不可変更力に違反して取消裁決を変更した(取消裁決を取り消した)場合、当該変更は<strong>違法</strong>。<span class="pk">しかし当然に無効となるわけではない</span>。公定力があるので取り消されるまでは有効と扱われる。</p>
+  </div>
+</div>
+
+<!-- 5効力まとめ -->
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 5つの効力 総まとめ</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>効力</th><th>ポイント</th><th>別名</th></tr>
+      <tr><td>拘束力</td><td>適法な行政行為の一般的効力</td><td>-</td></tr>
+      <tr><td><span class="pk">公定力</span></td><td>違法でも取消しまで一応有効</td><td>-</td></tr>
+      <tr><td><span class="pk">自力執行力</span></td><td>裁判抜きで強制執行可能(別根拠法必要)</td><td>執行力</td></tr>
+      <tr><td><span class="pk">不可争力</span></td><td>時間切れで国民側から争えない</td><td><span class="pk">形式的確定力</span></td></tr>
+      <tr><td><span class="pk">不可変更力</span></td><td>争訟裁断行為についてのみ</td><td><span class="pk">実質的確定力</span></td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">別名の混同注意!</span><p>「形式的=不可争(時間切れ)」「実質的=不可変更(裁決)」</p></div>
+</div>
+
+<!-- ミニテスト Section 3(★★★最重要・5つの効力) -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3・5つの効力)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 公定力とは、違法な行政行為であっても、権限ある国家機関によって取り消されるまでは一応有効なものとして取り扱われる効力をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「違法だけど有効」が公定力のキーワード。排除するには職権取消し・不服申立て・取消訴訟の3つ。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 瑕疵が重大かつ明白な無効な行政行為についても、公定力が生じる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 無効な行政行為には<span class="pk">公定力は生じない</span>。最初から効力ゼロなので、国民は従う必要なし。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 違法な行政行為について国家賠償請求訴訟を提起するには、あらかじめ取消判決または無効確認判決を得ておく必要がある。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最判昭36・4・21。<span class="pk">公定力は国賠訴訟には及ばない</span>ので、取消判決等を得ておく必要はない。いきなり国賠OK。超頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 自力執行力を行使するには、行政行為の根拠法とは別に、執行専門の法律(行政代執行法など)が必要である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 強制執行は国民の権利を大きく制約するため、別の根拠法が必要というルール。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問5 不可争力が生じると、国民側からも行政庁側からも、その行政行為を争うことはできなくなる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 不可争力は<span class="pk">国民側</span>から争えなくなるだけ。<span class="pk">行政庁の職権取消しは10年後・20年後でも可能</span>。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問6 取消訴訟の出訴期間は処分を知った日から6か月、不服申立て(審査請求)は処分を知った日の翌日から3か月である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「サンガツ・ロッカ」のゴロで覚える。3か月(不服)・6か月(取消訴訟)。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問7 不可変更力は、すべての行政行為について生じる効力である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 不可変更力は<span class="pk">争訟裁断行為(裁決など)についてのみ</span>生じる効力。すべての行政行為ではない。要注意。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問8 不可争力の別名は「形式的確定力」、不可変更力の別名は「実質的確定力」である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「形式的=不可争(時間切れ)」「実質的=不可変更(裁決)」と整理。逆に覚えると致命傷。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- 学習ツール -->
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch07_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第7章 行政行為の種類・効力" data-url="gyosei_ch07.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="index.html">
+    <span class="label">◀ BACK</span>
+    <span class="title">目次</span>
+  </a>
+  <a href="gyosei_ch07_q.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">第7章 演習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() {
+      if (typeof gambaInit === 'function') {
+        gambaInit('ch07');
+      } else {
+        setTimeout(run, 50);
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第9章 行政行為の瑕疵 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch09">
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第9章 / 行政作用</div>
+  <h1>行政行為の瑕疵<span class="stars">★★☆</span></h1>
+  <p class="sub">行政行為に「キズ」があった場合の話。「取り消しうべき行政行為」と「無効な行政行為」の区別、<strong>重大「かつ」明白</strong>が最重要ポイントです。</p>
+</header>
+<main>
+
+<!-- 穴埋めチャレンジバー -->
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<!-- 重要ポイント先出し -->
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>瑕疵には2段階ある:<span class="pk">軽微→取り消しうべき</span>、<span class="pk">重大かつ明白→無効</span></li>
+    <li>「重大<span class="pk">かつ</span>明白」の<strong>「かつ」</strong>がポイント!「重大<strong>又は</strong>明白」ではない</li>
+    <li><strong>違法性の承継</strong>:原則としてされない。例外として<span class="pk">先行行為と後行行為が一連</span>のときだけ承継される</li>
+  </ol>
+</section>
+
+<!-- 音声プレイヤー -->
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none">
+    <source src="audio/ch09.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div class="sec"><span class="num">1</span>行政行為の瑕疵とは?</div>
+
+<div class="card">
+  <p><span class="kw" data-tip="行政行為に存する違法又は不当のこと。キズ、欠陥">行政行為の瑕疵</span>とは、行政行為に<strong>違法または不当</strong>な点、つまり「キズ」があることを言います。</p>
+  <p>瑕疵は、その大きさによって2段階に分かれます。</p>
+  <div class="svg-box">
+    <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+      <rect x="10" y="10" width="580" height="180" fill="#fff" stroke="#1B2A4A" stroke-width="2" rx="6"/>
+      <text x="300" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B2A4A">瑕疵の2段階</text>
+      <rect x="40" y="60" width="250" height="110" fill="#fff9ed" stroke="#f4a62a" stroke-width="1.5" rx="4"/>
+      <text x="165" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#f4a62a">軽微な瑕疵</text>
+      <text x="165" y="110" text-anchor="middle" font-size="13" fill="#333">違法な行政行為</text>
+      <text x="165" y="130" text-anchor="middle" font-size="13" fill="#C0392B" font-weight="bold">=取り消しうべき</text>
+      <text x="165" y="155" text-anchor="middle" font-size="11" fill="#555">公定力・不可争力あり</text>
+      <rect x="310" y="60" width="250" height="110" fill="#fbeae7" stroke="#C0392B" stroke-width="1.5" rx="4"/>
+      <text x="435" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#C0392B">重大かつ明白な瑕疵</text>
+      <text x="435" y="110" text-anchor="middle" font-size="13" fill="#333">無効な行政行為</text>
+      <text x="435" y="130" text-anchor="middle" font-size="13" fill="#1B2A4A" font-weight="bold">=無効</text>
+      <text x="435" y="155" text-anchor="middle" font-size="11" fill="#555">公定力・不可争力なし</text>
+    </svg>
+  </div>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">瑕疵の区別表</span>
+    <p>軽微な瑕疵 → <span class="pk">取り消しうべき行政行為</span>(違法)<br>
+    重大かつ明白な瑕疵 → <span class="pk">無効な行政行為</span></p>
+  </div>
+</div>
+
+<!-- 最重要:重大かつ明白 -->
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 最重要:「重大<span style="text-decoration:underline;">かつ</span>明白」の「かつ」!</h3>
+  <p>無効な行政行為になるための要件は、瑕疵が<span class="pk">「重大<strong>かつ</strong>明白」</span>であることです。</p>
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">注意!</span><p>「重大<span style="text-decoration:line-through;">又は</span>明白」ではない!<br>→ 試験では「又は」に変えた引っかけが頻出します。<br>「かつ」なので、両方揃って初めて無効になります。</p></div>
+  <div class="ex-box"><span class="label">ゴロ</span><p>「<strong>カツ</strong>で無効!」(重大「カツ」明白=無効)</p></div>
+</div>
+
+<!-- 区別の実益 -->
+<div class="card">
+  <h3>🔍 2つを区別する実益</h3>
+  <p>違法な行政行為と無効な行政行為で、効力や救済方法が大きく変わります。</p>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th>違法(取り消しうべき)</th><th>無効</th></tr>
+      <tr><td><span class="pk">公定力</span></td><td>あり(違法でも一応有効)</td><td><span class="pk">なし</span>(最初から効力なし)</td></tr>
+      <tr><td><span class="pk">不可争力</span></td><td>あり(時間切れで争えない)</td><td><span class="pk">なし</span>(いつでも争える)</td></tr>
+      <tr><td>救済方法</td><td><span class="pk">取消訴訟</span>(6か月以内)</td><td><span class="pk">無効等確認訴訟</span>(期間制限なし)</td></tr>
+      <tr><td>争い方</td><td>訴訟を起こす必要</td><td><strong>訴訟なしでも従う必要なし</strong></td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">イメージ</span><p>違法=時間切れで争えなくなる小さいキズ/無効=最初から効力ゼロの致命的キズ</p></div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政行為の瑕疵は、軽微な瑕疵(取り消しうべき行政行為=違法)と、重大かつ明白な瑕疵(無効な行政行為)の2段階に分かれる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 瑕疵の大きさで効果が変わる。区別を確実に。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 無効な行政行為にも公定力・不可争力が生じる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 無効な行政行為には<span class="pk">公定力も不可争力もない</span>。最初から効力ゼロなのでいつでも争え、従う必要もない。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 違法な行政行為に対する救済方法は取消訴訟(原則6か月以内)、無効な行政行為に対する救済方法は無効等確認訴訟(期間制限なし)である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 救済方法の違いは、公定力・不可争力の有無に直結する。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div class="sec"><span class="num">2</span>瑕疵の種類(主観説と客観説)</div>
+
+<div class="card">
+  <h3>📘 重大明白説(判例・通説)</h3>
+  <p>判例は<span class="pk">重大明白説</span>を採用しています。</p>
+  <ul style="margin-top:8px;">
+    <li><strong>重大な瑕疵</strong>:重要な法律の要件に違反していること</li>
+    <li><strong>明白な瑕疵</strong>:誰が見ても分かる外観上明白な瑕疵</li>
+  </ul>
+  <div class="hanrei">
+    <h4>【明白性の判断基準】(最判昭36・3・7)</h4>
+    <p>瑕疵が明白であるとは、<strong>処分成立の当初から、外形上客観的に誤認が一見看取できる場合</strong>を言う。処分庁の調査義務違反までは必要ない。</p>
+    <p><span class="label">ポイント</span>「外観上明白」であれば足り、行政庁が調査すべきかどうかは関係なし!</p>
+  </div>
+</div>
+
+<!-- 例外的に重大性のみで足りる判例 -->
+<div class="card">
+  <h3>⚠️ 例外:重大性だけで無効になる判例</h3>
+  <p>原則は重大明白説ですが、<strong>相手方の権利が著しく侵害され、被害者が明らかに保護されるべき場合</strong>には、重大性の要件だけで無効とした判例があります。</p>
+  <div class="hanrei">
+    <h4>【課税処分無効事件】(最判昭48・4・26)</h4>
+    <p><span class="label">事案</span>全くの他人の所得を被告人の所得と誤認してなされた課税処分の効力が争われた。</p>
+    <p><span class="label">判旨</span>課税処分が課税庁の怠慢により<strong>第三者の行為による錯誤に基づいてされ</strong>、納税義務者にとって処分を甘受させることが<strong>著しく不当</strong>と認められる特段の事情がある場合には、<span class="pk">明白性を欠いても無効</span>となり得る。</p>
+  </div>
+  <div class="tip-box"><span class="label">試験対策</span><p>「重大かつ明白が原則、ただし例外あり」と覚えておけばOK。例外の具体例は深追いせず、「明白性要件が緩和されることがある」程度で大丈夫です。</p></div>
+</div>
+
+<!-- ミニテスト Section 2(超重要・カツで無効) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・カツで無効!)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 判例は、無効な行政行為の要件として、瑕疵が「重大又は明白」であることを必要とする。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 「又は」ではなく<span class="pk">「重大かつ明白」</span>。両方揃って初めて無効。「カツで無効!」と覚える。超頻出ひっかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 判例によれば、瑕疵が明白であるとは、処分成立の当初から外形上客観的に誤認が一見看取できる場合をいい、行政庁の調査義務違反までは必要ではない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判昭36・3・7。外観上明白であれば足りる。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 例外として、相手方の権利が著しく侵害され、被害者が明らかに保護されるべき特段の事情がある場合には、明白性を欠いても無効となり得る。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判昭48・4・26(課税処分無効事件)。あくまで例外。原則は重大かつ明白。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div class="sec"><span class="num">3</span>瑕疵の治癒と違法行為の転換</div>
+
+<div class="card">
+  <h3>🔧 瑕疵の治癒</h3>
+  <p><span class="pk">瑕疵の治癒</span>とは、行政行為に瑕疵があっても、<strong>事後的にその瑕疵が解消されれば、有効な行政行為として扱う</strong>という考え方です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>課税処分の理由が最初不十分でも、後から行政庁が追加で理由を示せば、処分は有効として扱ってよい、というイメージ。</p></div>
+  <div class="hanrei">
+    <h4>【更正処分の理由付記の瑕疵治癒】(最判昭47・12・5)</h4>
+    <p><span class="label">判旨</span>更正処分の理由付記の不備は、不服申立てに対する決定で理由を追加しても、<span class="pk">瑕疵は治癒されない</span>とした。</p>
+    <p><span class="label">ポイント</span>瑕疵の治癒は<strong>認められにくい</strong>!原則として治癒されないと考えておくとよい。</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>🔄 違法行為の転換</h3>
+  <p><span class="pk">違法行為の転換</span>とは、本来の行政行為としては違法でも、<strong>別の行政行為として有効</strong>とみなす考え方です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>「A処分」としては違法だけど、要件的には「B処分」の要件を満たしている → B処分として有効とみなせば、みんな幸せ、というイメージ。</p></div>
+  <p>判例上も、違法行為の転換は<span class="pk">限定的な場合にのみ</span>認められます。無制限に認めると行政行為の安定性が失われるためです。</p>
+</div>
+
+<!-- ミニテスト Section 3 -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 瑕疵の治癒とは、行政行為に瑕疵があっても、事後的にその瑕疵が解消されれば、有効な行政行為として扱う考え方である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ ただし判例上、瑕疵の治癒は認められにくい。原則として治癒されないと考える方が安全。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 判例によれば、更正処分の理由付記の不備は、不服申立てに対する決定で理由を追加すれば、瑕疵が治癒される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最判昭47・12・5。判例は<span class="pk">瑕疵は治癒されない</span>とした。瑕疵の治癒は認められにくいというのがポイント。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 違法行為の転換とは、本来の行政行為としては違法でも、別の行政行為として有効とみなす考え方であり、限定的な場合にのみ認められる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 無制限に認めると行政行為の安定性が失われるため、限定的に認められる。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 4 ================= -->
+<div class="sec"><span class="num">4</span>違法性の承継</div>
+
+<div class="card">
+  <h3>🔗 違法性の承継とは?</h3>
+  <p><span class="pk">違法性の承継</span>とは、先行する行政行為の違法性が、後続する行政行為に引き継がれるか、という問題です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>①違法な「宅地造成工事の事業認可」(先行行為、取消期間切れ) → ②「土地収用裁決」(後行行為)<br>② を争うときに、①の違法性を理由にできるか?というのが違法性の承継の問題。</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 違法性の承継の原則</h3>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">原則</span>
+    <p><span class="pk">違法性の承継は認められない</span>!<br>→ 先行行為と後行行為はそれぞれ独立した行政行為。先行行為の違法は先行行為の段階で争うべき。</p>
+  </div>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">例外</span>
+    <p>先行行為と後行行為が<span class="pk">一連の手続として行われ、同一の法律効果の発生を目指している場合</span>は、違法性の承継が認められる!</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3>📚 違法性の承継を認めた判例</h3>
+  <div class="hanrei">
+    <h4>【安全認定と建築確認】(最判平21・12・17)</h4>
+    <p><span class="label">事案</span>先行する<strong>安全認定</strong>(建築基準法43条1項ただし書)に違法があった場合、後続する<strong>建築確認</strong>の取消訴訟で、安全認定の違法を主張できるかが争われた。</p>
+    <p><span class="label">判旨</span>両者は<strong>結合して初めて効果を発揮する</strong>関係にあり、安全認定の段階では処分の相手方が建築主に限られ、一般の近隣住民は取消訴訟を争う機会が実質的にないことなどから、<span class="pk">違法性の承継が認められる</span>。</p>
+  </div>
+  <div class="hanrei">
+    <h4>【課税処分と滞納処分】</h4>
+    <p>課税処分に違法があっても、それは滞納処分の取消訴訟では主張できない(=違法性の承継<span class="pk">否定</span>)。それぞれ独立した行政行為で、別々の段階で争うべきだから。</p>
+  </div>
+  <div class="tip-box"><span class="label">判断のコツ</span><p>「先行行為と後行行為が<strong>一体として一つの目的を達成する関係</strong>か」を見極めるのがポイント。一体性があれば承継OK。独立していれば承継NG。</p></div>
+</div>
+
+<!-- ミニテスト Section 4(超重要・違法性の承継) -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4・違法性の承継)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 違法性の承継は、原則として認められない。先行行為と後行行為はそれぞれ独立した行政行為だから。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 原則否定。先行行為の違法は先行行為の段階で争うべき。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 例外として、先行行為と後行行為が一連の手続として行われ、同一の法律効果の発生を目指している場合には、違法性の承継が認められる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 一体として一つの目的を達成する関係なら承継OK。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 判例は、安全認定と建築確認との関係について、両者は結合して初めて効果を発揮する関係にあるなどの理由から、違法性の承継を認めた。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判平21・12・17。違法性承継の代表的な肯定例。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問4 課税処分と滞納処分との関係について、判例は違法性の承継を認めた。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 課税処分と滞納処分は<span class="pk">それぞれ独立した行政行為</span>なので、違法性の承継は<span class="pk">認められない</span>。安全認定・建築確認(肯定)との対比で覚える。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 5 ================= -->
+<div class="sec"><span class="num">5</span>行政行為の取消しと撤回</div>
+
+<div class="card">
+  <h3>🔧 取消しと撤回の違い</h3>
+  <p>似ている用語ですが、行政法では<strong>厳格に区別</strong>します。</p>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th><span class="pk">取消し</span></th><th><span class="pk">撤回</span></th></tr>
+      <tr><td>理由</td><td><span class="pk">原始的瑕疵</span>(最初から違法)</td><td><span class="pk">後発的事情</span>(後から事情変更)</td></tr>
+      <tr><td>効果</td><td><span class="pk">遡及</span>(最初から無効)</td><td><span class="pk">将来効</span>(撤回時から無効)</td></tr>
+      <tr><td>できる人</td><td>処分庁、上級庁、裁判所</td><td><span class="pk">処分庁のみ</span></td></tr>
+      <tr><td>明文根拠</td><td>不要</td><td>不要(ただし制限あり)</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">イメージ</span><p>取消し=「最初からなかったこと」にする<br>撤回=「今後はなかったことにする」</p></div>
+</div>
+
+<div class="card">
+  <h3>🚫 授益的行政行為の取消し・撤回の制限</h3>
+  <p>国民にメリットを与える<span class="kw" data-tip="国民に権利や利益を与える行政行為。許可、特許、認可、補助金交付決定など">授益的行政行為</span>の場合、相手方の信頼保護のため、取消し・撤回は制限されます。</p>
+  <div class="memo-box"><span class="label">原則</span><p>授益的行政行為の取消し・撤回は、<span class="pk">相手方の信頼を害するので、慎重に</span>行われるべき!<br>→ 取り消すべき必要性 > 相手方の不利益、のバランスが必要。</p></div>
+  <p>ただし、判例は<span class="pk">撤回について明文の根拠は不要</span>としています。撤回が必要な公益上の理由があれば、撤回権の留保の附款がなくても撤回できます。</p>
+</div>
+
+<!-- ミニテスト Section 5(取消しと撤回) -->
+<div class="mini-test" data-mini="s5">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション5・取消しと撤回)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政法上、「取消し」は原始的瑕疵を理由とし遡及効を有する。「撤回」は後発的事情を理由とし将来効のみを有する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 取消し=最初からなかったこと、撤回=今後はなかったこと。区別は超頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 撤回は、処分庁のみならず上級行政庁も行うことができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 撤回は<span class="pk">処分庁のみ</span>可能。上級庁は撤回できない。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 判例によれば、撤回権の留保の附款がなくても、撤回が必要な公益上の理由があれば撤回できる。撤回には明文の根拠は必要ない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 公益上の必要があれば、附款なし・明文なしでも撤回可能。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 国民にメリットを与える授益的行政行為(許可・特許・補助金交付決定など)の取消し・撤回は、相手方の信頼保護のため、慎重に行うべきである。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 取り消すべき必要性 > 相手方の不利益、というバランスが必要。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- まとめ -->
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第9章 総まとめ</h3>
+  <ol>
+    <li>瑕疵は<span class="pk">軽微(取り消しうべき)</span>と<span class="pk">重大かつ明白(無効)</span>の2段階</li>
+    <li>「重大<strong>かつ</strong>明白」の「かつ」が超重要(「又は」ではない!)</li>
+    <li>無効な行政行為には<span class="pk">公定力も不可争力もない</span></li>
+    <li>違法性の承継は<span class="pk">原則認められない</span>。例外は先行・後行が一連のとき</li>
+    <li>取消し=<span class="pk">遡及効</span>/撤回=<span class="pk">将来効</span>、撤回は<span class="pk">処分庁のみ</span>可能</li>
+  </ol>
+</div>
+
+<!-- 学習ツール -->
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch09_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第9章 行政行為の瑕疵" data-url="gyosei_ch09.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch08.html">
+    <span class="label">◀ BACK</span>
+    <span class="title">第8章 行政行為の附款</span>
+  </a>
+  <a href="gyosei_ch09_q.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">第9章 演習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() {
+      if (typeof gambaInit === 'function') {
+        gambaInit('ch09');
+      } else {
+        setTimeout(run, 50);
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+</body>
+</html>

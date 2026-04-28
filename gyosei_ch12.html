@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第12章 行政契約 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch12">
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第12章 / 行政作用</div>
+  <h1>行政契約<span class="stars">★★☆</span></h1>
+  <p class="sub">行政も民間と同じく<strong>契約</strong>を結ぶことがあります。公共工事の発注や水道の供給契約などが代表例。判例を押さえましょう。</p>
+</header>
+<main>
+
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>行政契約は<span class="pk">非権力的</span>。当事者の合意に基づく</li>
+    <li>法律の根拠は<span class="pk">原則不要</span>(侵害留保説で問題にならない)</li>
+    <li>判例:<span class="pk">水道法15条1項</span>(正当な理由なく供給拒否できない)</li>
+  </ol>
+</section>
+
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none"><source src="audio/ch12.mp3" type="audio/mpeg"></audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<div class="sec"><span class="num">1</span>行政契約とは?</div>
+<div class="card">
+  <p><span class="kw" data-tip="行政主体が相手方との合意に基づいて一定の法効果を発生させる行為">行政契約</span>とは、行政主体が相手方との<strong>合意</strong>に基づいて一定の法効果を発生させる行為のこと。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>市役所が道路工事の業者と契約する/電力会社から電気を買う契約/水道の供給契約を結ぶ、などが行政契約!</p></div>
+  <div class="memo-box"><span class="label">行政契約の特徴</span><p>①<span class="pk">非権力的</span>(合意ベース)<br>②<span class="pk">当事者の対等性</span>が前提<br>③<span class="pk">法律の根拠は原則不要</span></p></div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政契約とは、行政主体が相手方との合意に基づいて一定の法効果を発生させる行為である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 合意がベース。当事者は対等な立場。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 行政契約は権力的行為であり、行政庁が一方的に法効果を発生させる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行政契約は<span class="pk">非権力的</span>。一方的な行政行為(処分)とは性質が違う。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 行政契約を締結するには、原則として法律の根拠が必要である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行政契約は合意ベースで侵害的でないため、<span class="pk">法律の根拠は原則として不要</span>。侵害留保説で問題にならない。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">2</span>行政契約の分類</div>
+<div class="card">
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>例</th></tr>
+      <tr><td><strong>行政主体相互の契約</strong></td><td>地方公共団体間の事務委託契約</td></tr>
+      <tr><td><strong>行政主体と私人の契約</strong></td><td>公共工事請負契約、公務員の採用契約、水道供給契約</td></tr>
+      <tr><td><strong>給付行政の契約</strong></td><td>水道・ガス・電気の供給契約</td></tr>
+      <tr><td><strong>規制行政の契約</strong></td><td>公害防止協定など</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ミニテスト Section 2 -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 公共工事の請負契約や水道供給契約は、行政主体と私人との間の行政契約にあたる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 一方当事者が行政主体でも、合意に基づくものは行政契約。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 地方公共団体間の事務委託契約も行政契約の一種である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行政主体相互間の契約も行政契約に含まれる。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">3</span>重要判例</div>
+
+<div class="card">
+  <div class="hanrei">
+    <h4>【武蔵野市給水拒否事件】(最決平元・11・8)</h4>
+    <p><span class="label">事案</span>宅地開発指導要綱に基づく行政指導に従わない事業者に対し、市が水道の供給契約を拒否した事案。</p>
+    <p><span class="label">判旨</span>行政指導を事実上強制する手段として水道供給契約を拒否することは、<span class="pk">水道法15条1項</span>にいう「正当の理由」なしに供給を拒否したものとして違法。</p>
+    <p><span class="label">ポイント</span>水道事業者は、<span class="pk">「正当の理由」がある場合でないと供給を拒めない</span>!</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="hanrei">
+    <h4>【志免町給水拒否事件】(最判平11・1・21)</h4>
+    <p><span class="label">事案</span>水道水の需要が給水能力を超えていた町が、マンション業者への給水契約を拒否した事案。</p>
+    <p><span class="label">判旨</span>水需要が急増し給水能力が危機的状況にある場合、将来の給水確保のため、<span class="pk">例外的に給水契約の拒否が「正当な理由」にあたる</span>ことがあり得る。</p>
+    <p><span class="label">ポイント</span>武蔵野市との違い:志免町は<strong>給水能力の限界</strong>という物理的理由。「正当な理由」が認められた珍しいケース。</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="hanrei">
+    <h4>【公害防止協定事件】(最判平21・7・10・福間町事件)</h4>
+    <p><span class="label">事案</span>産業廃棄物処分業者と福間町との間で、使用期限を設けた公害防止協定を締結したが、その効力が争われた。</p>
+    <p><span class="label">判旨</span>公害防止協定に基づく使用期限の定めは、<span class="pk">業者の自由な意思で締結された</span>以上有効であり、廃棄物処理法に抵触しない。</p>
+    <p><span class="label">ポイント</span>公害防止協定にも法的拘束力あり!</p>
+  </div>
+</div>
+
+<!-- ミニテスト Section 3(判例・超頻出) -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3・判例)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 水道法15条1項によれば、水道事業者は需要者との給水契約を自由に拒否することができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 水道法15条1項は、「<span class="pk">正当の理由</span>がなければ給水を拒んではならない」と規定。公共性の高いライフラインだから自由な拒否は許されない。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 武蔵野市給水拒否事件で判例は、行政指導を事実上強制する手段として水道供給契約を拒否することは違法であるとした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最決平元・11・8。「行政指導に従わせるための不利益処分」はNG。水道法15条1項違反。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 志免町給水拒否事件で判例は、給水能力が需要に追いつかず危機的状況にある場合、給水契約の拒否が「正当の理由」にあたることがあるとした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判平11・1・21。物理的限界という客観的理由なら、例外的に拒否が許される。武蔵野市(違法)との対比で覚える。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問4 福間町事件で判例は、公害防止協定は紳士協定にすぎず、法的拘束力は一切ないとした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最判平21・7・10。判例は<span class="pk">法的拘束力を認めた</span>。業者の自由意思で締結された協定は有効。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">4</span>行政契約の限界</div>
+<div class="card">
+  <h3>🚫 契約による行政の限界</h3>
+  <p>行政契約は便利ですが、次の点に注意が必要です。</p>
+  <ul style="margin-top:8px;">
+    <li><strong>法律で契約が禁止されている場合は不可</strong>(例:租税の賦課徴収は契約でできない)</li>
+    <li><strong>公序良俗違反の契約は無効</strong></li>
+    <li><strong>予算上の措置が必要</strong>な契約は、予算がなければ効力が発生しない場合がある</li>
+  </ul>
+</div>
+
+<!-- ミニテスト Section 4 -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 行政契約は合意ベースなので、租税の賦課徴収についても、契約によって行うことが可能である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 租税は法律で課されるべきもの(租税法律主義)で、<span class="pk">契約でできない</span>。法律で契約が禁止されている場合や、性質上契約に馴染まない場合は不可。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 公序良俗に違反する行政契約は無効である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 私法上の契約と同様、公序良俗違反は無効。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第12章まとめ</h3>
+  <ol>
+    <li>行政契約=合意ベースの非権力的行為、法律の根拠原則不要</li>
+    <li>水道供給契約:<span class="pk">正当の理由</span>なく拒否不可(水道法15条1項)</li>
+    <li>武蔵野市=違法、志免町=例外的にOK</li>
+    <li>公害防止協定も合意ベースで有効</li>
+  </ol>
+</div>
+
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch12_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第12章 行政契約" data-url="gyosei_ch12.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch11.html"><span class="label">◀ BACK</span><span class="title">第11章 行政指導</span></a>
+  <a href="gyosei_ch12_q.html" class="next"><span class="label">NEXT ▶</span><span class="title">第12章 演習問題</span></a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() { if (typeof gambaInit === 'function') { gambaInit('ch12'); } else { setTimeout(run, 50); } }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+  })();
+</script>
+</body>
+</html>

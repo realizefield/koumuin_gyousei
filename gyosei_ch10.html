@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第10章 行政裁量 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch10">
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第10章 / 行政作用</div>
+  <h1>行政裁量<span class="stars">★★★</span></h1>
+  <p class="sub">公務員試験の<strong>超頻出テーマ</strong>です。裁量の種類・司法審査・重要判例をしっかり押さえましょう。</p>
+</header>
+<main>
+
+<!-- 穴埋めチャレンジバー -->
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<!-- 重要ポイント先出し -->
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li><strong>羈束行為</strong>(裁量なし)と<strong>裁量行為</strong>(裁量あり)の区別</li>
+    <li>現在は自由裁量も<span class="pk">司法審査の対象</span>。<span class="pk">裁量の逸脱・濫用</span>があれば違法</li>
+    <li>重要判例6つ:<span class="pk">マクリーン事件・神戸税関事件・伊方原発・個人タクシー・日光太郎杉・公立高校生命令教科書</span></li>
+  </ol>
+</section>
+
+<!-- 音声プレイヤー -->
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none">
+    <source src="audio/ch10.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div class="sec"><span class="num">1</span>行政裁量とは?</div>
+
+<div class="card">
+  <p><span class="kw" data-tip="行政庁が法律の範囲内で判断の余地を有すること">行政裁量</span>とは、行政庁が法律の範囲内で<strong>判断の余地</strong>を持つことを言います。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>法律「危険なら営業停止にしてよい」<br>→ 何が「危険」かの判断は行政庁の裁量。警察官個人の好き嫌いで決めるのではなく、法律の範囲内で行政が判断する余地がある、というイメージ。</p></div>
+</div>
+
+<div class="card">
+  <h3>📊 羈束行為と裁量行為</h3>
+  <p>行政行為は、裁量の有無で2つに分かれます。</p>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th><span class="pk">羈束行為</span></th><th><span class="pk">裁量行為</span></th></tr>
+      <tr><td>裁量</td><td><span class="pk">なし</span>(法律に厳格に拘束される)</td><td><span class="pk">あり</span>(判断の余地)</td></tr>
+      <tr><td>例</td><td>租税の賦課、当選人の決定</td><td>生活保護の決定、営業停止命令</td></tr>
+      <tr><td>司法審査</td><td>全面的に可能</td><td>裁量の逸脱・濫用のみ違法</td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">ゴロ</span><p>「<strong>羈束は縛られ</strong>、<strong>裁量は自由</strong>」(きそく=キズナで縛られる、さいりょう=自由裁量)</p></div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政裁量とは、行政庁が法律の範囲内で判断の余地を持つことをいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ ただし「法律の範囲内」が前提。完全に自由ではない。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 租税の賦課や当選人の決定は、典型的な裁量行為に該当する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ いずれも<span class="pk">羈束行為</span>(裁量なし、要件を満たせば必ず一定の処分をすべき)。生活保護決定や営業停止命令が典型的な裁量行為。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 羈束行為に対する司法審査は全面的に可能だが、裁量行為に対する司法審査は裁量の逸脱・濫用がある場合に限られる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 裁量行為では行政の判断を尊重しつつ、明らかにおかしい場合は裁判所が介入。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div class="sec"><span class="num">2</span>裁量行為の種類(かつての区別)</div>
+
+<div class="card">
+  <h3>📘 かつての区別:自由裁量と羈束裁量</h3>
+  <p>かつての通説は、裁量行為をさらに2つに区別していました。</p>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th><span class="pk">自由裁量(便宜裁量)</span></th><th><span class="pk">羈束裁量(法規裁量)</span></th></tr>
+      <tr><td>性質</td><td>公益目的の判断</td><td>法律の解釈適用</td></tr>
+      <tr><td>司法審査</td><td>及ばない(不可)</td><td>及ぶ(可)</td></tr>
+    </table>
+  </div>
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">重要!現在は違う</span><p>現在は、この区別はあまり意味を持ちません。<br>→ <span class="pk">自由裁量でも司法審査が及ぶ</span>(ただし、裁量の逸脱・濫用があった場合に限って違法と判断される)</p></div>
+</div>
+
+<div class="card">
+  <h3>⭐ 現代の考え方:すべての裁量行為に司法審査が及ぶ</h3>
+  <p>行政事件訴訟法30条で明文化されています。</p>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">行政事件訴訟法30条</span>
+    <p>行政庁の裁量処分については、<span class="pk">裁量権の範囲をこえ、又はその濫用があった場合に限り</span>、裁判所は、その処分を取り消すことができる。</p>
+  </div>
+  <div class="ex-box"><span class="label">イメージ</span><p>裁量行為は「行政庁の判断を尊重」する。でも判断が<strong>明らかにおかしい</strong>場合(逸脱・濫用)は裁判所が介入できる。要はバランス!</p></div>
+</div>
+
+<!-- ミニテスト Section 2 -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 現在の通説・判例によれば、自由裁量(便宜裁量)に対する司法審査は及ばない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ かつてはそうだったが、現在は<span class="pk">自由裁量にも司法審査が及ぶ</span>(行政事件訴訟法30条)。裁量権の逸脱・濫用があれば違法として取り消せる。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 行政事件訴訟法30条は、裁量処分について「裁量権の範囲をこえ、又はその濫用があった場合に限り」、裁判所はその処分を取り消すことができると規定する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 条文ベースで現在の考え方を確認しておく。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 現在の通説・判例によれば、自由裁量と羈束裁量の区別はあまり意味を持たない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ いずれも司法審査の対象になるため、区別の実益が薄い。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div class="sec"><span class="num">3</span>裁量の場面(要件裁量と効果裁量)</div>
+
+<div class="card">
+  <p>行政処分は「要件 → 効果」という流れ。それぞれの段階で裁量がある場合があります。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>裁量の種類</th><th>内容</th><th>例</th></tr>
+      <tr><td><span class="pk">要件裁量</span></td><td>法律要件の認定・判断に裁量</td><td>「公益を害する」の判断</td></tr>
+      <tr><td><span class="pk">効果裁量</span></td><td>処分するかどうか・どんな処分かに裁量</td><td>営業停止にするか、免許取消しにするか</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">イメージ</span><p>「要件に該当するか」=入口の判断/「何の処分を選ぶか」=出口の判断。どちらにも裁量がある場合がある!</p></div>
+</div>
+
+<!-- ミニテスト Section 3 -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 要件裁量とは、法律要件の認定・判断において行政庁に裁量が認められる場合をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「公益を害する」「相当の理由がある」など、抽象的な要件の認定に裁量がある。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 効果裁量とは、処分するかどうか・どんな処分にするかなど、効果の選択に裁量が認められる場合をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 営業停止か免許取消しか、停止期間をどうするか、などの選択に裁量がある。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 4 ================= -->
+<div class="sec"><span class="num">4</span>裁量審査の手法</div>
+
+<div class="card">
+  <p>裁判所は、裁量処分について「逸脱・濫用」がないかを審査します。主な審査手法は以下の通り。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>手法</th><th>内容</th></tr>
+      <tr><td><strong>事実誤認</strong></td><td>重要な事実の基礎を誤認していないか</td></tr>
+      <tr><td><strong>目的違反・動機違反</strong></td><td>法律の目的から外れた判断をしていないか</td></tr>
+      <tr><td><strong>平等原則違反</strong></td><td>他の同様のケースと合理的理由なく異なる扱いをしていないか</td></tr>
+      <tr><td><strong>比例原則違反</strong></td><td>手段が目的に対して過剰ではないか</td></tr>
+      <tr><td><strong>他事考慮</strong></td><td>考慮してはいけない事情を考慮していないか</td></tr>
+      <tr><td><strong>考慮不尽</strong></td><td>考慮すべき事情を考慮していないか</td></tr>
+      <tr><td><strong>判断過程審査</strong></td><td>判断の形成過程全体が合理的か</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ミニテスト Section 4 -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 裁量処分について裁判所が用いる審査手法には、事実誤認・目的違反・比例原則違反・平等原則違反・他事考慮・考慮不尽・判断過程審査などがある。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 多様な手法を組み合わせて、裁量権の逸脱・濫用がないかを審査する。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 「考慮すべき事情を考慮していないか」を審査するのが「考慮不尽」、「考慮してはいけない事情を考慮していないか」を審査するのが「他事考慮」である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ どちらも判断過程審査の重要な手法。日光太郎杉事件で代表的に用いられた。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 5 ================= -->
+<div class="sec"><span class="num">5</span>重要判例(6つ)</div>
+
+<!-- マクリーン事件 -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【マクリーン事件】(最大判昭53・10・4)★最重要</h4>
+    <p><span class="label">事案</span>在留期間の更新を申請した外国人(マクリーン氏)が、政治活動を理由に更新を不許可とされた事案。</p>
+    <p><span class="label">判旨</span>在留期間更新の許可は<span class="pk">法務大臣の広範な裁量</span>に委ねられている。裁判所の審査は、その判断が<span class="pk">全く事実の基礎を欠くか、又は社会通念上著しく妥当性を欠くことが明らかである場合</span>に限り、裁量権の範囲を超え又はその濫用があったものとして違法と判断できる。</p>
+    <p><span class="label">ポイント</span>外国人の在留に関する判断は、政治・外交的配慮が必要 → 裁量が広い → 司法審査は限定的!</p>
+  </div>
+</div>
+
+<!-- 神戸税関事件 -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【神戸税関事件】(最判昭52・12・20)</h4>
+    <p><span class="label">事案</span>公務員の懲戒処分について、裁判所がどこまで審査できるかが争われた事案。</p>
+    <p><span class="label">判旨</span>懲戒権者の裁量判断は、<span class="pk">社会観念上著しく妥当を欠き</span>、裁量権の濫用と認められる場合に限り違法となる。</p>
+    <p><span class="label">ポイント</span>公務員の懲戒についても裁量が広い。「社会観念上著しく妥当を欠く」がキーワード!</p>
+  </div>
+</div>
+
+<!-- 伊方原発事件 -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【伊方原発訴訟】(最判平4・10・29)</h4>
+    <p><span class="label">事案</span>原子炉設置許可処分の取消しが争われた事案。専門技術的な判断について、裁判所はどこまで審査できるか。</p>
+    <p><span class="label">判旨</span>専門技術的な判断は、裁量に委ねられる。裁判所の審査は、①原子力委員会等の<span class="pk">専門技術的調査審議の過程に看過しがたい過誤・欠落があるか</span>、②その結果に基づく判断が<span class="pk">不合理</span>か否か、という<strong>判断過程審査</strong>による。</p>
+    <p><span class="label">ポイント</span>原発のような高度専門的判断では、行政の判断を尊重しつつ「判断過程」を審査!</p>
+  </div>
+</div>
+
+<!-- 個人タクシー -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【個人タクシー事件】(最判昭46・10・28)</h4>
+    <p><span class="label">事案</span>個人タクシーの免許申請について、申請者ごとに審査基準を公にせずに不許可処分をした事案。</p>
+    <p><span class="label">判旨</span>多数の申請者がいる中で許可・不許可を決める際には、行政庁は<span class="pk">事前に定められた審査基準</span>に従って判断すべき。申請者の<span class="pk">主張・立証の機会</span>を与える必要がある。</p>
+    <p><span class="label">ポイント</span>手続的な公正さを重視。裁量権行使にも<strong>手続保障</strong>が必要!</p>
+  </div>
+</div>
+
+<!-- 日光太郎杉 -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【日光太郎杉事件】(東京高判昭48・7・13)★判断過程審査の代表例</h4>
+    <p><span class="label">事案</span>日光杉並木に影響する道路拡張のための土地収用認定が争われた事案。</p>
+    <p><span class="label">判旨</span>本来最も重視すべき事情(日光杉並木の文化的価値)を<span class="pk">不当に軽視</span>し、考慮すべきでない事情(経済的便宜)を<span class="pk">過大に評価</span>したことは、裁量権の逸脱にあたり違法。</p>
+    <p><span class="label">ポイント</span>「<strong>考慮すべき事情を考慮せず、考慮すべきでない事情を考慮した</strong>」という判断過程審査の代表例!</p>
+  </div>
+</div>
+
+<!-- 公立高校 -->
+<div class="card">
+  <div class="hanrei">
+    <h4>【剣道受講拒否事件】(最判平8・3・8)</h4>
+    <p><span class="label">事案</span>エホバの証人の信者である市立高等専門学校の学生が、剣道実技への参加を宗教上の理由で拒否し、体育の単位を取得できず、原級留置・退学処分となった事案。</p>
+    <p><span class="label">判旨</span>学生の信仰上の理由による剣道実技の拒否と、代替措置の可否について、<span class="pk">他の方法でも体育の目的は達成可能</span>だったのに、代替措置を検討しないまま処分したことは、<span class="pk">社会観念上著しく妥当を欠き、裁量権の範囲を超える違法</span>。</p>
+    <p><span class="label">ポイント</span>裁量行為でも、代替措置等を十分検討しないと、裁量の逸脱・濫用になる!</p>
+  </div>
+</div>
+
+<!-- 判例まとめ -->
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 重要判例6つ 一覧</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>判例</th><th>場面</th><th>結論</th></tr>
+      <tr><td>マクリーン事件</td><td>外国人の在留更新</td><td>法務大臣の広範な裁量(社会通念上著しく妥当性を欠く場合のみ違法)</td></tr>
+      <tr><td>神戸税関事件</td><td>公務員の懲戒</td><td>懲戒権者の裁量(社会観念上著しく妥当を欠く場合のみ違法)</td></tr>
+      <tr><td>伊方原発訴訟</td><td>原子炉設置許可</td><td>専門技術的判断 → 判断過程審査</td></tr>
+      <tr><td>個人タクシー</td><td>免許申請</td><td>審査基準の設定・手続保障が必要</td></tr>
+      <tr><td>日光太郎杉</td><td>土地収用認定</td><td>考慮事項の重み付けを誤った裁量の逸脱</td></tr>
+      <tr><td>剣道受講拒否</td><td>退学処分</td><td>代替措置を検討しない処分は違法</td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">ゴロ</span><p>「<strong>マク・神・伊・個・日・剣</strong>」(マク=マクリーン、神=神戸税関、伊=伊方、個=個人タクシー、日=日光、剣=剣道)</p></div>
+</div>
+
+<!-- ミニテスト Section 5(判例6つ) -->
+<div class="mini-test" data-mini="s5">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション5・重要判例6つ)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 マクリーン事件で判例は、外国人の在留期間更新の許可は法務大臣の広範な裁量に委ねられているとした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最大判昭53・10・4。政治・外交的配慮が必要な分野なので裁量が広い。違法となるのは社会通念上著しく妥当性を欠く場合のみ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 神戸税関事件で判例は、公務員の懲戒処分について懲戒権者の裁量を認め、社会観念上著しく妥当を欠き裁量権の濫用と認められる場合に限り違法とした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判昭52・12・20。「社会観念上著しく妥当を欠く」がキーワード。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 伊方原発訴訟で判例は、原子炉設置許可処分について判断過程審査を採用した。専門技術的調査審議の過程に看過しがたい過誤・欠落があるか、結果の判断が不合理かを審査する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判平4・10・29。高度専門的判断について、行政の判断を尊重しつつ判断過程を審査する。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 個人タクシー事件で判例は、免許申請の審査について、行政庁は事前に定められた審査基準に従って判断し、申請者に主張・立証の機会を与える必要があるとした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判昭46・10・28。裁量行為にも手続保障が必要、というのがポイント。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問5 日光太郎杉事件で判例は、考慮すべき事情を不当に軽視し、考慮すべきでない事情を過大に評価した土地収用認定を、裁量権の逸脱として違法とした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 東京高判昭48・7・13。判断過程審査の代表例。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問6 剣道受講拒否事件で判例は、信仰上の理由により剣道実技を拒否した学生に対する退学処分について、代替措置を検討しなくても裁量権の範囲内で適法とした。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最判平8・3・8。判例は<span class="pk">代替措置を検討しないまま処分したことは社会観念上著しく妥当を欠き裁量権の範囲を超える違法</span>とした。逆に覚えると致命的。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- まとめ -->
+<div class="card" style="border-left:5px solid #1B2A4A;background:#e8eef5;">
+  <h3>⭐ 第10章 総まとめ</h3>
+  <ol>
+    <li><strong>羈束行為</strong>(裁量なし)と<strong>裁量行為</strong>(裁量あり)の区別</li>
+    <li>裁量行為も<span class="pk">司法審査の対象</span>になる(行政事件訴訟法30条)</li>
+    <li><span class="pk">裁量権の逸脱・濫用</span>があれば違法として取消し可能</li>
+    <li>裁量の種類:<span class="pk">要件裁量・効果裁量</span></li>
+    <li>審査手法:事実誤認・目的違反・比例/平等原則違反・他事考慮・考慮不尽・判断過程審査</li>
+    <li>重要判例6つ:マクリーン・神戸税関・伊方・個人タクシー・日光・剣道</li>
+  </ol>
+</div>
+
+<!-- 学習ツール -->
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch10_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第10章 行政裁量" data-url="gyosei_ch10.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch09.html">
+    <span class="label">◀ BACK</span>
+    <span class="title">第9章 行政行為の瑕疵</span>
+  </a>
+  <a href="gyosei_ch10_q.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">第10章 演習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() {
+      if (typeof gambaInit === 'function') {
+        gambaInit('ch10');
+      } else {
+        setTimeout(run, 50);
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第8章 行政行為の附款 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+<style>
+/* ============================================================
+   GAMBA行政法学習システム 共通CSS
+   深紺(#1B2A4A) × 深紅(#C0392B) 江原予備校カラー
+   ============================================================ */
+
+/* ---------- リセット & ベース ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Meiryo", "メイリオ", "Yu Gothic", "游ゴシック", sans-serif;
+  color: #222;
+  line-height: 1.8;
+  background: #f5f2ec;
+  font-size: 15px;
+}
+img { max-width: 100%; height: auto; }
+a { color: #1B2A4A; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #C0392B; }
+
+/* ---------- レイアウト ---------- */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+main { padding-top: 20px; }
+
+/* ---------- トップナビ ---------- */
+.topnav {
+  background: #1B2A4A;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+}
+.topnav .brand { font-weight: bold; color: #f5c55b; }
+.topnav .sep { color: #6b7a95; }
+.topnav a { color: #fff; text-decoration: none; }
+.topnav a:hover { color: #f5c55b; }
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  background: linear-gradient(135deg, #1B2A4A 0%, #2a3e6e 100%);
+  color: #fff;
+  padding: 36px 28px 28px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 16px rgba(27,42,74,0.2);
+}
+.hero .crumb {
+  font-size: 12px;
+  color: #f5c55b;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.hero h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+.hero h1 .stars {
+  display: inline-block;
+  margin-left: 10px;
+  color: #f5c55b;
+  font-size: 16px;
+}
+.hero .sub {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #d4dae8;
+  line-height: 1.7;
+}
+
+/* ---------- ゴール(学習目標) ---------- */
+.goals {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 18px 0;
+  border-left: 5px solid #C0392B;
+}
+.goals h2 {
+  margin: 0 0 10px;
+  color: #1B2A4A;
+  font-size: 16px;
+}
+.goals ol { margin: 0; padding-left: 24px; }
+.goals li { margin: 4px 0; }
+
+/* ---------- セクション見出し ---------- */
+.sec {
+  margin: 26px 0 12px;
+  color: #1B2A4A;
+  font-weight: bold;
+  font-size: 17px;
+  border-bottom: 2px solid #1B2A4A;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec .num {
+  background: #C0392B;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.subsec {
+  color: #1B2A4A;
+  margin: 18px 0 8px;
+  font-size: 15px;
+  border-left: 4px solid #C0392B;
+  padding-left: 10px;
+}
+
+/* ---------- カード ---------- */
+.card {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ---------- キーワード(用語ポップアップ) ---------- */
+.kw {
+  position: relative;
+  color: #1B2A4A;
+  font-weight: bold;
+  border-bottom: 2px dashed #1B2A4A;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.kw:hover { background: #fff7ea; }
+.kw .tip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: #1B2A4A;
+  color: #fff;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: opacity 0.2s;
+  border: 2px solid #C0392B;
+}
+.kw .tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #C0392B transparent transparent transparent;
+}
+.kw.open .tip { visibility: visible; opacity: 1; }
+
+/* ---------- 強調(ピンク・深紅) ---------- */
+.pk { color: #C0392B; font-weight: bold; }
+
+/* ---------- 例え話ボックス ---------- */
+.ex-box {
+  background: #fff7ea;
+  border: 1px solid #f4c36a;
+  border-left: 5px solid #f4a62a;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.ex-box .label {
+  display: inline-block;
+  background: #f4a62a;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.ex-box p { margin: 6px 0; }
+
+/* ---------- Tipボックス(緑系:重要補足) ---------- */
+.tip-box {
+  background: #e8f5ec;
+  border: 1px solid #68a97f;
+  border-left: 5px solid #2d7a4e;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.tip-box .label {
+  display: inline-block;
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tip-box p { margin: 6px 0; }
+
+/* ---------- メモボックス(暗記・ゴロ) ---------- */
+.memo-box {
+  background: #fdeff0;
+  border: 1px solid #e8a3a8;
+  border-left: 5px solid #C0392B;
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin: 14px 0;
+}
+.memo-box .label {
+  display: inline-block;
+  background: #C0392B;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.memo-box .goro {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C0392B;
+  text-align: center;
+  margin: 8px 0;
+  letter-spacing: 0.1em;
+}
+.memo-box .detail { margin: 6px 0; font-size: 14px; }
+
+/* ---------- 判例ボックス ---------- */
+.hanrei {
+  background: #fafbfd;
+  border: 2px solid #1B2A4A;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.hanrei .htitle {
+  background: #1B2A4A;
+  color: #fff;
+  margin: -16px -20px 12px;
+  padding: 10px 20px;
+  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+.hanrei .htitle .badge {
+  display: inline-block;
+  background: #C0392B;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-right: 8px;
+}
+.hanrei .hrow {
+  margin: 10px 0;
+  padding-left: 80px;
+  position: relative;
+  line-height: 1.7;
+}
+.hanrei .hrow .tag {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #e5e0d5;
+  color: #1B2A4A;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 66px;
+  text-align: center;
+}
+.hanrei .hrow.point .tag { background: #C0392B; color: #fff; }
+
+/* ---------- テーブル ---------- */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  background: #fff;
+  font-size: 14px;
+}
+.tbl th {
+  background: #1B2A4A;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #1B2A4A;
+}
+.tbl td {
+  padding: 10px 12px;
+  border: 1px solid #d6cfbe;
+  vertical-align: top;
+}
+.tbl tr:nth-child(even) td { background: #faf8f3; }
+.tbl .badge-ok {
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.tbl .badge-ng {
+  background: #C0392B;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ---------- SVG ボックス ---------- */
+.svg-box {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 14px 0;
+  text-align: center;
+}
+.svg-box svg { max-width: 100%; height: auto; }
+.svg-box .caption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-block;
+  background: #1B2A4A;
+  color: #fff;
+  border: 2px solid #1B2A4A;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn:hover { background: #2a3e6e; border-color: #2a3e6e; }
+.btn.outline {
+  background: #fff;
+  color: #1B2A4A;
+}
+.btn.outline:hover { background: #1B2A4A; color: #fff; }
+.btn.accent {
+  background: #C0392B;
+  border-color: #C0392B;
+}
+.btn.accent:hover { background: #a6321e; border-color: #a6321e; }
+.btn.small { padding: 4px 12px; font-size: 12px; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ---------- 穴埋め ---------- */
+.blank {
+  display: inline-block;
+  min-width: 80px;
+  padding: 2px 10px;
+  margin: 0 2px;
+  background: #1B2A4A;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+.blank.revealed {
+  background: #fff3e0;
+  color: #C0392B;
+  border: 1px solid #C0392B;
+}
+
+/* ---------- 演習問題カード ---------- */
+.choice-q {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-left: 5px solid #1B2A4A;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 14px 0;
+}
+.choice-q.correct { border-left-color: #2d7a4e; }
+.choice-q.wrong { border-left-color: #C0392B; }
+.choice-q.hidden { display: none; }
+.choice-q .qlead {
+  font-weight: bold;
+  margin: 8px 0 12px;
+  line-height: 1.7;
+}
+.choice-q .opt {
+  display: block;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border: 1px solid #d6cfbe;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fafbfd;
+  transition: background 0.15s;
+}
+.choice-q .opt:hover { background: #f0f4fa; }
+.choice-q .opt.sel { background: #fff3e0; border-color: #f4a62a; }
+.choice-q .opt.ok { background: #e8f5ec; border-color: #2d7a4e; }
+.choice-q .opt.ng { background: #fdeff0; border-color: #C0392B; }
+.choice-q .opt .label {
+  display: inline-block;
+  background: #1B2A4A;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.choice-q .opt.ok .label { background: #2d7a4e; }
+.choice-q .opt.ng .label { background: #C0392B; }
+.choice-q .actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.choice-q .expl {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #f5f2ec;
+  border-left: 4px solid #1B2A4A;
+  border-radius: 4px;
+  line-height: 1.75;
+}
+.choice-q.done .expl { display: block; }
+.choice-q .expl .head {
+  font-weight: bold;
+  color: #1B2A4A;
+  margin-bottom: 6px;
+}
+.choice-q .expl .correct-mark {
+  display: inline-block;
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+/* 問題ボタン(★・📝) */
+.qbtn {
+  background: #fff;
+  border: 1px solid #d6cfbe;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.qbtn:hover { background: #f5f2ec; }
+.qbtn.active {
+  background: #f5c55b;
+  border-color: #f4a62a;
+}
+.qbtn.active.memo { background: #e8f5ec; border-color: #2d7a4e; }
+
+/* ---------- タブ(演習切替) ---------- */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 14px 0;
+  border-bottom: 2px solid #1B2A4A;
+}
+.tabs .tab {
+  background: #e5e0d5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1B2A4A;
+  font-weight: bold;
+}
+.tabs .tab.on { background: #1B2A4A; color: #fff; }
+
+/* ---------- バナー ---------- */
+.banner {
+  background: #fff4e5;
+  border-left: 4px solid #f4a62a;
+  padding: 10px 14px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: #7a5a0f;
+}
+
+/* ---------- メモモーダル ---------- */
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 460px;
+  width: 92%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal h3 {
+  margin: 0 0 12px;
+  color: #1B2A4A;
+  border-left: 5px solid #C0392B;
+  padding-left: 10px;
+}
+.modal textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 8px;
+  border: 1px solid #c8c0ae;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+.modal .m-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+/* ---------- ページナビ ---------- */
+.pagenav {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+.pagenav a {
+  flex: 1;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+}
+.pagenav a:hover {
+  border-color: #1B2A4A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.pagenav a.next { text-align: right; }
+.pagenav .label {
+  display: block;
+  font-size: 11px;
+  color: #C0392B;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.pagenav .title {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1B2A4A;
+}
+
+/* ---------- メモ・ブックマーク表示 ---------- */
+.note-display {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fff7ea;
+  border-left: 3px solid #f4a62a;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ============================================================
+   穴埋めチャレンジ機能
+   ============================================================ */
+
+/* チャレンジボタン(上部固定) */
+.challenge-bar {
+  background: linear-gradient(135deg, #C0392B 0%, #e85443 100%);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 3px 10px rgba(192,57,43,0.3);
+}
+.challenge-bar .cb-title {
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.challenge-bar .cb-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.challenge-bar .cb-btn {
+  background: #fff;
+  color: #C0392B;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.challenge-bar .cb-btn:hover {
+  background: #fff4e5;
+  transform: translateY(-2px);
+}
+.challenge-bar .cb-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.challenge-bar .cb-status {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* 穴埋め対象のインライン空欄 */
+.blank-q {
+  display: inline-block;
+  min-width: 80px;
+  padding: 2px 8px;
+  margin: 0 3px;
+  font-weight: bold;
+  color: #1B2A4A;
+}
+/* 通常状態:普通の強調と同じ見た目 */
+.blank-q.normal {
+  color: #C0392B;
+  font-weight: bold;
+}
+/* チャレンジモード・空欄 */
+.blank-q.empty {
+  background: #fff;
+  border: 2px dashed #C0392B;
+  color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 26px;
+  transition: all 0.15s;
+}
+.blank-q.empty:hover {
+  background: #fff7ea;
+  border-style: solid;
+}
+.blank-q.empty.focus {
+  background: #ffe58a;
+  border-color: #f4a62a;
+  border-style: solid;
+  box-shadow: 0 0 0 3px rgba(244,166,42,0.3);
+}
+/* 語句が入った状態 */
+.blank-q.filled {
+  background: #e8f2ec;
+  border: 2px solid #2d7a4e;
+  color: #1B2A4A;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.blank-q.filled:hover {
+  background: #fdeff0;
+  border-color: #C0392B;
+}
+/* 判定後:正解 */
+.blank-q.correct {
+  background: #e8f5ec;
+  border: 2px solid #2d7a4e;
+  color: #2d7a4e;
+  cursor: default;
+}
+.blank-q.correct::after {
+  content: " ✓";
+  color: #2d7a4e;
+  font-weight: bold;
+}
+/* 判定後:不正解 */
+.blank-q.incorrect {
+  background: #fdeff0;
+  border: 2px solid #C0392B;
+  color: #C0392B;
+  text-decoration: line-through;
+  cursor: default;
+}
+.blank-q.incorrect::after {
+  content: " → " attr(data-a);
+  color: #2d7a4e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 語群エリア(画面下に固定) */
+.word-bank {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1B2A4A;
+  color: #fff;
+  padding: 14px 20px 18px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  z-index: 100;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.word-bank.show { display: block; }
+.word-bank .wb-title {
+  font-size: 12px;
+  color: #f5c55b;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.word-bank .wb-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.word-bank .wb-word {
+  background: #fff;
+  color: #1B2A4A;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: all 0.15s;
+  user-select: none;
+}
+.word-bank .wb-word:hover {
+  background: #f5c55b;
+  border-color: #f5c55b;
+}
+.word-bank .wb-word.sel {
+  background: #f5c55b;
+  border-color: #C0392B;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(245,197,91,0.5);
+}
+.word-bank .wb-word.used {
+  opacity: 0.35;
+  cursor: default;
+  background: #7a8699;
+  color: #fff;
+}
+
+/* チャレンジ中の本文余白(語群分確保) */
+body.challenge-mode main {
+  padding-bottom: 220px;
+}
+
+/* 合格モーダル + 花吹雪 */
+.pass-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+}
+.pass-overlay.show { display: flex; }
+.pass-dialog {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  animation: passPop 0.5s ease-out;
+  max-width: 90%;
+}
+@keyframes passPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.pass-dialog .pass-emoji {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.pass-dialog h2 {
+  color: #C0392B;
+  font-size: 36px;
+  margin: 8px 0;
+  letter-spacing: 0.1em;
+}
+.pass-dialog p {
+  color: #1B2A4A;
+  font-size: 15px;
+  margin: 10px 0 20px;
+}
+.pass-dialog .pass-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 花吹雪 */
+.confetti {
+  position: fixed;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  z-index: 299;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+/* 不合格モーダル */
+.fail-toast {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #C0392B;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  z-index: 300;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.fail-toast.show {
+  display: block;
+  animation: failShake 0.5s;
+}
+@keyframes failShake {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25% { transform: translate(-52%, -50%); }
+  75% { transform: translate(-48%, -50%); }
+}
+
+/* ---------- モバイル ---------- */
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .wrap { padding: 0 14px 50px; }
+  .hero { padding: 26px 20px 22px; }
+  .hero h1 { font-size: 22px; }
+  .card { padding: 14px 16px; }
+  .hanrei .hrow { padding-left: 0; padding-top: 28px; }
+  .hanrei .hrow .tag { top: 0; left: 0; }
+  .sec { font-size: 15px; }
+  .pagenav a { min-width: 100%; }
+  .kw .tip { width: 240px; }
+}
+/* ============================================ */
+/* ミニテスト機能 (mini-test)                    */
+/* ============================================ */
+
+.mini-test {
+  margin: 16px 0 28px;
+}
+
+/* 開閉ボタン */
+.mini-test .mini-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #1B2A4A 0%, #2c4173 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(27, 42, 74, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mini-test .mini-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(27, 42, 74, 0.35);
+}
+.mini-test .mini-btn.is-open {
+  background: linear-gradient(135deg, #444 0%, #666 100%);
+}
+.mini-test .mini-btn::after {
+  content: " ▼";
+  font-size: 12px;
+}
+.mini-test .mini-btn.is-open::after {
+  content: " ▲";
+}
+
+/* 本体(初期は非表示) */
+.mini-test .mini-body {
+  display: none;
+  margin-top: 14px;
+  padding: 18px;
+  background: #fbfcfe;
+  border: 2px solid #1B2A4A;
+  border-radius: 8px;
+}
+.mini-test.is-open .mini-body {
+  display: block;
+  animation: miniSlideDown 0.3s ease-out;
+}
+@keyframes miniSlideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 各問 */
+.mini-q {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e0e4ec;
+}
+.mini-q .mini-stem {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #1B2A4A;
+}
+
+/* ○×ボタン */
+.mini-choices {
+  display: flex;
+  gap: 10px;
+}
+.mini-c {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mini-c:hover {
+  background: #f0f4fa;
+}
+.mini-c.selected {
+  background: #1B2A4A;
+  color: #fff;
+  border-color: #1B2A4A;
+}
+.mini-c[data-v="o"].selected { background: #2d7a4e; border-color: #2d7a4e; }
+.mini-c[data-v="x"].selected { background: #C0392B; border-color: #C0392B; }
+
+/* 結果表示 */
+.mini-q.is-correct {
+  background: #e8f5ec;
+  border-color: #2d7a4e;
+}
+.mini-q.is-wrong {
+  background: #fdeff0;
+  border-color: #C0392B;
+}
+.mini-q.is-correct .mini-c.selected,
+.mini-q.is-wrong .mini-c.selected {
+  pointer-events: none;
+}
+
+/* 解説(初期は非表示) */
+.mini-exp {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff9ed;
+  border-left: 3px solid #f4a62a;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+}
+.mini-q.show-exp .mini-exp {
+  display: block;
+}
+
+/* 操作ボタン群 */
+.mini-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.mini-judge,
+.mini-reset {
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+.mini-judge {
+  background: #f4a62a;
+  color: #fff;
+}
+.mini-judge:hover { background: #e09715; }
+.mini-judge:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.mini-reset {
+  background: #fff;
+  color: #1B2A4A;
+  border: 2px solid #1B2A4A;
+}
+.mini-reset:hover { background: #f0f4fa; }
+
+/* 結果メッセージ */
+.mini-result {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  display: none;
+}
+.mini-result.show { display: block; }
+.mini-result.pass {
+  background: linear-gradient(135deg, #e8f5ec 0%, #fff9ed 100%);
+  color: #2d7a4e;
+  border: 2px solid #2d7a4e;
+}
+.mini-result.fail {
+  background: #fdeff0;
+  color: #C0392B;
+  border: 2px solid #C0392B;
+}
+.mini-result .big {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ============================================ */
+/* 花吹雪アニメーション                          */
+/* ============================================ */
+.sakura-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+}
+.sakura-overlay.show { display: block; }
+
+.sakura-petal {
+  position: absolute;
+  top: -30px;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 30% 30%, #ffd1dc 0%, #ff9eb5 60%, #ff7099 100%);
+  border-radius: 100% 0 100% 0;
+  opacity: 0.9;
+  animation: sakuraFall linear forwards;
+}
+.sakura-petal.alt {
+  background: radial-gradient(circle at 30% 30%, #fff5f8 0%, #ffd1dc 60%, #ffaecb 100%);
+  width: 12px;
+  height: 12px;
+}
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 80px)) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+</style>
+<script>
+/* ============================================================
+   GAMBA行政法学習システム 共通JS
+   ============================================================ */
+
+/* ---------- 用語ポップアップ ---------- */
+function initTips() {
+  document.querySelectorAll('.kw').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.kw.open').forEach(o => {
+        if (o !== el) o.classList.remove('open');
+      });
+      el.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.kw.open').forEach(o => o.classList.remove('open'));
+  });
+}
+
+/* ---------- 穴埋め ---------- */
+function initBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    const ans = b.dataset.a || '';
+    b.textContent = '　　　';
+    b.addEventListener('click', () => {
+      if (b.classList.contains('revealed')) {
+        b.classList.remove('revealed');
+        b.textContent = '　　　';
+      } else {
+        b.classList.add('revealed');
+        b.textContent = ans;
+      }
+    });
+  });
+}
+
+function revealAllBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    b.classList.add('revealed');
+    b.textContent = b.dataset.a || '';
+  });
+}
+function hideAllBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    b.classList.remove('revealed');
+    b.textContent = '　　　';
+  });
+}
+
+/* ---------- 復習リスト保存 ---------- */
+const REVIEW_KEY = 'gamba_review_list';
+function getReviewList() {
+  try { return JSON.parse(localStorage.getItem(REVIEW_KEY) || '[]'); }
+  catch(e) { return []; }
+}
+function saveReviewList(list) {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(list));
+}
+function addToReview(title, url) {
+  const list = getReviewList();
+  if (list.find(r => r.url === url)) return false;
+  list.push({ title, url, date: new Date().toISOString() });
+  saveReviewList(list);
+  return true;
+}
+function removeFromReview(url) {
+  const list = getReviewList().filter(r => r.url !== url);
+  saveReviewList(list);
+}
+
+function initReviewBtn() {
+  document.querySelectorAll('.add-review').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.dataset.title || document.title;
+      const url = btn.dataset.url || location.pathname.split('/').pop();
+      const added = addToReview(title, url);
+      const orig = btn.textContent;
+      btn.textContent = added ? '✓ 復習リストに追加しました' : '既に追加済みです';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+      }, 2000);
+    });
+  });
+}
+
+/* ---------- ブックマーク(問題単位) ---------- */
+const BM_KEY = 'gamba_bookmark';
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem(BM_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveBookmarks(bm) { localStorage.setItem(BM_KEY, JSON.stringify(bm)); }
+function isBookmarked(pageId, qid) {
+  const bm = getBookmarks();
+  return !!(bm[pageId] && bm[pageId][qid]);
+}
+function toggleBookmark(pageId, qid) {
+  const bm = getBookmarks();
+  if (!bm[pageId]) bm[pageId] = {};
+  if (bm[pageId][qid]) {
+    delete bm[pageId][qid];
+  } else {
+    bm[pageId][qid] = true;
+  }
+  saveBookmarks(bm);
+  return !!(bm[pageId] && bm[pageId][qid]);
+}
+
+/* ---------- メモ(問題単位) ---------- */
+const MEMO_KEY = 'gamba_memo';
+function getMemos() {
+  try { return JSON.parse(localStorage.getItem(MEMO_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveMemos(m) { localStorage.setItem(MEMO_KEY, JSON.stringify(m)); }
+function getMemo(pageId, qid) {
+  const m = getMemos();
+  return (m[pageId] && m[pageId][qid]) || '';
+}
+function setMemo(pageId, qid, text) {
+  const m = getMemos();
+  if (!m[pageId]) m[pageId] = {};
+  if (text) m[pageId][qid] = text;
+  else delete m[pageId][qid];
+  saveMemos(m);
+}
+
+/* ---------- 間違い記録 ---------- */
+const WRONG_KEY = 'gamba_wrong';
+function getWrongs() {
+  try { return JSON.parse(localStorage.getItem(WRONG_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveWrongs(w) { localStorage.setItem(WRONG_KEY, JSON.stringify(w)); }
+function setWrong(pageId, qid, isWrong) {
+  const w = getWrongs();
+  if (!w[pageId]) w[pageId] = {};
+  if (isWrong) w[pageId][qid] = true;
+  else delete w[pageId][qid];
+  saveWrongs(w);
+}
+function isWrong(pageId, qid) {
+  const w = getWrongs();
+  return !!(w[pageId] && w[pageId][qid]);
+}
+
+/* ---------- 選択問題 ---------- */
+function initChoiceQuestions(pageId) {
+  document.querySelectorAll('.choice-q').forEach(q => {
+    const qid = q.dataset.qid;
+    const correct = parseInt(q.dataset.correct, 10);
+    const opts = q.querySelectorAll('.opt');
+    const submitBtn = q.querySelector('.submit-btn');
+    const resetBtn = q.querySelector('.reset-btn');
+    const bmBtn = q.querySelector('.qbtn.bm');
+    const memoBtn = q.querySelector('.qbtn.memo');
+
+    // 選択肢クリック
+    opts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        if (q.classList.contains('done')) return;
+        opts.forEach(o => o.classList.remove('sel'));
+        opt.classList.add('sel');
+      });
+    });
+
+    // 解答
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        const sel = q.querySelector('.opt.sel');
+        if (!sel) { alert('選択肢を選んでください'); return; }
+        const val = parseInt(sel.dataset.val, 10);
+        opts.forEach(o => {
+          const v = parseInt(o.dataset.val, 10);
+          if (v === correct) o.classList.add('ok');
+          else if (o === sel) o.classList.add('ng');
+        });
+        q.classList.add('done');
+        const isCorrect = val === correct;
+        if (isCorrect) q.classList.add('correct');
+        else q.classList.add('wrong');
+        if (pageId && qid) setWrong(pageId, qid, !isCorrect);
+      });
+    }
+
+    // リセット
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        opts.forEach(o => o.classList.remove('sel','ok','ng'));
+        q.classList.remove('done','correct','wrong');
+      });
+    }
+
+    // ブックマーク
+    if (bmBtn && pageId && qid) {
+      if (isBookmarked(pageId, qid)) bmBtn.classList.add('active');
+      bmBtn.addEventListener('click', () => {
+        const on = toggleBookmark(pageId, qid);
+        bmBtn.classList.toggle('active', on);
+      });
+    }
+
+    // メモ
+    if (memoBtn && pageId && qid) {
+      const existing = getMemo(pageId, qid);
+      if (existing) {
+        memoBtn.classList.add('active');
+        appendMemoDisplay(q, existing);
+      }
+      memoBtn.addEventListener('click', () => {
+        openMemoModal(pageId, qid, q);
+      });
+    }
+  });
+}
+
+function appendMemoDisplay(qEl, text) {
+  let disp = qEl.querySelector('.note-display');
+  if (!disp) {
+    disp = document.createElement('div');
+    disp.className = 'note-display';
+    qEl.appendChild(disp);
+  }
+  disp.textContent = '📝 ' + text;
+}
+
+function removeMemoDisplay(qEl) {
+  const disp = qEl.querySelector('.note-display');
+  if (disp) disp.remove();
+}
+
+function openMemoModal(pageId, qid, qEl) {
+  let modal = document.getElementById('memo-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'memo-modal';
+    modal.className = 'modal-bg';
+    modal.innerHTML = `
+      <div class="modal">
+        <h3>📝 メモ</h3>
+        <textarea id="memo-text" placeholder="この問題について気づいたこと、注意点などをメモしましょう"></textarea>
+        <div class="m-actions">
+          <button class="btn outline small" id="memo-cancel">キャンセル</button>
+          <button class="btn outline small" id="memo-delete">削除</button>
+          <button class="btn accent small" id="memo-save">保存</button>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+  }
+  const ta = modal.querySelector('#memo-text');
+  ta.value = getMemo(pageId, qid);
+  modal.classList.add('show');
+
+  const close = () => modal.classList.remove('show');
+  modal.querySelector('#memo-cancel').onclick = close;
+  modal.querySelector('#memo-save').onclick = () => {
+    const txt = ta.value.trim();
+    setMemo(pageId, qid, txt);
+    const memoBtn = qEl.querySelector('.qbtn.memo');
+    if (txt) {
+      memoBtn.classList.add('active');
+      appendMemoDisplay(qEl, txt);
+    } else {
+      memoBtn.classList.remove('active');
+      removeMemoDisplay(qEl);
+    }
+    close();
+  };
+  modal.querySelector('#memo-delete').onclick = () => {
+    setMemo(pageId, qid, '');
+    const memoBtn = qEl.querySelector('.qbtn.memo');
+    memoBtn.classList.remove('active');
+    removeMemoDisplay(qEl);
+    close();
+  };
+}
+
+/* ---------- タブ(全問/間違えた/★) ---------- */
+function initModeTabs(pageId) {
+  const tabs = document.querySelectorAll('.tabs .tab');
+  if (!tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('on'));
+      tab.classList.add('on');
+      const mode = tab.dataset.mode;
+      filterQuestions(pageId, mode);
+    });
+  });
+}
+
+function filterQuestions(pageId, mode) {
+  document.querySelectorAll('.choice-q').forEach(q => {
+    const qid = q.dataset.qid;
+    let show = true;
+    if (mode === 'wrong') {
+      show = isWrong(pageId, qid);
+    } else if (mode === 'bookmark') {
+      show = isBookmarked(pageId, qid);
+    }
+    q.classList.toggle('hidden', !show);
+  });
+}
+
+/* ============================================================
+   穴埋めチャレンジ機能
+   ============================================================ */
+
+let currentChallenge = {
+  active: false,
+  selectedWord: null,
+  blanks: []
+};
+
+function initChallenge() {
+  const startBtn = document.getElementById('cb-start');
+  const resetBtn = document.getElementById('cb-reset');
+  const judgeBtn = document.getElementById('cb-judge');
+  const cancelBtn = document.getElementById('cb-cancel');
+  if (!startBtn) return; // チャレンジバーがないページはスキップ
+
+  startBtn.addEventListener('click', startChallenge);
+  if (resetBtn) resetBtn.addEventListener('click', resetChallenge);
+  if (judgeBtn) judgeBtn.addEventListener('click', judgeChallenge);
+  if (cancelBtn) cancelBtn.addEventListener('click', cancelChallenge);
+}
+
+function startChallenge() {
+  document.body.classList.add('challenge-mode');
+  const blanks = document.querySelectorAll('.blank-q');
+  if (!blanks.length) {
+    alert('このページには穴埋め問題がありません');
+    return;
+  }
+
+  currentChallenge.active = true;
+  currentChallenge.blanks = Array.from(blanks);
+  currentChallenge.selectedWord = null;
+
+  // 正解ワードを集めて重複排除・シャッフル
+  const words = Array.from(new Set(currentChallenge.blanks.map(b => b.dataset.a)));
+  shuffleArray(words);
+
+  // 各blankを空欄化
+  currentChallenge.blanks.forEach(b => {
+    b.classList.remove('normal', 'filled', 'correct', 'incorrect', 'focus');
+    b.classList.add('empty');
+    b.textContent = '';
+    b.dataset.current = '';
+    b.onclick = () => onBlankClick(b);
+  });
+
+  // 語群を作成
+  const wbWords = document.getElementById('wb-words');
+  wbWords.innerHTML = '';
+  words.forEach(w => {
+    const span = document.createElement('span');
+    span.className = 'wb-word';
+    span.textContent = w;
+    span.dataset.word = w;
+    span.onclick = () => onWordClick(span);
+    wbWords.appendChild(span);
+  });
+
+  // UIを切り替え
+  document.getElementById('word-bank').classList.add('show');
+  document.getElementById('cb-start').style.display = 'none';
+  document.getElementById('cb-reset').style.display = '';
+  document.getElementById('cb-judge').style.display = '';
+  document.getElementById('cb-cancel').style.display = '';
+  document.getElementById('cb-status').textContent = '語群から語句をタップ → 空欄をタップ';
+}
+
+function onWordClick(wordEl) {
+  if (wordEl.classList.contains('used')) return;
+  // 他の選択を解除
+  document.querySelectorAll('.wb-word.sel').forEach(w => w.classList.remove('sel'));
+  wordEl.classList.add('sel');
+  currentChallenge.selectedWord = wordEl;
+  // 空欄をハイライト
+  document.querySelectorAll('.blank-q.empty, .blank-q.filled').forEach(b => {
+    if (!b.classList.contains('correct') && !b.classList.contains('incorrect')) {
+      b.classList.add('focus');
+    }
+  });
+}
+
+function onBlankClick(blankEl) {
+  if (blankEl.classList.contains('correct') || blankEl.classList.contains('incorrect')) return;
+
+  // すでに語が入っていて、新しい語が選択されていない場合 → 語を戻す
+  if (blankEl.classList.contains('filled') && !currentChallenge.selectedWord) {
+    const currentWord = blankEl.dataset.current;
+    if (currentWord) returnWordToBank(currentWord);
+    blankEl.textContent = '';
+    blankEl.dataset.current = '';
+    blankEl.classList.remove('filled', 'focus');
+    blankEl.classList.add('empty');
+    return;
+  }
+
+  // 新しい語を入れる
+  if (!currentChallenge.selectedWord) return;
+  const newWord = currentChallenge.selectedWord.dataset.word;
+
+  // すでに何か入っていたら、その語を語群に戻す
+  if (blankEl.classList.contains('filled') && blankEl.dataset.current) {
+    returnWordToBank(blankEl.dataset.current);
+  }
+
+  // 新しい語を入れる
+  blankEl.textContent = newWord;
+  blankEl.dataset.current = newWord;
+  blankEl.classList.remove('empty', 'focus');
+  blankEl.classList.add('filled');
+
+  // 語群の語を使用済みに
+  currentChallenge.selectedWord.classList.add('used');
+  currentChallenge.selectedWord.classList.remove('sel');
+  currentChallenge.selectedWord = null;
+
+  // フォーカスを全解除
+  document.querySelectorAll('.blank-q.focus').forEach(b => b.classList.remove('focus'));
+
+  // 進捗更新
+  updateStatus();
+}
+
+function returnWordToBank(word) {
+  const words = document.querySelectorAll('.wb-word');
+  // 複数使われている語でも、1つだけ戻す
+  for (const w of words) {
+    if (w.dataset.word === word && w.classList.contains('used')) {
+      w.classList.remove('used');
+      break;
+    }
+  }
+}
+
+function updateStatus() {
+  const total = currentChallenge.blanks.length;
+  const filled = currentChallenge.blanks.filter(b => b.classList.contains('filled')).length;
+  document.getElementById('cb-status').textContent = `${filled} / ${total}`;
+}
+
+function judgeChallenge() {
+  const blanks = currentChallenge.blanks;
+  let allCorrect = true;
+  let filledCount = 0;
+
+  blanks.forEach(b => {
+    const user = b.dataset.current || '';
+    const ans = b.dataset.a;
+    if (user) filledCount++;
+    b.classList.remove('empty', 'filled', 'focus');
+    if (user === ans) {
+      b.classList.add('correct');
+    } else {
+      b.classList.add('incorrect');
+      allCorrect = false;
+    }
+    b.onclick = null;
+  });
+
+  // すべて空欄のままだったら警告
+  if (filledCount === 0) {
+    alert('まだ語句が入っていません。語群から選んで空欄をタップしてください。');
+    // 戻す
+    blanks.forEach(b => {
+      b.classList.remove('correct', 'incorrect');
+      b.classList.add('empty');
+      b.onclick = () => onBlankClick(b);
+    });
+    return;
+  }
+
+  // 語群を非表示に
+  document.getElementById('word-bank').classList.remove('show');
+  document.body.classList.remove('challenge-mode');
+  document.getElementById('cb-judge').style.display = 'none';
+  document.getElementById('cb-cancel').style.display = 'none';
+  document.getElementById('cb-reset').textContent = 'もう一度チャレンジ';
+
+  if (allCorrect) {
+    showPassScreen();
+  } else {
+    showFailToast();
+  }
+}
+
+function showPassScreen() {
+  // 花吹雪
+  const colors = ['#C0392B', '#f5c55b', '#2d7a4e', '#1B2A4A', '#e85443', '#f4a62a'];
+  for (let i = 0; i < 80; i++) {
+    const conf = document.createElement('div');
+    conf.className = 'confetti';
+    conf.style.left = Math.random() * 100 + '%';
+    conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+    conf.style.animationDuration = (2 + Math.random() * 2) + 's';
+    conf.style.animationDelay = Math.random() * 0.5 + 's';
+    document.body.appendChild(conf);
+    setTimeout(() => conf.remove(), 5000);
+  }
+
+  // 合格ダイアログ
+  const overlay = document.getElementById('pass-overlay');
+  overlay.classList.add('show');
+}
+
+function showFailToast() {
+  const wrong = currentChallenge.blanks.filter(b => b.classList.contains('incorrect')).length;
+  const correct = currentChallenge.blanks.filter(b => b.classList.contains('correct')).length;
+  const toast = document.getElementById('fail-toast');
+  toast.innerHTML = `😢 惜しい!<br><span style="font-size:14px;font-weight:normal;">正解: ${correct} / 間違い: ${wrong}<br>もう一度チャレンジしましょう</span>`;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+function resetChallenge() {
+  // 判定結果をクリアして再挑戦
+  const overlay = document.getElementById('pass-overlay');
+  if (overlay) overlay.classList.remove('show');
+  document.getElementById('cb-reset').textContent = 'リセット';
+  startChallenge();
+}
+
+function cancelChallenge() {
+  if (!confirm('チャレンジを中止して通常表示に戻しますか?')) return;
+  // 通常表示に戻す
+  currentChallenge.blanks.forEach(b => {
+    b.classList.remove('empty', 'filled', 'correct', 'incorrect', 'focus');
+    b.classList.add('normal');
+    b.textContent = b.dataset.a;
+    b.dataset.current = '';
+    b.onclick = null;
+  });
+  document.getElementById('word-bank').classList.remove('show');
+  document.body.classList.remove('challenge-mode');
+  document.getElementById('cb-start').style.display = '';
+  document.getElementById('cb-reset').style.display = 'none';
+  document.getElementById('cb-judge').style.display = 'none';
+  document.getElementById('cb-cancel').style.display = 'none';
+  document.getElementById('cb-status').textContent = '';
+  currentChallenge.active = false;
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+/* ---------- 初期化 ---------- */
+function gambaInit(pageId) {
+  if (pageId) document.body.dataset.page = pageId;
+  initTips();
+  initBlanks();
+  initReviewBtn();
+  initChallenge();
+  // 初期状態:blank-qは通常表示
+  document.querySelectorAll('.blank-q').forEach(b => {
+    b.classList.add('normal');
+    b.textContent = b.dataset.a;
+  });
+  if (pageId) {
+    initChoiceQuestions(pageId);
+    initModeTabs(pageId);
+  }
+}
+/* ============================================ */
+/* ミニテスト機能                                 */
+/* ============================================ */
+(function() {
+  'use strict';
+
+  // 花吹雪を散らす
+  function showSakura() {
+    var overlay = document.getElementById('sakura-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'sakura-overlay';
+      overlay.className = 'sakura-overlay';
+      document.body.appendChild(overlay);
+    }
+    overlay.innerHTML = '';
+    overlay.classList.add('show');
+
+    var count = 50;
+    for (var i = 0; i < count; i++) {
+      var petal = document.createElement('div');
+      petal.className = 'sakura-petal' + (Math.random() < 0.5 ? ' alt' : '');
+      petal.style.left = (Math.random() * 100) + 'vw';
+      var dur = 3 + Math.random() * 3;
+      petal.style.animationDuration = dur + 's';
+      petal.style.animationDelay = (Math.random() * 1.5) + 's';
+      petal.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+      overlay.appendChild(petal);
+    }
+
+    setTimeout(function() {
+      overlay.classList.remove('show');
+      overlay.innerHTML = '';
+    }, 6000);
+  }
+
+  // 1つのミニテストを初期化
+  function initMiniTest(el) {
+    var btn = el.querySelector('.mini-btn');
+    var body = el.querySelector('.mini-body');
+    var qs = el.querySelectorAll('.mini-q');
+    var judgeBtn = el.querySelector('.mini-judge');
+    var resetBtn = el.querySelector('.mini-reset');
+    var result = el.querySelector('.mini-result');
+
+    if (!btn || !body) return;
+
+    // 開閉
+    btn.addEventListener('click', function() {
+      el.classList.toggle('is-open');
+      btn.classList.toggle('is-open');
+    });
+
+    // 各問の○×選択
+    qs.forEach(function(q) {
+      var choices = q.querySelectorAll('.mini-c');
+      choices.forEach(function(c) {
+        c.addEventListener('click', function() {
+          if (q.classList.contains('show-exp')) return; // 判定後はロック
+          choices.forEach(function(x) { x.classList.remove('selected'); });
+          c.classList.add('selected');
+          q.dataset.user = c.dataset.v;
+        });
+      });
+    });
+
+    // 答え合わせ
+    judgeBtn.addEventListener('click', function() {
+      var allAnswered = true;
+      qs.forEach(function(q) {
+        if (!q.dataset.user) allAnswered = false;
+      });
+      if (!allAnswered) {
+        result.className = 'mini-result fail show';
+        result.innerHTML = '<span class="big">⚠️</span>すべての問題に解答してください';
+        return;
+      }
+
+      var correctCount = 0;
+      qs.forEach(function(q) {
+        var ans = q.dataset.correct;
+        var user = q.dataset.user;
+        q.classList.add('show-exp');
+        if (ans === user) {
+          q.classList.add('is-correct');
+          correctCount++;
+        } else {
+          q.classList.add('is-wrong');
+        }
+      });
+
+      var total = qs.length;
+      if (correctCount === total) {
+        result.className = 'mini-result pass show';
+        result.innerHTML = '<span class="big">🌸 合格! 🌸</span>全' + total + '問正解です!この調子で次へ進みましょう。';
+        showSakura();
+      } else {
+        result.className = 'mini-result fail show';
+        result.innerHTML = '<span class="big">惜しい!</span>' + total + '問中 ' + correctCount + '問正解。下の解説を確認してから「もう一度挑戦」を押してください。';
+      }
+
+      judgeBtn.style.display = 'none';
+      resetBtn.style.display = 'inline-block';
+    });
+
+    // リセット
+    resetBtn.addEventListener('click', function() {
+      qs.forEach(function(q) {
+        q.classList.remove('is-correct', 'is-wrong', 'show-exp');
+        delete q.dataset.user;
+        var choices = q.querySelectorAll('.mini-c');
+        choices.forEach(function(c) { c.classList.remove('selected'); });
+      });
+      result.className = 'mini-result';
+      result.innerHTML = '';
+      judgeBtn.style.display = 'inline-block';
+      resetBtn.style.display = 'none';
+    });
+  }
+
+  // ページ全体を初期化
+  function initAllMiniTests() {
+    var tests = document.querySelectorAll('.mini-test');
+    tests.forEach(initMiniTest);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllMiniTests);
+  } else {
+    initAllMiniTests();
+  }
+})();
+
+</script>
+</head>
+<body data-page="ch08">
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第8章 / 行政作用</div>
+  <h1>行政行為の附款<span class="stars">★★☆</span></h1>
+  <p class="sub">第7章の続きで、行政行為のサブテーマ「附款」を学びます。内容は難しくないので、時間をかけずに一気に攻略しましょう。</p>
+</header>
+<main>
+
+<!-- 穴埋めチャレンジバー -->
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<!-- 重要ポイント先出し -->
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li><strong>附款は<span class="pk">法律行為的行政行為</span>にのみ付せる</strong>(準法律行為的行政行為には付せない)</li>
+    <li>条件は<span class="pk">不確実な事実</span>、期限は<span class="pk">確実な事実</span>にかからせる附款</li>
+    <li><strong>負担に違反しても本体たる行政行為の効力は失われない</strong>(超頻出の引っかけ)</li>
+  </ol>
+</section>
+
+<!-- 音声プレイヤー -->
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none">
+    <source src="audio/ch08.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div class="sec"><span class="num">1</span>附款とは?</div>
+
+<div class="card">
+  <p><span class="kw" data-tip="行政行為の効果を制限するために主たる意思表示に付加された従たる意思表示">行政行為の附款</span>とは、行政行為の効果を制限するために、<strong>主たる意思表示に付加された従たる意思表示</strong>のことを言います。</p>
+  <p>簡単に言うと、行政行為にくっついている<strong>「おまけ」</strong>みたいなもの。ただし、<span class="pk">おまけとはいえ、これ自体も行政行為</span>として扱われるので注意です。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>運転免許(行政行為)に「眼鏡等」(附款)が付いている。メインは免許、おまけが眼鏡条件というイメージ!</p></div>
+</div>
+
+<div class="card">
+  <h3>🚫 附款は「法律行為的行政行為」にのみ</h3>
+  <p>附款は意思表示の内容を制限するためのものなので、意思表示を要素としない <span class="pk">準法律行為的行政行為には付せません</span>。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>附款を付せるか</th></tr>
+      <tr><td><strong>法律行為的行政行為</strong>(下命・禁止・許可・免除・特許・認可・代理)</td><td><span class="pk">○ 付せる</span></td></tr>
+      <tr><td><strong>準法律行為的行政行為</strong>(確認・公証・通知・受理)</td><td><span class="pk">× 付せない</span></td></tr>
+    </table>
+  </div>
+  <div class="tip-box"><span class="label">覚え方</span><p>「意思表示があるから、それを制限できる」→ 法律行為的行政行為だけ附款OK!</p></div>
+</div>
+
+<div class="card">
+  <h3>📝 附款の根拠</h3>
+  <p>附款を付すには、これを付すことができる旨の<strong>明文規定があれば</strong>もちろん付せます。では、明文規定がなければ付せないかというと、そうではありません。</p>
+  <div class="memo-box"><span class="label">重要</span><p>明文の規定がなくても、<span class="pk">行政庁の裁量で附款を付せる場合がある</span>!</p></div>
+  <p>附款も行政行為ですから、<strong>裁量権行使の一環</strong>として付せるわけです。ただし、裁量行使に制約がかかるのは当然で、<span class="pk">平等原則</span>や<span class="pk">比例原則</span>に違反する附款は許されません。</p>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政行為の附款とは、行政行為の効果を制限するために、主たる意思表示に付加された従たる意思表示をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「おまけ」だが、これ自体も行政行為として扱われる点に注意。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 附款は、確認・公証・通知・受理などの準法律行為的行政行為にも付すことができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 附款は<span class="pk">法律行為的行政行為にのみ付せる</span>。意思表示を要素としない準法律行為的行政行為には付せない。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 附款を付すための明文規定がなくても、行政庁の裁量で附款を付せる場合がある。ただし、平等原則や比例原則に違反する附款は許されない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 裁量権行使の一環として附款を付せる。ただし無制限ではなく、原則による制約がある。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div class="sec"><span class="num">2</span>附款の種類(5つ)</div>
+
+<div class="card">
+  <p>附款には5種類あります。①条件、②期限、③負担、④撤回権の留保、⑤法律効果の一部除外、この順に見ていきましょう。</p>
+</div>
+
+<!-- 条件 -->
+<div class="card">
+  <h3>① 条件(不確実な事実)</h3>
+  <p><span class="pk">条件</span>とは、行政行為の効果を、将来発生することが <span class="pk">不確実な事実</span> にかからせる附款を言います。「不確実」がキーワード。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>「君が出世したら、この車をあげるよ」 → 「出世したら」の部分が条件。出世するかどうかは不確実!</p></div>
+
+  <h4 style="color:#C0392B;margin-top:12px;">📌 条件には2種類ある</h4>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th><th>例</th></tr>
+      <tr><td><span class="pk">停止条件</span></td><td>条件成就によって効果が<span class="pk">発生</span>する</td><td>「道路工事を開始したら通行止めにする」</td></tr>
+      <tr><td><span class="pk">解除条件</span></td><td>条件成就によって効果が<span class="pk">消滅</span>する</td><td>「橋が完成するまでの間は通行止めにする」</td></tr>
+    </table>
+  </div>
+  <div class="tip-box"><span class="label">要注意</span><p>「停止」というイメージと「発生」のイメージが結びつきにくい!<br>停止条件=効果が<strong>停止</strong>している状態が、条件成就で<strong>発生</strong>に変わる、と覚えましょう。</p></div>
+</div>
+
+<!-- 期限 -->
+<div class="card">
+  <h3>② 期限(確実な事実)</h3>
+  <p><span class="pk">期限</span>とは、行政行為の効果を将来発生することが <span class="pk">確実な事実</span> にかからせる附款を言います。条件との違いは「確実か不確実か」だけ。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th></tr>
+      <tr><td><strong>始期</strong></td><td>「○年○月○日から」(効果の発生時期)</td></tr>
+      <tr><td><strong>終期</strong></td><td>「△年△月△日まで」(効果の消滅時期)</td></tr>
+    </table>
+  </div>
+  <p>「○年○月○日から△年○月△日まで」のように、<strong>確実な日時</strong>を定めるのが典型例。ただし、「次に雨が降ったときから、それがやむまで」のような<span class="pk">不確定期限</span>もあり得ます。いつ雨が降るかは特定できませんが、将来的に必ず降るから期限なんですね。</p>
+</div>
+
+<!-- 負担 -->
+<div class="card">
+  <h3>③ 負担 ⭐超頻出</h3>
+  <p><span class="pk">負担</span>とは、特許・許可・認可などの <span class="kw" data-tip="国民に対してメリットを与える行政行為">授益的行政行為</span>に対し、<span class="pk">特別の義務を課す</span>附款です。</p>
+  <p>典型例は、運転免許を与える際の<span class="pk">眼鏡着用義務</span>。視力が悪い人の免許証に「免許の条件等」として「眼鏡等」と書いてあるアレです。法令上は「条件」と書いてありますが、講学上は<strong>負担</strong>!</p>
+
+  <h4 style="color:#C0392B;margin-top:12px;">📌 負担の超重要論点2つ</h4>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">論点①</span>
+    <p><strong>負担を付すには法律の根拠が必要</strong>。本来の行政行為以上の義務を課すから。</p>
+  </div>
+  <div class="memo-box" style="background:#fff9ed;border-color:#f4a62a;">
+    <span class="label">論点②(頻出!)</span>
+    <p>負担に違反しても、<span class="pk">本体たる行政行為の効力は当然には失われない</span>!</p>
+  </div>
+  <div class="ex-box"><span class="label">例え話</span><p>眼鏡着用義務に違反して運転しても、運転免許自体は生き残る(2点減点+反則金7,000円で済む)。こんな感じです。頻出の引っかけなので絶対に覚えましょう!</p></div>
+</div>
+
+<!-- 撤回権の留保 -->
+<div class="card">
+  <h3>④ 撤回権の留保</h3>
+  <p><span class="pk">撤回権の留保</span>とは、特許・許可・認可などの授益的行政行為をする際に、<span class="pk">その行政行為を撤回する権利を留保</span>しておくことを言います。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>「土地の使用を許可します。しかし、公益上の必要が生じた場合には撤回します」というイメージ。</p></div>
+
+  <h4 style="color:#C0392B;margin-top:12px;">📌 撤回権の留保の要注意点</h4>
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">重要!</span><p>撤回権を留保していたとしても、<span class="pk">公益上必要な場合など撤回すべき実質的な理由がない限り、撤回権を行使できない</span>!<br>→ 濫用的な撤回をシャットアウトする趣旨です。</p></div>
+</div>
+
+<!-- 法律効果の一部除外 -->
+<div class="card">
+  <h3>⑤ 法律効果の一部除外</h3>
+  <p><span class="pk">法律効果の一部除外</span>とは、法律が与えた効果の一部を発生させないようにすることを言います。</p>
+  <div class="ex-box"><span class="label">例え話</span><p>公務員に出張を命じておきながら、旅費は一定額までしか支給しない、というような場合。</p></div>
+  <div class="tip-box" style="border-color:#C0392B;"><span class="label">重要</span><p>法律効果の一部除外は、<span class="pk">行政行為によって国会で作った法律の内容を変えてしまう</span>ことを意味するので、勝手にできるわけではありません。<span class="pk">法律の根拠が必要</span>です。</p></div>
+</div>
+
+<!-- まとめ表 -->
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 附款5種類まとめ</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th><th>特徴</th></tr>
+      <tr><td><strong>条件</strong></td><td>不確実な事実にかからせる</td><td>停止条件・解除条件</td></tr>
+      <tr><td><strong>期限</strong></td><td>確実な事実にかからせる</td><td>始期・終期・不確定期限</td></tr>
+      <tr><td><span class="pk">負担</span></td><td>特別の義務を課す</td><td>違反しても本体は失効せず</td></tr>
+      <tr><td><strong>撤回権の留保</strong></td><td>撤回する権利を留保</td><td>実質的理由がないと撤回不可</td></tr>
+      <tr><td><strong>法律効果の一部除外</strong></td><td>効果の一部を発生させない</td><td>法律の根拠必要</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ミニテスト Section 2(超頻出・5種類) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・5種類)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 条件は将来発生することが不確実な事実、期限は将来発生することが確実な事実にかからせる附款である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「条件=不確実、期限=確実」。違いは確実か否かだけ。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 停止条件とは、条件成就によって行政行為の効果が消滅する条件をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 停止条件は条件成就で効果が<span class="pk">発生</span>する。効果が消滅するのは<span class="pk">解除条件</span>。逆に覚えると致命的。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 「次に雨が降ったときから、それがやむまで」のような不確定期限も、条件ではなく期限である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ いつ降るかは特定できないが、<span class="pk">将来必ず降る</span>から確実な事実=期限。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問4 運転免許に付された眼鏡着用義務(負担)に違反すると、運転免許自体の効力が当然に失われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 負担に違反しても<span class="pk">本体たる行政行為の効力は当然には失われない</span>。眼鏡なしで運転しても免許は生きる(2点減点+反則金で済む)。超頻出引っかけ!</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問5 負担を付すには法律の根拠が必要である。本来の行政行為以上の義務を課すから。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 本体の効果を超える義務を課すので、法律の根拠が必要。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問6 撤回権の留保が附款として付されている場合、行政庁は理由のいかんを問わず自由に撤回できる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 撤回権の留保があっても、<span class="pk">公益上必要など撤回すべき実質的な理由</span>がない限り撤回できない。濫用的撤回をシャットアウトする趣旨。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問7 法律効果の一部除外を行うには、法律の根拠が必要である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 国会で作った法律の内容を変えてしまうことになるため、法律の根拠が必要。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div class="sec"><span class="num">3</span>附款の限界</div>
+
+<div class="card">
+  <p>附款は行政行為の目的を確実に達成するために付されるもの。したがって、次のような制約があります。</p>
+  <ul style="margin-top:8px;">
+    <li><strong>本体たる行政行為の目的と無関係な附款は付せない</strong><br>
+    <span style="color:#888;font-size:0.9em;">例:風俗営業の許可(健全な風俗維持が目的)に「ふるさと納税をすること」という附款は付せない</span></li>
+    <li><strong>比例原則に違反する附款は違法</strong><br>
+    <span style="color:#888;font-size:0.9em;">必要最小限度を超える義務を課すのは×</span></li>
+    <li><strong>平等原則に違反する附款も違法</strong></li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>🔍 違法な附款の効果</h3>
+  <p>附款も行政行為ですから<span class="pk">公定力</span>を持ちます。したがって、たとえ違法な附款が付されていても、それが取り消されるまでは一応有効として扱われます。</p>
+
+  <h4 style="color:#C0392B;margin-top:12px;">附款だけの取消し?それとも全部取消し?</h4>
+  <p>附款が違法な場合、場面を2つに分けて考えます。</p>
+  <div class="tbl">
+    <table>
+      <tr><th>場面</th><th>取消しの範囲</th></tr>
+      <tr><td>附款が本体と<span class="pk">可分</span></td><td><span class="pk">附款だけ</span>の取消しを求められる</td></tr>
+      <tr><td>附款が本体と<span class="pk">不可分</span></td><td>行政行為<span class="pk">全体</span>を取り消す必要あり</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">例え話</span><p>おまけが本体から切り離せるなら、おまけだけ返品OK。切り離せない一体のセットなら、全部返品、というイメージです。</p></div>
+</div>
+
+<!-- ミニテスト Section 3 -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 違法な附款が付された場合、当該附款は当然に効力を生じない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 附款も行政行為なので<span class="pk">公定力</span>を持つ。違法でも、取り消されるまでは一応有効。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 違法な附款の取消しの範囲は、附款が本体と可分なら附款だけ、不可分なら行政行為全体を取り消す必要がある。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 可分・不可分の判定がポイント。一体のセットなら全部取消し。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 附款は本体の行政行為の目的を達成するためのものなので、目的と無関係な附款や比例原則・平等原則に違反する附款は許されない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 附款にも当然「本体の目的に資すること」「諸原則に違反しないこと」という限界がある。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<!-- 学習ツール -->
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch08_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第8章 行政行為の附款" data-url="gyosei_ch08.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch07.html">
+    <span class="label">◀ BACK</span>
+    <span class="title">第7章 行政行為の種類・効力</span>
+  </a>
+  <a href="gyosei_ch08_q.html" class="next">
+    <span class="label">NEXT ▶</span>
+    <span class="title">第8章 演習問題</span>
+  </a>
+</nav>
+
+</main>
+</div>
+
+<!-- preview: app.js skipped -->
+<script>
+  (function() {
+    function run() {
+      if (typeof gambaInit === 'function') {
+        gambaInit('ch08');
+      } else {
+        setTimeout(run, 50);
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', run);
+    } else {
+      run();
+    }
+  })();
+</script>
+</body>
+</html>
