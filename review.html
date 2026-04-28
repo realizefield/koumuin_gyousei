@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>復習リスト | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+<style>
+.rv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.rv-item .info { flex: 1; }
+.rv-item .title { font-weight: bold; color: #1B2A4A; text-decoration: none; }
+.rv-item .title:hover { color: #C0392B; text-decoration: underline; }
+.rv-item .date { font-size: 12px; color: #888; margin-top: 3px; }
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px dashed #c8c0ae;
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <span class="brand">GAMBA 行政法</span>
+  <span class="sep">|</span>
+  <a href="index.html">目次</a>
+  <a href="review.html">復習リスト</a>
+</nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">📌 Review List</div>
+  <h1>復習リスト</h1>
+  <p class="sub">「復習リストに追加」したページがここに並びます。試験前の総ざらいに活用してください。</p>
+</header>
+<main>
+
+<div id="rv-list"></div>
+
+<div style="margin-top:24px;text-align:center;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+  <button class="btn outline" onclick="clearAllReview()">すべてクリア</button>
+  <a href="index.html" class="btn" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+function render() {
+  const list = getReviewList();
+  const container = document.getElementById('rv-list');
+  if (list.length === 0) {
+    container.innerHTML = '<div class="empty">📭 復習リストはまだ空です<br><small style="color:#aaa;">解説ページや演習ページの「復習リストに追加」ボタンを押してください</small></div>';
+    return;
+  }
+  container.innerHTML = list.map(r => {
+    const d = new Date(r.date);
+    const dateStr = `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
+    return `
+      <div class="rv-item">
+        <div class="info">
+          <a href="${r.url}" class="title">${r.title}</a>
+          <div class="date">追加日: ${dateStr}</div>
+        </div>
+        <button class="btn outline small" onclick="removeItem('${r.url}')">削除</button>
+      </div>`;
+  }).join('');
+}
+function removeItem(url) {
+  if (!confirm('この項目を復習リストから削除しますか?')) return;
+  removeFromReview(url);
+  render();
+}
+function clearAllReview() {
+  if (!confirm('復習リストをすべてクリアしますか?この操作は取り消せません。')) return;
+  localStorage.removeItem(REVIEW_KEY);
+  render();
+}
+render();
+</script>
+
+</body>
+</html>

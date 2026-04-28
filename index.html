@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>GAMBA 行政法 全30章 目次</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'BIZ UDGothic','Hiragino Kaku Gothic Pro','Meiryo',sans-serif;background:#eef2f7;color:#1a1a2e;min-height:100vh;font-size:15px}
+.top-header{background:linear-gradient(135deg,#1B3A6B 0%,#C0392B 100%);color:#fff;padding:16px 16px 0;text-align:center}
+.top-header h1{font-size:18px;font-weight:700;letter-spacing:.05em}
+.top-header p{font-size:12px;margin-top:3px;opacity:.85}
+.summary-bar{background:rgba(0,0,0,.25);margin-top:12px;padding:9px 14px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;font-size:12px;color:#fff}
+.sum-item{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.sum-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sum-dot-a{background:#4caf50}
+.sum-dot-b{background:#f9a825}
+.sum-dot-c{background:#e53935}
+.sum-dot-n{background:#aaa}
+.sum-count{font-weight:700;font-size:15px;min-width:18px;text-align:center}
+.wrap{max-width:920px;margin:0 auto;padding:16px 12px 48px}
+.unit{background:#fff;border-radius:14px;border:1px solid #dde3ee;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden}
+.unit-hd{background:linear-gradient(90deg,#1B3A6B,#1B5E8B);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.unit-num{background:rgba(255,255,255,.2);border-radius:8px;padding:3px 10px;font-size:13px;font-weight:700;white-space:nowrap}
+.unit-title{font-size:16px;font-weight:700;flex:1}
+.unit-badge{font-size:11px;background:rgba(255,255,255,.3);border-radius:10px;padding:2px 8px;white-space:nowrap;font-weight:700}
+.unit-body{padding:14px 16px}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:4px}
+.sec-card{border-radius:10px;border:1.5px solid #dde3ee;overflow:hidden;transition:.2s;background:#fff}
+.sec-card:hover{box-shadow:0 3px 12px rgba(0,0,0,.1);transform:translateY(-1px)}
+.sec-card a{text-decoration:none;color:inherit;display:block}
+.sc-hd{background:#f0f4ff;border-bottom:2px solid #C0392B;padding:9px 12px;display:flex;align-items:center;gap:8px}
+.sc-num{width:30px;height:24px;background:#1B3A6B;color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.sc-title{font-size:13px;font-weight:700;color:#1B3A6B;flex:1;line-height:1.3}
+.sc-stars{font-size:11px;color:#f9a825;letter-spacing:-1px;flex-shrink:0}
+.sc-body{padding:9px 12px;background:#fff}
+.sc-topics{list-style:none;margin:0;padding:0}
+.sc-topics li{font-size:12px;color:#555;padding:2px 0;border-bottom:1px solid #f0f0f5;line-height:1.5}
+.sc-topics li:last-child{border-bottom:none}
+.sc-topics li::before{content:"・";color:#C0392B}
+.sc-mini-badge{display:inline-block;background:#fff5f0;color:#C0392B;border:1px solid #fbc8b5;border-radius:8px;padding:1px 7px;font-size:10px;font-weight:700;margin-left:5px}
+.sc-btn-row{display:flex;gap:6px;margin-top:8px}
+.sc-btn{flex:1;text-align:center;padding:7px 4px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none;transition:.15s;font-family:inherit;border:none;cursor:pointer;display:block}
+.sc-btn-learn{background:#1B3A6B;color:#fff}
+.sc-btn-learn:hover{background:#0f2545}
+.sc-btn-practice{background:#C0392B;color:#fff;border:1.5px solid #8a2820}
+.sc-btn-practice:hover{background:#8a2820;color:#fff}
+.abc-row{display:flex;gap:6px;padding:8px 12px 10px}
+.abc-btn{flex:1;padding:7px 2px;border-radius:20px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;transition:.15s;border:2px solid;text-align:center;background:#fff}
+.abc-btn-a{border-color:#2e7d32;color:#fff;background:#43a047}
+.abc-btn-b{border-color:#f57f17;color:#fff;background:#fb8c00}
+.abc-btn-c{border-color:#c62828;color:#fff;background:#e53935}
+.abc-btn-a.sel{background:#1b5e20;color:#fff;border-color:#1b5e20}
+.abc-btn-b.sel{background:#e65100;color:#fff;border-color:#e65100}
+.abc-btn-c.sel{background:#b71c1c;color:#fff;border-color:#b71c1c}
+.sec-card.status-a{border-color:#2e7d32}
+.sec-card.status-a .sc-hd{background:#e8f5e9;border-bottom-color:#2e7d32}
+.sec-card.status-b{border-color:#f9a825}
+.sec-card.status-b .sc-hd{background:#fff9e6;border-bottom-color:#f9a825}
+.sec-card.status-c{border-color:#e53935}
+.sec-card.status-c .sc-hd{background:#fce8e8;border-bottom-color:#e53935}
+.flow{background:#fff;border-radius:14px;border:1px solid #dde3ee;padding:14px 16px;margin-bottom:20px}
+.flow-title{font-size:14px;font-weight:700;color:#1B3A6B;margin-bottom:10px;padding-bottom:6px;border-bottom:2px solid #C0392B}
+.flow-steps{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.flow-step{background:#f0f4ff;border:1px solid #b3c6ee;border-radius:8px;padding:7px 12px;font-size:12px;color:#1B3A6B;font-weight:700;white-space:nowrap}
+.flow-arrow{color:#C0392B;font-size:16px;font-weight:700}
+.review-link{display:block;text-align:center;background:#fff9ed;border:1.5px solid #f4a62a;border-radius:10px;padding:12px;margin-bottom:20px;text-decoration:none;color:#8a5a00;font-weight:700;font-size:14px;transition:.2s}
+.review-link:hover{background:#ffe9b8;transform:translateY(-1px)}
+canvas{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;display:none}
+</style>
+</head>
+<body>
+<canvas id="cc"></canvas>
+<div class="top-header">
+  <h1>📚 GAMBA 行政法 全30章 目次</h1>
+  <p>熊本市役所・大津町役場 6月試験対策 ― 章をタップして学習を始めよう ―</p>
+  <div class="summary-bar">
+    <div class="sum-item"><span class="sum-dot sum-dot-a"></span>A OK <span class="sum-count" id="cnt-a">0</span> 章</div>
+    <div class="sum-item"><span class="sum-dot sum-dot-b"></span>B 要復習 <span class="sum-count" id="cnt-b">0</span> 章</div>
+    <div class="sum-item"><span class="sum-dot sum-dot-c"></span>C 何度も復習 <span class="sum-count" id="cnt-c">0</span> 章</div>
+    <div class="sum-item"><span class="sum-dot sum-dot-n"></span>未実施 <span class="sum-count" id="cnt-n">30</span> 章</div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="flow">
+    <div class="flow-title">📖 学習の流れ</div>
+    <div class="flow-steps">
+      <div class="flow-step">① 解説を読む</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">② ✏️ ミニテスト</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">③ 演習問題</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">④ A/B/C で自己評価</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">⑤ 復習リストへ</div>
+    </div>
+  </div>
+
+  <a href="review.html" class="review-link">📌 復習リストを開く ― ブックマーク・間違えた問題を確認</a>
+
+  <!-- Unit 1: 行政法総論 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 1</span><span class="unit-title">行政法総論(基本原理・組織)</span><span class="unit-badge">★ 基礎</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch01">
+          <a href="gyosei_ch01.html"><div class="sc-hd"><span class="sc-num">第1章</span><span class="sc-title">行政法の基本原理</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>法律による行政の原理</li><li>法律の優位・法律の留保</li><li>侵害留保説・全部留保説</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch01.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch01_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch01','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch01','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch01','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch02">
+          <a href="gyosei_ch02.html"><div class="sc-hd"><span class="sc-num">第2章</span><span class="sc-title">行政法の法源</span><span class="sc-stars">★☆☆</span></div><div class="sc-body"><ul class="sc-topics"><li>成文法源と不文法源</li><li>慣習法・条理・判例の役割</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch02.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch02_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch02','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch02','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch02','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch03">
+          <a href="gyosei_ch03.html"><div class="sc-hd"><span class="sc-num">第3章</span><span class="sc-title">行政立法</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>法規命令と行政規則</li><li>委任命令・執行命令</li><li>判例:児童扶養手当事件等</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch03.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch03_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch03','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch03','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch03','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch04">
+          <a href="gyosei_ch04.html"><div class="sc-hd"><span class="sc-num">第4章</span><span class="sc-title">行政上の法律関係</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>公法・私法二元論</li><li>公法上の法律関係への民法適用</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch04.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch04_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch04','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch04','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch04','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch05">
+          <a href="gyosei_ch05.html"><div class="sc-hd"><span class="sc-num">第5章</span><span class="sc-title">行政組織</span><span class="sc-stars">★☆☆</span></div><div class="sc-body"><ul class="sc-topics"><li>行政庁・補助機関・諮問機関</li><li>独立行政法人・指定法人</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch05.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch05_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch05','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch05','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch05','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch06">
+          <a href="gyosei_ch06.html"><div class="sc-hd"><span class="sc-num">第6章</span><span class="sc-title">権限の代行</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>権限の代理・委任</li><li>専決・代決の違い</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch06.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch06_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch06','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch06','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch06','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 2: 行政作用法 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 2</span><span class="unit-title">行政作用法(行政行為・指導・契約)</span><span class="unit-badge">⭐ 重要</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch07">
+          <a href="gyosei_ch07.html"><div class="sc-hd"><span class="sc-num">第7章</span><span class="sc-title">行政行為の種類と効力</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>命令・形成・確認・通知行為</li><li>公定力・不可争力・自力執行力</li><li>不可変更力</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch07.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch07_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch07','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch07','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch07','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch08">
+          <a href="gyosei_ch08.html"><div class="sc-hd"><span class="sc-num">第8章</span><span class="sc-title">行政行為の附款</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>条件・期限・負担・撤回権の留保</li><li>附款の限界・違法附款の処理</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch08.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch08_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch08','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch08','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch08','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch09">
+          <a href="gyosei_ch09.html"><div class="sc-hd"><span class="sc-num">第9章</span><span class="sc-title">行政行為の瑕疵</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>無効と取消し・撤回の区別</li><li>違法性の承継</li><li>判例:重大明白説</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch09.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch09_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch09','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch09','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch09','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch10">
+          <a href="gyosei_ch10.html"><div class="sc-hd"><span class="sc-num">第10章</span><span class="sc-title">行政裁量</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>羈束行為と裁量行為</li><li>裁量権の逸脱・濫用</li><li>マクリーン事件・神戸税関事件</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch10.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch10_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch10','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch10','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch10','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch11">
+          <a href="gyosei_ch11.html"><div class="sc-hd"><span class="sc-num">第11章</span><span class="sc-title">行政指導</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>定義・3原則(任意性等)</li><li>行政指導指針</li><li>判例:武蔵野市事件</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch11.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch11_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch11','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch11','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch11','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch12">
+          <a href="gyosei_ch12.html"><div class="sc-hd"><span class="sc-num">第12章</span><span class="sc-title">行政契約</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>調達契約・規制行政契約</li><li>給付行政契約</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch12.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch12_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch12','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch12','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch12','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch13">
+          <a href="gyosei_ch13.html"><div class="sc-hd"><span class="sc-num">第13章</span><span class="sc-title">行政計画</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>計画策定の手続</li><li>計画担保責任</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch13.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch13_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch13','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch13','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch13','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch14">
+          <a href="gyosei_ch14.html"><div class="sc-hd"><span class="sc-num">第14章</span><span class="sc-title">行政上の強制</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>代執行・執行罰・直接強制</li><li>強制徴収・即時強制</li><li>判例:成田新法事件</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch14.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch14_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch14','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch14','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch14','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch15">
+          <a href="gyosei_ch15.html"><div class="sc-hd"><span class="sc-num">第15章</span><span class="sc-title">行政罰</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>行政刑罰と秩序罰の違い</li><li>過料の徴収手続</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch15.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch15_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch15','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch15','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch15','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 3: 行政手続・情報公開 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 3</span><span class="unit-title">行政手続・情報公開</span><span class="unit-badge">⭐ 重要</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch16">
+          <a href="gyosei_ch16.html"><div class="sc-hd"><span class="sc-num">第16章</span><span class="sc-title">行政手続法1(申請・不利益処分)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>申請に対する処分(審査基準)</li><li>不利益処分(処分基準・聴聞・弁明)</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch16.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch16_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch16','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch16','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch16','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch17">
+          <a href="gyosei_ch17.html"><div class="sc-hd"><span class="sc-num">第17章</span><span class="sc-title">行政手続法2(指導・パブコメ)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>行政指導(任意性・3原則)</li><li>意見公募手続(30日以上)</li><li>処分等の求め</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch17.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch17_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch17','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch17','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch17','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch18">
+          <a href="gyosei_ch18.html"><div class="sc-hd"><span class="sc-num">第18章</span><span class="sc-title">情報公開法</span><span class="sc-stars">★☆☆</span></div><div class="sc-body"><ul class="sc-topics"><li>「何人も」開示請求可</li><li>不開示情報6類型(コホクコウシンジ)</li><li>「知る権利」明文なし</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch18.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch18_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch18','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch18','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch18','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 4: 行政争訟法 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 4</span><span class="unit-title">行政争訟法(不服審査・取消訴訟)</span><span class="unit-badge">🔥 超重要</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch19">
+          <a href="gyosei_ch19.html"><div class="sc-hd"><span class="sc-num">第19章</span><span class="sc-title">行政不服審査法1</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>審査請求の対象・期間(3か月)</li><li>処分庁・上級庁・第三者機関</li><li>違法+不当を対象</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch19.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch19_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch19','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch19','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch19','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch20">
+          <a href="gyosei_ch20.html"><div class="sc-hd"><span class="sc-num">第20章</span><span class="sc-title">行政不服審査法2</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>審理員・行政不服審査会</li><li>裁決の種類(却下/棄却/認容/事情)</li><li>不利益変更禁止</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch20.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch20_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch20','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch20','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch20','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch21">
+          <a href="gyosei_ch21.html"><div class="sc-hd"><span class="sc-num">第21章</span><span class="sc-title">行政事件訴訟法1</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>訴訟類型(コウ・トウ・ミン・キカン)</li><li>処分性・原告適格・訴えの利益</li><li>出訴期間6か月・1年</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch21.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch21_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch21','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch21','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch21','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch22">
+          <a href="gyosei_ch22.html"><div class="sc-hd"><span class="sc-num">第22章</span><span class="sc-title">行政事件訴訟法2</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>義務付け・差止め(平成16年新設)</li><li>執行停止・内閣総理大臣の異議</li><li>第三者効・拘束力</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch22.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch22_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch22','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch22','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch22','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 5: 国家補償 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 5</span><span class="unit-title">国家補償(国家賠償・損失補償)</span><span class="unit-badge">🔥 超重要</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch23">
+          <a href="gyosei_ch23.html"><div class="sc-hd"><span class="sc-num">第23章</span><span class="sc-title">国家賠償法1(1条責任)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>公権力の行使・公務員(機能的概念)</li><li>外形標準説・職務行為基準説</li><li>規制権限不行使違法</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch23.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch23_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch23','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch23','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch23','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch24">
+          <a href="gyosei_ch24.html"><div class="sc-hd"><span class="sc-num">第24章</span><span class="sc-title">国家賠償法2(2条責任)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>無過失責任・通常の安全性</li><li>高知落石・大東水害・多摩川水害</li><li>大阪空港・故障車・赤色灯</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch24.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch24_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch24','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch24','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch24','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch25">
+          <a href="gyosei_ch25.html"><div class="sc-hd"><span class="sc-num">第25章</span><span class="sc-title">損失補償</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>適法行為+特別の犠牲</li><li>ため池条例(補償不要)</li><li>河川附近地(直接29条3項)</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch25.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch25_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch25','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch25','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch25','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 6: 地方自治法 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 6</span><span class="unit-title">地方自治法</span><span class="unit-badge">🔥 超重要</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch26">
+          <a href="gyosei_ch26.html"><div class="sc-hd"><span class="sc-num">第26章</span><span class="sc-title">地方自治法1(団体・住民・条例)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>団体自治+住民自治</li><li>住民は国籍要件なし</li><li>条例罰則「2-100-5」・徳島市公安条例</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch26.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch26_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch26','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch26','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch26','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch27">
+          <a href="gyosei_ch27.html"><div class="sc-hd"><span class="sc-num">第27章</span><span class="sc-title">地方自治法2(議会・長・直接請求)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>二元代表制・不信任議決</li><li>「3分の2出席+4分の3同意」</li><li>直接請求「立つの50・首切る3」</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch27.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch27_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch27','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch27','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch27','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch28">
+          <a href="gyosei_ch28.html"><div class="sc-hd"><span class="sc-num">第28章</span><span class="sc-title">地方自治法3(財務・公の施設)</span><span class="sc-stars">★★☆</span></div><div class="sc-body"><ul class="sc-topics"><li>泉佐野・上尾市福祉会館事件</li><li>指定管理者制度(平成15年)</li><li>国地方係争処理委員会</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch28.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch28_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch28','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch28','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch28','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unit 7: 直前対策 -->
+  <div class="unit">
+    <div class="unit-hd"><span class="unit-num">Unit 7</span><span class="unit-title">直前対策(横断・総まとめ)</span><span class="unit-badge">🌸 仕上げ</span></div>
+    <div class="unit-body">
+      <div class="sec-grid">
+        <div class="sec-card" data-id="ch29">
+          <a href="gyosei_ch29.html"><div class="sc-hd"><span class="sc-num">第29章</span><span class="sc-title">総合演習1(横断ミックス)</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>判例30選・頻出数字横断</li><li>論点対比表(ひっかけ防止)</li><li>引っかけパターンTOP10・ゴロ集</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch29.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch29_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch29','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch29','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch29','c',this)">C 何度も</button></div>
+        </div>
+        <div class="sec-card" data-id="ch30">
+          <a href="gyosei_ch30.html"><div class="sc-hd"><span class="sc-num">第30章</span><span class="sc-title">総まとめ&試験直前対策</span><span class="sc-stars">★★★</span></div><div class="sc-body"><ul class="sc-topics"><li>直前チェックリスト・1ページサマリー</li><li>本試験の解き方戦略・記述対策</li><li>本試験予想ヤマ・最終総ざらい</li></ul></div></a>
+          <div class="sc-body" style="padding-top:0"><div class="sc-btn-row"><a class="sc-btn sc-btn-learn" href="gyosei_ch30.html">解説<span class="sc-mini-badge">ミニテスト</span></a><a class="sc-btn sc-btn-practice" href="gyosei_ch30_q.html">演習</a></div></div>
+          <div class="abc-row"><button class="abc-btn abc-btn-a" onclick="setABC('ch30','a',this)">A OK</button><button class="abc-btn abc-btn-b" onclick="setABC('ch30','b',this)">B 要復習</button><button class="abc-btn abc-btn-c" onclick="setABC('ch30','c',this)">C 何度も</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var STORAGE_KEY = 'gamba_gyosei_status';
+var status = {};
+var activeIds = ['ch01','ch02','ch03','ch04','ch05','ch06','ch07','ch08','ch09','ch10','ch11','ch12','ch13','ch14','ch15','ch16','ch17','ch18','ch19','ch20','ch21','ch22','ch23','ch24','ch25','ch26','ch27','ch28','ch29','ch30'];
+
+// localStorage から復元
+try {
+  var saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) status = JSON.parse(saved);
+} catch(e) { status = {}; }
+
+// 起動時に保存済み状態を反映
+function applyStoredStatus() {
+  Object.keys(status).forEach(function(id) {
+    var grade = status[id];
+    if (!grade) return;
+    var card = document.querySelector('[data-id="'+id+'"]');
+    if (!card) return;
+    card.classList.add('status-' + grade);
+    var btnClass = 'abc-btn-' + grade;
+    var btn = card.querySelector('.' + btnClass);
+    if (btn) btn.classList.add('sel');
+  });
+}
+
+function saveStatus() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(status)); } catch(e) {}
+}
+
+function setABC(id, grade, btn) {
+  var card = document.querySelector('[data-id="'+id+'"]');
+  if (!card) return;
+  // 同じボタンを再クリックでクリア
+  if (status[id] === grade) {
+    delete status[id];
+    card.className = card.className.replace(/ ?status-[abc]/g,'');
+    card.querySelectorAll('.abc-btn').forEach(function(b){b.classList.remove('sel');});
+    saveStatus();
+    updateSummary();
+    return;
+  }
+  status[id] = grade;
+  card.className = card.className.replace(/ ?status-[abc]/g,'');
+  card.classList.add('status-' + grade);
+  card.querySelectorAll('.abc-btn').forEach(function(b){b.classList.remove('sel');});
+  btn.classList.add('sel');
+  saveStatus();
+  if (grade === 'a') confetti();
+  updateSummary();
+}
+
+function updateSummary() {
+  var ca=0, cb=0, cc=0, cn=0;
+  activeIds.forEach(function(id) {
+    var s = status[id];
+    if (s === 'a') ca++;
+    else if (s === 'b') cb++;
+    else if (s === 'c') cc++;
+    else cn++;
+  });
+  document.getElementById('cnt-a').textContent = ca;
+  document.getElementById('cnt-b').textContent = cb;
+  document.getElementById('cnt-c').textContent = cc;
+  document.getElementById('cnt-n').textContent = cn;
+}
+
+function confetti() {
+  var cv = document.getElementById('cc');
+  cv.width = window.innerWidth;
+  cv.height = window.innerHeight;
+  cv.style.display = 'block';
+  var ctx = cv.getContext('2d');
+  var cols = ['#f9a825','#0097A7','#1B3A6B','#e53935','#2e7d32','#ff6f00','#7b1fa2','#ff4081','#C0392B'];
+  var ps = [];
+  for (var k=0; k<130; k++) {
+    ps.push({
+      x: Math.random() * cv.width,
+      y: -20 - Math.random() * 180,
+      w: 7 + Math.random() * 9,
+      h: 3 + Math.random() * 5,
+      c: cols[Math.floor(Math.random() * cols.length)],
+      s: 2 + Math.random() * 4,
+      a: Math.random() * 360,
+      sp: 3 - Math.random() * 6,
+      d: (Math.random() - 0.5) * 2.5
+    });
+  }
+  var fr = 0;
+  function draw() {
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ps.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.a * Math.PI / 180);
+      ctx.fillStyle = p.c;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+      p.y += p.s;
+      p.x += p.d;
+      p.a += p.sp;
+    });
+    fr++;
+    if (fr < 100) requestAnimationFrame(draw);
+    else {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      cv.style.display = 'none';
+    }
+  }
+  draw();
+}
+
+applyStoredStatus();
+updateSummary();
+</script>
+</body>
+</html>
