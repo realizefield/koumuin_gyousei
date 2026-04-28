@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第22章 行政事件訴訟法2 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+<style>
+/* ============================================================
+   GAMBA行政法学習システム 共通CSS
+   深紺(#1B2A4A) × 深紅(#C0392B) 江原予備校カラー
+   ============================================================ */
+
+/* ---------- リセット & ベース ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Meiryo", "メイリオ", "Yu Gothic", "游ゴシック", sans-serif;
+  color: #222;
+  line-height: 1.8;
+  background: #f5f2ec;
+  font-size: 15px;
+}
+img { max-width: 100%; height: auto; }
+a { color: #1B2A4A; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #C0392B; }
+
+/* ---------- レイアウト ---------- */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+main { padding-top: 20px; }
+
+/* ---------- トップナビ ---------- */
+.topnav {
+  background: #1B2A4A;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+}
+.topnav .brand { font-weight: bold; color: #f5c55b; }
+.topnav .sep { color: #6b7a95; }
+.topnav a { color: #fff; text-decoration: none; }
+.topnav a:hover { color: #f5c55b; }
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  background: linear-gradient(135deg, #1B2A4A 0%, #2a3e6e 100%);
+  color: #fff;
+  padding: 36px 28px 28px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 16px rgba(27,42,74,0.2);
+}
+.hero .crumb {
+  font-size: 12px;
+  color: #f5c55b;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.hero h1 {
+  font-size: 26px;
+  margin: 0 0 8px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+.hero h1 .stars {
+  display: inline-block;
+  margin-left: 10px;
+  color: #f5c55b;
+  font-size: 16px;
+}
+.hero .sub {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #d4dae8;
+  line-height: 1.7;
+}
+
+/* ---------- ゴール(学習目標) ---------- */
+.goals {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 18px 0;
+  border-left: 5px solid #C0392B;
+}
+.goals h2 {
+  margin: 0 0 10px;
+  color: #1B2A4A;
+  font-size: 16px;
+}
+.goals ol { margin: 0; padding-left: 24px; }
+.goals li { margin: 4px 0; }
+
+/* ---------- セクション見出し ---------- */
+.sec {
+  margin: 26px 0 12px;
+  color: #1B2A4A;
+  font-weight: bold;
+  font-size: 17px;
+  border-bottom: 2px solid #1B2A4A;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec .num {
+  background: #C0392B;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.subsec {
+  color: #1B2A4A;
+  margin: 18px 0 8px;
+  font-size: 15px;
+  border-left: 4px solid #C0392B;
+  padding-left: 10px;
+}
+
+/* ---------- カード ---------- */
+.card {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 12px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ---------- キーワード(用語ポップアップ) ---------- */
+.kw {
+  position: relative;
+  color: #1B2A4A;
+  font-weight: bold;
+  border-bottom: 2px dashed #1B2A4A;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.kw:hover { background: #fff7ea; }
+.kw .tip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background: #1B2A4A;
+  color: #fff;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: opacity 0.2s;
+  border: 2px solid #C0392B;
+}
+.kw .tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #C0392B transparent transparent transparent;
+}
+.kw.open .tip { visibility: visible; opacity: 1; }
+
+/* ---------- 強調(ピンク・深紅) ---------- */
+.pk { color: #C0392B; font-weight: bold; }
+
+/* ---------- 例え話ボックス ---------- */
+.ex-box {
+  background: #fff7ea;
+  border: 1px solid #f4c36a;
+  border-left: 5px solid #f4a62a;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.ex-box .label {
+  display: inline-block;
+  background: #f4a62a;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.ex-box p { margin: 6px 0; }
+
+/* ---------- Tipボックス(緑系:重要補足) ---------- */
+.tip-box {
+  background: #e8f5ec;
+  border: 1px solid #68a97f;
+  border-left: 5px solid #2d7a4e;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 12px 0;
+}
+.tip-box .label {
+  display: inline-block;
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.tip-box p { margin: 6px 0; }
+
+/* ---------- メモボックス(暗記・ゴロ) ---------- */
+.memo-box {
+  background: #fdeff0;
+  border: 1px solid #e8a3a8;
+  border-left: 5px solid #C0392B;
+  border-radius: 4px;
+  padding: 14px 18px;
+  margin: 14px 0;
+}
+.memo-box .label {
+  display: inline-block;
+  background: #C0392B;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.memo-box .goro {
+  font-size: 18px;
+  font-weight: bold;
+  color: #C0392B;
+  text-align: center;
+  margin: 8px 0;
+  letter-spacing: 0.1em;
+}
+.memo-box .detail { margin: 6px 0; font-size: 14px; }
+
+/* ---------- 判例ボックス ---------- */
+.hanrei {
+  background: #fafbfd;
+  border: 2px solid #1B2A4A;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.hanrei .htitle {
+  background: #1B2A4A;
+  color: #fff;
+  margin: -16px -20px 12px;
+  padding: 10px 20px;
+  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+.hanrei .htitle .badge {
+  display: inline-block;
+  background: #C0392B;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-right: 8px;
+}
+.hanrei .hrow {
+  margin: 10px 0;
+  padding-left: 80px;
+  position: relative;
+  line-height: 1.7;
+}
+.hanrei .hrow .tag {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #e5e0d5;
+  color: #1B2A4A;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 66px;
+  text-align: center;
+}
+.hanrei .hrow.point .tag { background: #C0392B; color: #fff; }
+
+/* ---------- テーブル ---------- */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  background: #fff;
+  font-size: 14px;
+}
+.tbl th {
+  background: #1B2A4A;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #1B2A4A;
+}
+.tbl td {
+  padding: 10px 12px;
+  border: 1px solid #d6cfbe;
+  vertical-align: top;
+}
+.tbl tr:nth-child(even) td { background: #faf8f3; }
+.tbl .badge-ok {
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.tbl .badge-ng {
+  background: #C0392B;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ---------- SVG ボックス ---------- */
+.svg-box {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 14px 0;
+  text-align: center;
+}
+.svg-box svg { max-width: 100%; height: auto; }
+.svg-box .caption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-block;
+  background: #1B2A4A;
+  color: #fff;
+  border: 2px solid #1B2A4A;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn:hover { background: #2a3e6e; border-color: #2a3e6e; }
+.btn.outline {
+  background: #fff;
+  color: #1B2A4A;
+}
+.btn.outline:hover { background: #1B2A4A; color: #fff; }
+.btn.accent {
+  background: #C0392B;
+  border-color: #C0392B;
+}
+.btn.accent:hover { background: #a6321e; border-color: #a6321e; }
+.btn.small { padding: 4px 12px; font-size: 12px; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ---------- 穴埋め ---------- */
+.blank {
+  display: inline-block;
+  min-width: 80px;
+  padding: 2px 10px;
+  margin: 0 2px;
+  background: #1B2A4A;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+.blank.revealed {
+  background: #fff3e0;
+  color: #C0392B;
+  border: 1px solid #C0392B;
+}
+
+/* ---------- 演習問題カード ---------- */
+.choice-q {
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-left: 5px solid #1B2A4A;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 14px 0;
+}
+.choice-q.correct { border-left-color: #2d7a4e; }
+.choice-q.wrong { border-left-color: #C0392B; }
+.choice-q.hidden { display: none; }
+.choice-q .qlead {
+  font-weight: bold;
+  margin: 8px 0 12px;
+  line-height: 1.7;
+}
+.choice-q .opt {
+  display: block;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border: 1px solid #d6cfbe;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fafbfd;
+  transition: background 0.15s;
+}
+.choice-q .opt:hover { background: #f0f4fa; }
+.choice-q .opt.sel { background: #fff3e0; border-color: #f4a62a; }
+.choice-q .opt.ok { background: #e8f5ec; border-color: #2d7a4e; }
+.choice-q .opt.ng { background: #fdeff0; border-color: #C0392B; }
+.choice-q .opt .label {
+  display: inline-block;
+  background: #1B2A4A;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.choice-q .opt.ok .label { background: #2d7a4e; }
+.choice-q .opt.ng .label { background: #C0392B; }
+.choice-q .actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.choice-q .expl {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #f5f2ec;
+  border-left: 4px solid #1B2A4A;
+  border-radius: 4px;
+  line-height: 1.75;
+}
+.choice-q.done .expl { display: block; }
+.choice-q .expl .head {
+  font-weight: bold;
+  color: #1B2A4A;
+  margin-bottom: 6px;
+}
+.choice-q .expl .correct-mark {
+  display: inline-block;
+  background: #2d7a4e;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+/* 問題ボタン(★・📝) */
+.qbtn {
+  background: #fff;
+  border: 1px solid #d6cfbe;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.qbtn:hover { background: #f5f2ec; }
+.qbtn.active {
+  background: #f5c55b;
+  border-color: #f4a62a;
+}
+.qbtn.active.memo { background: #e8f5ec; border-color: #2d7a4e; }
+
+/* ---------- タブ(演習切替) ---------- */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 14px 0;
+  border-bottom: 2px solid #1B2A4A;
+}
+.tabs .tab {
+  background: #e5e0d5;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  color: #1B2A4A;
+  font-weight: bold;
+}
+.tabs .tab.on { background: #1B2A4A; color: #fff; }
+
+/* ---------- バナー ---------- */
+.banner {
+  background: #fff4e5;
+  border-left: 4px solid #f4a62a;
+  padding: 10px 14px;
+  margin: 16px 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: #7a5a0f;
+}
+
+/* ---------- メモモーダル ---------- */
+.modal-bg {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 460px;
+  width: 92%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal h3 {
+  margin: 0 0 12px;
+  color: #1B2A4A;
+  border-left: 5px solid #C0392B;
+  padding-left: 10px;
+}
+.modal textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 8px;
+  border: 1px solid #c8c0ae;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+.modal .m-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+/* ---------- ページナビ ---------- */
+.pagenav {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+.pagenav a {
+  flex: 1;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e5e0d5;
+  border-radius: 6px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+}
+.pagenav a:hover {
+  border-color: #1B2A4A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.pagenav a.next { text-align: right; }
+.pagenav .label {
+  display: block;
+  font-size: 11px;
+  color: #C0392B;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.pagenav .title {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1B2A4A;
+}
+
+/* ---------- メモ・ブックマーク表示 ---------- */
+.note-display {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #fff7ea;
+  border-left: 3px solid #f4a62a;
+  border-radius: 0 4px 4px 0;
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ============================================================
+   穴埋めチャレンジ機能
+   ============================================================ */
+
+/* チャレンジボタン(上部固定) */
+.challenge-bar {
+  background: linear-gradient(135deg, #C0392B 0%, #e85443 100%);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 3px 10px rgba(192,57,43,0.3);
+}
+.challenge-bar .cb-title {
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.challenge-bar .cb-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.challenge-bar .cb-btn {
+  background: #fff;
+  color: #C0392B;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.challenge-bar .cb-btn:hover {
+  background: #fff4e5;
+  transform: translateY(-2px);
+}
+.challenge-bar .cb-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.challenge-bar .cb-status {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* 穴埋め対象のインライン空欄 */
+.blank-q {
+  display: inline-block;
+  min-width: 80px;
+  padding: 2px 8px;
+  margin: 0 3px;
+  font-weight: bold;
+  color: #1B2A4A;
+}
+/* 通常状態:普通の強調と同じ見た目 */
+.blank-q.normal {
+  color: #C0392B;
+  font-weight: bold;
+}
+/* チャレンジモード・空欄 */
+.blank-q.empty {
+  background: #fff;
+  border: 2px dashed #C0392B;
+  color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 26px;
+  transition: all 0.15s;
+}
+.blank-q.empty:hover {
+  background: #fff7ea;
+  border-style: solid;
+}
+.blank-q.empty.focus {
+  background: #ffe58a;
+  border-color: #f4a62a;
+  border-style: solid;
+  box-shadow: 0 0 0 3px rgba(244,166,42,0.3);
+}
+/* 語句が入った状態 */
+.blank-q.filled {
+  background: #e8f2ec;
+  border: 2px solid #2d7a4e;
+  color: #1B2A4A;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.blank-q.filled:hover {
+  background: #fdeff0;
+  border-color: #C0392B;
+}
+/* 判定後:正解 */
+.blank-q.correct {
+  background: #e8f5ec;
+  border: 2px solid #2d7a4e;
+  color: #2d7a4e;
+  cursor: default;
+}
+.blank-q.correct::after {
+  content: " ✓";
+  color: #2d7a4e;
+  font-weight: bold;
+}
+/* 判定後:不正解 */
+.blank-q.incorrect {
+  background: #fdeff0;
+  border: 2px solid #C0392B;
+  color: #C0392B;
+  text-decoration: line-through;
+  cursor: default;
+}
+.blank-q.incorrect::after {
+  content: " → " attr(data-a);
+  color: #2d7a4e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 語群エリア(画面下に固定) */
+.word-bank {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1B2A4A;
+  color: #fff;
+  padding: 14px 20px 18px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  z-index: 100;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.word-bank.show { display: block; }
+.word-bank .wb-title {
+  font-size: 12px;
+  color: #f5c55b;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.word-bank .wb-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.word-bank .wb-word {
+  background: #fff;
+  color: #1B2A4A;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: all 0.15s;
+  user-select: none;
+}
+.word-bank .wb-word:hover {
+  background: #f5c55b;
+  border-color: #f5c55b;
+}
+.word-bank .wb-word.sel {
+  background: #f5c55b;
+  border-color: #C0392B;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(245,197,91,0.5);
+}
+.word-bank .wb-word.used {
+  opacity: 0.35;
+  cursor: default;
+  background: #7a8699;
+  color: #fff;
+}
+
+/* チャレンジ中の本文余白(語群分確保) */
+body.challenge-mode main {
+  padding-bottom: 220px;
+}
+
+/* 合格モーダル + 花吹雪 */
+.pass-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+}
+.pass-overlay.show { display: flex; }
+.pass-dialog {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  animation: passPop 0.5s ease-out;
+  max-width: 90%;
+}
+@keyframes passPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.pass-dialog .pass-emoji {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.pass-dialog h2 {
+  color: #C0392B;
+  font-size: 36px;
+  margin: 8px 0;
+  letter-spacing: 0.1em;
+}
+.pass-dialog p {
+  color: #1B2A4A;
+  font-size: 15px;
+  margin: 10px 0 20px;
+}
+.pass-dialog .pass-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 花吹雪 */
+.confetti {
+  position: fixed;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  z-index: 299;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+/* 不合格モーダル */
+.fail-toast {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #C0392B;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  z-index: 300;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.fail-toast.show {
+  display: block;
+  animation: failShake 0.5s;
+}
+@keyframes failShake {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25% { transform: translate(-52%, -50%); }
+  75% { transform: translate(-48%, -50%); }
+}
+
+/* ---------- モバイル ---------- */
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .wrap { padding: 0 14px 50px; }
+  .hero { padding: 26px 20px 22px; }
+  .hero h1 { font-size: 22px; }
+  .card { padding: 14px 16px; }
+  .hanrei .hrow { padding-left: 0; padding-top: 28px; }
+  .hanrei .hrow .tag { top: 0; left: 0; }
+  .sec { font-size: 15px; }
+  .pagenav a { min-width: 100%; }
+  .kw .tip { width: 240px; }
+}
+/* ============================================ */
+/* ミニテスト機能 (mini-test)                    */
+/* ============================================ */
+
+.mini-test {
+  margin: 16px 0 28px;
+}
+
+/* 開閉ボタン */
+.mini-test .mini-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #1B2A4A 0%, #2c4173 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(27, 42, 74, 0.25);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.mini-test .mini-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(27, 42, 74, 0.35);
+}
+.mini-test .mini-btn.is-open {
+  background: linear-gradient(135deg, #444 0%, #666 100%);
+}
+.mini-test .mini-btn::after {
+  content: " ▼";
+  font-size: 12px;
+}
+.mini-test .mini-btn.is-open::after {
+  content: " ▲";
+}
+
+/* 本体(初期は非表示) */
+.mini-test .mini-body {
+  display: none;
+  margin-top: 14px;
+  padding: 18px;
+  background: #fbfcfe;
+  border: 2px solid #1B2A4A;
+  border-radius: 8px;
+}
+.mini-test.is-open .mini-body {
+  display: block;
+  animation: miniSlideDown 0.3s ease-out;
+}
+@keyframes miniSlideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 各問 */
+.mini-q {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #e0e4ec;
+}
+.mini-q .mini-stem {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #1B2A4A;
+}
+
+/* ○×ボタン */
+.mini-choices {
+  display: flex;
+  gap: 10px;
+}
+.mini-c {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.mini-c:hover {
+  background: #f0f4fa;
+}
+.mini-c.selected {
+  background: #1B2A4A;
+  color: #fff;
+  border-color: #1B2A4A;
+}
+.mini-c[data-v="o"].selected { background: #2d7a4e; border-color: #2d7a4e; }
+.mini-c[data-v="x"].selected { background: #C0392B; border-color: #C0392B; }
+
+/* 結果表示 */
+.mini-q.is-correct {
+  background: #e8f5ec;
+  border-color: #2d7a4e;
+}
+.mini-q.is-wrong {
+  background: #fdeff0;
+  border-color: #C0392B;
+}
+.mini-q.is-correct .mini-c.selected,
+.mini-q.is-wrong .mini-c.selected {
+  pointer-events: none;
+}
+
+/* 解説(初期は非表示) */
+.mini-exp {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fff9ed;
+  border-left: 3px solid #f4a62a;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+}
+.mini-q.show-exp .mini-exp {
+  display: block;
+}
+
+/* 操作ボタン群 */
+.mini-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+.mini-judge,
+.mini-reset {
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+.mini-judge {
+  background: #f4a62a;
+  color: #fff;
+}
+.mini-judge:hover { background: #e09715; }
+.mini-judge:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.mini-reset {
+  background: #fff;
+  color: #1B2A4A;
+  border: 2px solid #1B2A4A;
+}
+.mini-reset:hover { background: #f0f4fa; }
+
+/* 結果メッセージ */
+.mini-result {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  display: none;
+}
+.mini-result.show { display: block; }
+.mini-result.pass {
+  background: linear-gradient(135deg, #e8f5ec 0%, #fff9ed 100%);
+  color: #2d7a4e;
+  border: 2px solid #2d7a4e;
+}
+.mini-result.fail {
+  background: #fdeff0;
+  color: #C0392B;
+  border: 2px solid #C0392B;
+}
+.mini-result .big {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ============================================ */
+/* 花吹雪アニメーション                          */
+/* ============================================ */
+.sakura-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+  display: none;
+}
+.sakura-overlay.show { display: block; }
+
+.sakura-petal {
+  position: absolute;
+  top: -30px;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle at 30% 30%, #ffd1dc 0%, #ff9eb5 60%, #ff7099 100%);
+  border-radius: 100% 0 100% 0;
+  opacity: 0.9;
+  animation: sakuraFall linear forwards;
+}
+.sakura-petal.alt {
+  background: radial-gradient(circle at 30% 30%, #fff5f8 0%, #ffd1dc 60%, #ffaecb 100%);
+  width: 12px;
+  height: 12px;
+}
+@keyframes sakuraFall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 80px)) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+</style>
+<script>
+/* ============================================================
+   GAMBA行政法学習システム 共通JS
+   ============================================================ */
+
+/* ---------- 用語ポップアップ ---------- */
+function initTips() {
+  document.querySelectorAll('.kw').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.kw.open').forEach(o => {
+        if (o !== el) o.classList.remove('open');
+      });
+      el.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.kw.open').forEach(o => o.classList.remove('open'));
+  });
+}
+
+/* ---------- 穴埋め ---------- */
+function initBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    const ans = b.dataset.a || '';
+    b.textContent = '　　　';
+    b.addEventListener('click', () => {
+      if (b.classList.contains('revealed')) {
+        b.classList.remove('revealed');
+        b.textContent = '　　　';
+      } else {
+        b.classList.add('revealed');
+        b.textContent = ans;
+      }
+    });
+  });
+}
+
+function revealAllBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    b.classList.add('revealed');
+    b.textContent = b.dataset.a || '';
+  });
+}
+function hideAllBlanks() {
+  document.querySelectorAll('.blank').forEach(b => {
+    b.classList.remove('revealed');
+    b.textContent = '　　　';
+  });
+}
+
+/* ---------- 復習リスト保存 ---------- */
+const REVIEW_KEY = 'gamba_review_list';
+function getReviewList() {
+  try { return JSON.parse(localStorage.getItem(REVIEW_KEY) || '[]'); }
+  catch(e) { return []; }
+}
+function saveReviewList(list) {
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(list));
+}
+function addToReview(title, url) {
+  const list = getReviewList();
+  if (list.find(r => r.url === url)) return false;
+  list.push({ title, url, date: new Date().toISOString() });
+  saveReviewList(list);
+  return true;
+}
+function removeFromReview(url) {
+  const list = getReviewList().filter(r => r.url !== url);
+  saveReviewList(list);
+}
+
+function initReviewBtn() {
+  document.querySelectorAll('.add-review').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.dataset.title || document.title;
+      const url = btn.dataset.url || location.pathname.split('/').pop();
+      const added = addToReview(title, url);
+      const orig = btn.textContent;
+      btn.textContent = added ? '✓ 復習リストに追加しました' : '既に追加済みです';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+      }, 2000);
+    });
+  });
+}
+
+/* ---------- ブックマーク(問題単位) ---------- */
+const BM_KEY = 'gamba_bookmark';
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem(BM_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveBookmarks(bm) { localStorage.setItem(BM_KEY, JSON.stringify(bm)); }
+function isBookmarked(pageId, qid) {
+  const bm = getBookmarks();
+  return !!(bm[pageId] && bm[pageId][qid]);
+}
+function toggleBookmark(pageId, qid) {
+  const bm = getBookmarks();
+  if (!bm[pageId]) bm[pageId] = {};
+  if (bm[pageId][qid]) {
+    delete bm[pageId][qid];
+  } else {
+    bm[pageId][qid] = true;
+  }
+  saveBookmarks(bm);
+  return !!(bm[pageId] && bm[pageId][qid]);
+}
+
+/* ---------- メモ(問題単位) ---------- */
+const MEMO_KEY = 'gamba_memo';
+function getMemos() {
+  try { return JSON.parse(localStorage.getItem(MEMO_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveMemos(m) { localStorage.setItem(MEMO_KEY, JSON.stringify(m)); }
+function getMemo(pageId, qid) {
+  const m = getMemos();
+  return (m[pageId] && m[pageId][qid]) || '';
+}
+function setMemo(pageId, qid, text) {
+  const m = getMemos();
+  if (!m[pageId]) m[pageId] = {};
+  if (text) m[pageId][qid] = text;
+  else delete m[pageId][qid];
+  saveMemos(m);
+}
+
+/* ---------- 間違い記録 ---------- */
+const WRONG_KEY = 'gamba_wrong';
+function getWrongs() {
+  try { return JSON.parse(localStorage.getItem(WRONG_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function saveWrongs(w) { localStorage.setItem(WRONG_KEY, JSON.stringify(w)); }
+function setWrong(pageId, qid, isWrong) {
+  const w = getWrongs();
+  if (!w[pageId]) w[pageId] = {};
+  if (isWrong) w[pageId][qid] = true;
+  else delete w[pageId][qid];
+  saveWrongs(w);
+}
+function isWrong(pageId, qid) {
+  const w = getWrongs();
+  return !!(w[pageId] && w[pageId][qid]);
+}
+
+/* ---------- 選択問題 ---------- */
+function initChoiceQuestions(pageId) {
+  document.querySelectorAll('.choice-q').forEach(q => {
+    const qid = q.dataset.qid;
+    const correct = parseInt(q.dataset.correct, 10);
+    const opts = q.querySelectorAll('.opt');
+    const submitBtn = q.querySelector('.submit-btn');
+    const resetBtn = q.querySelector('.reset-btn');
+    const bmBtn = q.querySelector('.qbtn.bm');
+    const memoBtn = q.querySelector('.qbtn.memo');
+
+    // 選択肢クリック
+    opts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        if (q.classList.contains('done')) return;
+        opts.forEach(o => o.classList.remove('sel'));
+        opt.classList.add('sel');
+      });
+    });
+
+    // 解答
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        const sel = q.querySelector('.opt.sel');
+        if (!sel) { alert('選択肢を選んでください'); return; }
+        const val = parseInt(sel.dataset.val, 10);
+        opts.forEach(o => {
+          const v = parseInt(o.dataset.val, 10);
+          if (v === correct) o.classList.add('ok');
+          else if (o === sel) o.classList.add('ng');
+        });
+        q.classList.add('done');
+        const isCorrect = val === correct;
+        if (isCorrect) q.classList.add('correct');
+        else q.classList.add('wrong');
+        if (pageId && qid) setWrong(pageId, qid, !isCorrect);
+      });
+    }
+
+    // リセット
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        opts.forEach(o => o.classList.remove('sel','ok','ng'));
+        q.classList.remove('done','correct','wrong');
+      });
+    }
+
+    // ブックマーク
+    if (bmBtn && pageId && qid) {
+      if (isBookmarked(pageId, qid)) bmBtn.classList.add('active');
+      bmBtn.addEventListener('click', () => {
+        const on = toggleBookmark(pageId, qid);
+        bmBtn.classList.toggle('active', on);
+      });
+    }
+
+    // メモ
+    if (memoBtn && pageId && qid) {
+      const existing = getMemo(pageId, qid);
+      if (existing) {
+        memoBtn.classList.add('active');
+        appendMemoDisplay(q, existing);
+      }
+      memoBtn.addEventListener('click', () => {
+        openMemoModal(pageId, qid, q);
+      });
+    }
+  });
+}
+
+function appendMemoDisplay(qEl, text) {
+  let disp = qEl.querySelector('.note-display');
+  if (!disp) {
+    disp = document.createElement('div');
+    disp.className = 'note-display';
+    qEl.appendChild(disp);
+  }
+  disp.textContent = '📝 ' + text;
+}
+
+function removeMemoDisplay(qEl) {
+  const disp = qEl.querySelector('.note-display');
+  if (disp) disp.remove();
+}
+
+function openMemoModal(pageId, qid, qEl) {
+  let modal = document.getElementById('memo-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'memo-modal';
+    modal.className = 'modal-bg';
+    modal.innerHTML = `
+      <div class="modal">
+        <h3>📝 メモ</h3>
+        <textarea id="memo-text" placeholder="この問題について気づいたこと、注意点などをメモしましょう"></textarea>
+        <div class="m-actions">
+          <button class="btn outline small" id="memo-cancel">キャンセル</button>
+          <button class="btn outline small" id="memo-delete">削除</button>
+          <button class="btn accent small" id="memo-save">保存</button>
+        </div>
+      </div>`;
+    document.body.appendChild(modal);
+  }
+  const ta = modal.querySelector('#memo-text');
+  ta.value = getMemo(pageId, qid);
+  modal.classList.add('show');
+
+  const close = () => modal.classList.remove('show');
+  modal.querySelector('#memo-cancel').onclick = close;
+  modal.querySelector('#memo-save').onclick = () => {
+    const txt = ta.value.trim();
+    setMemo(pageId, qid, txt);
+    const memoBtn = qEl.querySelector('.qbtn.memo');
+    if (txt) {
+      memoBtn.classList.add('active');
+      appendMemoDisplay(qEl, txt);
+    } else {
+      memoBtn.classList.remove('active');
+      removeMemoDisplay(qEl);
+    }
+    close();
+  };
+  modal.querySelector('#memo-delete').onclick = () => {
+    setMemo(pageId, qid, '');
+    const memoBtn = qEl.querySelector('.qbtn.memo');
+    memoBtn.classList.remove('active');
+    removeMemoDisplay(qEl);
+    close();
+  };
+}
+
+/* ---------- タブ(全問/間違えた/★) ---------- */
+function initModeTabs(pageId) {
+  const tabs = document.querySelectorAll('.tabs .tab');
+  if (!tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('on'));
+      tab.classList.add('on');
+      const mode = tab.dataset.mode;
+      filterQuestions(pageId, mode);
+    });
+  });
+}
+
+function filterQuestions(pageId, mode) {
+  document.querySelectorAll('.choice-q').forEach(q => {
+    const qid = q.dataset.qid;
+    let show = true;
+    if (mode === 'wrong') {
+      show = isWrong(pageId, qid);
+    } else if (mode === 'bookmark') {
+      show = isBookmarked(pageId, qid);
+    }
+    q.classList.toggle('hidden', !show);
+  });
+}
+
+/* ============================================================
+   穴埋めチャレンジ機能
+   ============================================================ */
+
+let currentChallenge = {
+  active: false,
+  selectedWord: null,
+  blanks: []
+};
+
+function initChallenge() {
+  const startBtn = document.getElementById('cb-start');
+  const resetBtn = document.getElementById('cb-reset');
+  const judgeBtn = document.getElementById('cb-judge');
+  const cancelBtn = document.getElementById('cb-cancel');
+  if (!startBtn) return; // チャレンジバーがないページはスキップ
+
+  startBtn.addEventListener('click', startChallenge);
+  if (resetBtn) resetBtn.addEventListener('click', resetChallenge);
+  if (judgeBtn) judgeBtn.addEventListener('click', judgeChallenge);
+  if (cancelBtn) cancelBtn.addEventListener('click', cancelChallenge);
+}
+
+function startChallenge() {
+  document.body.classList.add('challenge-mode');
+  const blanks = document.querySelectorAll('.blank-q');
+  if (!blanks.length) {
+    alert('このページには穴埋め問題がありません');
+    return;
+  }
+
+  currentChallenge.active = true;
+  currentChallenge.blanks = Array.from(blanks);
+  currentChallenge.selectedWord = null;
+
+  // 正解ワードを集めて重複排除・シャッフル
+  const words = Array.from(new Set(currentChallenge.blanks.map(b => b.dataset.a)));
+  shuffleArray(words);
+
+  // 各blankを空欄化
+  currentChallenge.blanks.forEach(b => {
+    b.classList.remove('normal', 'filled', 'correct', 'incorrect', 'focus');
+    b.classList.add('empty');
+    b.textContent = '';
+    b.dataset.current = '';
+    b.onclick = () => onBlankClick(b);
+  });
+
+  // 語群を作成
+  const wbWords = document.getElementById('wb-words');
+  wbWords.innerHTML = '';
+  words.forEach(w => {
+    const span = document.createElement('span');
+    span.className = 'wb-word';
+    span.textContent = w;
+    span.dataset.word = w;
+    span.onclick = () => onWordClick(span);
+    wbWords.appendChild(span);
+  });
+
+  // UIを切り替え
+  document.getElementById('word-bank').classList.add('show');
+  document.getElementById('cb-start').style.display = 'none';
+  document.getElementById('cb-reset').style.display = '';
+  document.getElementById('cb-judge').style.display = '';
+  document.getElementById('cb-cancel').style.display = '';
+  document.getElementById('cb-status').textContent = '語群から語句をタップ → 空欄をタップ';
+}
+
+function onWordClick(wordEl) {
+  if (wordEl.classList.contains('used')) return;
+  // 他の選択を解除
+  document.querySelectorAll('.wb-word.sel').forEach(w => w.classList.remove('sel'));
+  wordEl.classList.add('sel');
+  currentChallenge.selectedWord = wordEl;
+  // 空欄をハイライト
+  document.querySelectorAll('.blank-q.empty, .blank-q.filled').forEach(b => {
+    if (!b.classList.contains('correct') && !b.classList.contains('incorrect')) {
+      b.classList.add('focus');
+    }
+  });
+}
+
+function onBlankClick(blankEl) {
+  if (blankEl.classList.contains('correct') || blankEl.classList.contains('incorrect')) return;
+
+  // すでに語が入っていて、新しい語が選択されていない場合 → 語を戻す
+  if (blankEl.classList.contains('filled') && !currentChallenge.selectedWord) {
+    const currentWord = blankEl.dataset.current;
+    if (currentWord) returnWordToBank(currentWord);
+    blankEl.textContent = '';
+    blankEl.dataset.current = '';
+    blankEl.classList.remove('filled', 'focus');
+    blankEl.classList.add('empty');
+    return;
+  }
+
+  // 新しい語を入れる
+  if (!currentChallenge.selectedWord) return;
+  const newWord = currentChallenge.selectedWord.dataset.word;
+
+  // すでに何か入っていたら、その語を語群に戻す
+  if (blankEl.classList.contains('filled') && blankEl.dataset.current) {
+    returnWordToBank(blankEl.dataset.current);
+  }
+
+  // 新しい語を入れる
+  blankEl.textContent = newWord;
+  blankEl.dataset.current = newWord;
+  blankEl.classList.remove('empty', 'focus');
+  blankEl.classList.add('filled');
+
+  // 語群の語を使用済みに
+  currentChallenge.selectedWord.classList.add('used');
+  currentChallenge.selectedWord.classList.remove('sel');
+  currentChallenge.selectedWord = null;
+
+  // フォーカスを全解除
+  document.querySelectorAll('.blank-q.focus').forEach(b => b.classList.remove('focus'));
+
+  // 進捗更新
+  updateStatus();
+}
+
+function returnWordToBank(word) {
+  const words = document.querySelectorAll('.wb-word');
+  // 複数使われている語でも、1つだけ戻す
+  for (const w of words) {
+    if (w.dataset.word === word && w.classList.contains('used')) {
+      w.classList.remove('used');
+      break;
+    }
+  }
+}
+
+function updateStatus() {
+  const total = currentChallenge.blanks.length;
+  const filled = currentChallenge.blanks.filter(b => b.classList.contains('filled')).length;
+  document.getElementById('cb-status').textContent = `${filled} / ${total}`;
+}
+
+function judgeChallenge() {
+  const blanks = currentChallenge.blanks;
+  let allCorrect = true;
+  let filledCount = 0;
+
+  blanks.forEach(b => {
+    const user = b.dataset.current || '';
+    const ans = b.dataset.a;
+    if (user) filledCount++;
+    b.classList.remove('empty', 'filled', 'focus');
+    if (user === ans) {
+      b.classList.add('correct');
+    } else {
+      b.classList.add('incorrect');
+      allCorrect = false;
+    }
+    b.onclick = null;
+  });
+
+  // すべて空欄のままだったら警告
+  if (filledCount === 0) {
+    alert('まだ語句が入っていません。語群から選んで空欄をタップしてください。');
+    // 戻す
+    blanks.forEach(b => {
+      b.classList.remove('correct', 'incorrect');
+      b.classList.add('empty');
+      b.onclick = () => onBlankClick(b);
+    });
+    return;
+  }
+
+  // 語群を非表示に
+  document.getElementById('word-bank').classList.remove('show');
+  document.body.classList.remove('challenge-mode');
+  document.getElementById('cb-judge').style.display = 'none';
+  document.getElementById('cb-cancel').style.display = 'none';
+  document.getElementById('cb-reset').textContent = 'もう一度チャレンジ';
+
+  if (allCorrect) {
+    showPassScreen();
+  } else {
+    showFailToast();
+  }
+}
+
+function showPassScreen() {
+  // 花吹雪
+  const colors = ['#C0392B', '#f5c55b', '#2d7a4e', '#1B2A4A', '#e85443', '#f4a62a'];
+  for (let i = 0; i < 80; i++) {
+    const conf = document.createElement('div');
+    conf.className = 'confetti';
+    conf.style.left = Math.random() * 100 + '%';
+    conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+    conf.style.animationDuration = (2 + Math.random() * 2) + 's';
+    conf.style.animationDelay = Math.random() * 0.5 + 's';
+    document.body.appendChild(conf);
+    setTimeout(() => conf.remove(), 5000);
+  }
+
+  // 合格ダイアログ
+  const overlay = document.getElementById('pass-overlay');
+  overlay.classList.add('show');
+}
+
+function showFailToast() {
+  const wrong = currentChallenge.blanks.filter(b => b.classList.contains('incorrect')).length;
+  const correct = currentChallenge.blanks.filter(b => b.classList.contains('correct')).length;
+  const toast = document.getElementById('fail-toast');
+  toast.innerHTML = `😢 惜しい!<br><span style="font-size:14px;font-weight:normal;">正解: ${correct} / 間違い: ${wrong}<br>もう一度チャレンジしましょう</span>`;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+function resetChallenge() {
+  // 判定結果をクリアして再挑戦
+  const overlay = document.getElementById('pass-overlay');
+  if (overlay) overlay.classList.remove('show');
+  document.getElementById('cb-reset').textContent = 'リセット';
+  startChallenge();
+}
+
+function cancelChallenge() {
+  if (!confirm('チャレンジを中止して通常表示に戻しますか?')) return;
+  // 通常表示に戻す
+  currentChallenge.blanks.forEach(b => {
+    b.classList.remove('empty', 'filled', 'correct', 'incorrect', 'focus');
+    b.classList.add('normal');
+    b.textContent = b.dataset.a;
+    b.dataset.current = '';
+    b.onclick = null;
+  });
+  document.getElementById('word-bank').classList.remove('show');
+  document.body.classList.remove('challenge-mode');
+  document.getElementById('cb-start').style.display = '';
+  document.getElementById('cb-reset').style.display = 'none';
+  document.getElementById('cb-judge').style.display = 'none';
+  document.getElementById('cb-cancel').style.display = 'none';
+  document.getElementById('cb-status').textContent = '';
+  currentChallenge.active = false;
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+/* ---------- 初期化 ---------- */
+function gambaInit(pageId) {
+  if (pageId) document.body.dataset.page = pageId;
+  initTips();
+  initBlanks();
+  initReviewBtn();
+  initChallenge();
+  // 初期状態:blank-qは通常表示
+  document.querySelectorAll('.blank-q').forEach(b => {
+    b.classList.add('normal');
+    b.textContent = b.dataset.a;
+  });
+  if (pageId) {
+    initChoiceQuestions(pageId);
+    initModeTabs(pageId);
+  }
+}
+/* ============================================ */
+/* ミニテスト機能                                 */
+/* ============================================ */
+(function() {
+  'use strict';
+
+  // 花吹雪を散らす
+  function showSakura() {
+    var overlay = document.getElementById('sakura-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'sakura-overlay';
+      overlay.className = 'sakura-overlay';
+      document.body.appendChild(overlay);
+    }
+    overlay.innerHTML = '';
+    overlay.classList.add('show');
+
+    var count = 50;
+    for (var i = 0; i < count; i++) {
+      var petal = document.createElement('div');
+      petal.className = 'sakura-petal' + (Math.random() < 0.5 ? ' alt' : '');
+      petal.style.left = (Math.random() * 100) + 'vw';
+      var dur = 3 + Math.random() * 3;
+      petal.style.animationDuration = dur + 's';
+      petal.style.animationDelay = (Math.random() * 1.5) + 's';
+      petal.style.setProperty('--drift', (Math.random() * 200 - 100) + 'px');
+      overlay.appendChild(petal);
+    }
+
+    setTimeout(function() {
+      overlay.classList.remove('show');
+      overlay.innerHTML = '';
+    }, 6000);
+  }
+
+  // 1つのミニテストを初期化
+  function initMiniTest(el) {
+    var btn = el.querySelector('.mini-btn');
+    var body = el.querySelector('.mini-body');
+    var qs = el.querySelectorAll('.mini-q');
+    var judgeBtn = el.querySelector('.mini-judge');
+    var resetBtn = el.querySelector('.mini-reset');
+    var result = el.querySelector('.mini-result');
+
+    if (!btn || !body) return;
+
+    // 開閉
+    btn.addEventListener('click', function() {
+      el.classList.toggle('is-open');
+      btn.classList.toggle('is-open');
+    });
+
+    // 各問の○×選択
+    qs.forEach(function(q) {
+      var choices = q.querySelectorAll('.mini-c');
+      choices.forEach(function(c) {
+        c.addEventListener('click', function() {
+          if (q.classList.contains('show-exp')) return; // 判定後はロック
+          choices.forEach(function(x) { x.classList.remove('selected'); });
+          c.classList.add('selected');
+          q.dataset.user = c.dataset.v;
+        });
+      });
+    });
+
+    // 答え合わせ
+    judgeBtn.addEventListener('click', function() {
+      var allAnswered = true;
+      qs.forEach(function(q) {
+        if (!q.dataset.user) allAnswered = false;
+      });
+      if (!allAnswered) {
+        result.className = 'mini-result fail show';
+        result.innerHTML = '<span class="big">⚠️</span>すべての問題に解答してください';
+        return;
+      }
+
+      var correctCount = 0;
+      qs.forEach(function(q) {
+        var ans = q.dataset.correct;
+        var user = q.dataset.user;
+        q.classList.add('show-exp');
+        if (ans === user) {
+          q.classList.add('is-correct');
+          correctCount++;
+        } else {
+          q.classList.add('is-wrong');
+        }
+      });
+
+      var total = qs.length;
+      if (correctCount === total) {
+        result.className = 'mini-result pass show';
+        result.innerHTML = '<span class="big">🌸 合格! 🌸</span>全' + total + '問正解です!この調子で次へ進みましょう。';
+        showSakura();
+      } else {
+        result.className = 'mini-result fail show';
+        result.innerHTML = '<span class="big">惜しい!</span>' + total + '問中 ' + correctCount + '問正解。下の解説を確認してから「もう一度挑戦」を押してください。';
+      }
+
+      judgeBtn.style.display = 'none';
+      resetBtn.style.display = 'inline-block';
+    });
+
+    // リセット
+    resetBtn.addEventListener('click', function() {
+      qs.forEach(function(q) {
+        q.classList.remove('is-correct', 'is-wrong', 'show-exp');
+        delete q.dataset.user;
+        var choices = q.querySelectorAll('.mini-c');
+        choices.forEach(function(c) { c.classList.remove('selected'); });
+      });
+      result.className = 'mini-result';
+      result.innerHTML = '';
+      judgeBtn.style.display = 'inline-block';
+      resetBtn.style.display = 'none';
+    });
+  }
+
+  // ページ全体を初期化
+  function initAllMiniTests() {
+    var tests = document.querySelectorAll('.mini-test');
+    tests.forEach(initMiniTest);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllMiniTests);
+  } else {
+    initAllMiniTests();
+  }
+})();
+
+</script>
+</head>
+<body data-page="ch22">
+
+<nav class="topnav"><span class="brand">GAMBA 行政法</span><span class="sep">|</span><a href="index.html">目次</a><a href="review.html">復習リスト</a></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第22章 / 行政争訟</div>
+  <h1>行政事件訴訟法2<span class="stars">★★★</span></h1>
+  <p class="sub">超頻出!取消訴訟以外の抗告訴訟(義務付け・差止め等)、<strong>執行停止・判決の効力・当事者訴訟</strong>を学びます。</p>
+</header>
+<main>
+
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>義務付け訴訟は<span class="pk">申請型</span>(37条の3)と<span class="pk">非申請型</span>(37条の2)の2類型</li>
+    <li>執行停止は<span class="pk">重大な損害</span>を避けるため緊急の必要があるとき</li>
+    <li>判決の効力:<span class="pk">既判力・形成力・拘束力</span>(33条)</li>
+  </ol>
+</section>
+
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none"><source src="audio/ch22.mp3" type="audio/mpeg"></audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<div class="sec"><span class="num">1</span>無効等確認訴訟(36条)</div>
+<div class="card">
+  <h3>📌 無効等確認訴訟とは?</h3>
+  <p><span class="kw" data-tip="処分・裁決の無効・存否を確認する訴訟">無効等確認訴訟</span>(3条4項)は、<strong>取消訴訟の出訴期間が経過した後</strong>でも、処分の無効を主張するための訴訟。</p>
+  <div class="memo-box"><span class="label">使われ方</span><p>取消訴訟は6か月の出訴期間で時効になるが、<span class="pk">「無効」</span>な処分なら出訴期間に関係なく争える!</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 原告適格(36条)— 補充性の要件</h3>
+  <p>無効等確認訴訟は、以下のいずれかに該当する者に限り提起できる:</p>
+  <ol>
+    <li>当該処分・裁決に続く処分により損害を受けるおそれのある者</li>
+    <li>その他当該処分・裁決の<span class="pk">無効等の確認を求めるにつき法律上の利益</span>を有する者で、<span class="pk">現在の法律関係に関する訴え(当事者訴訟・民事訴訟等)によって目的を達することができないもの</span></li>
+  </ol>
+  <div class="ex-box"><span class="label">「もんじゅ訴訟」(H4)</span><p>原発の設置許可の無効確認訴訟。最高裁は、現在の法律関係に関する訴え(民事差止訴訟)では権利保護の目的を達せられないとして、<span class="pk">無効等確認訴訟の原告適格を肯定</span>した!</p></div>
+</div>
+
+<!-- ミニテスト Section 1(無効等確認訴訟) -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1・無効等確認訴訟)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 無効等確認訴訟は、取消訴訟と異なり、出訴期間の制限はない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行訴法36条には出訴期間の規定なし。「無効」=最初から効力ゼロなので、いつでも争える。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 もんじゅ訴訟で判例は、現在の法律関係に関する訴え(民事差止訴訟)では権利保護の目的を達せられないとして、無効等確認訴訟の原告適格を肯定した。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 最判平4・9・22。無効等確認訴訟の原告適格について、現在の法律関係に関する訴えとの関係を示した重要判例。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">2</span>不作為違法確認訴訟(37条)</div>
+<div class="card">
+  <h3>📌 不作為違法確認訴訟とは?</h3>
+  <p>申請をした者が<span class="pk">相当の期間内に何らの処分もしないこと</span>の違法確認を求める訴訟(3条5項・37条)。</p>
+  <div class="memo-box"><span class="label">原告適格</span><p>処分・裁決についての<span class="pk">申請をした者</span>に限り提起できる(37条)。<br>=申請していない者は提起できない</p></div>
+  <div class="tip-box"><span class="label">注意</span><p>不作為違法確認訴訟で勝っても、行政が処分を出してくれるわけではない(違法であることが確認されるだけ)。<br>→ <span class="pk">義務付け訴訟と併合提起</span>するのが有効!</p></div>
+</div>
+
+<!-- ミニテスト Section 2(不作為違法確認訴訟) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・不作為違法確認訴訟)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 不作為違法確認訴訟は、処分または裁決についての申請をした者に限り提起することができる(行訴法37条)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 申請をした者のみ原告適格あり。第三者は不可。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 不作為違法確認訴訟で勝訴すれば、判決の効力により行政庁は当然に申請に対する処分をしなければならなくなる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 不作為違法確認訴訟は<span class="pk">違法を確認するだけ</span>。具体的な処分を命じるものではない。具体的な処分まで求めるなら<span class="pk">義務付け訴訟</span>が必要。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">3</span>義務付け訴訟(超重要・改正の目玉)</div>
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 義務付け訴訟の2類型(3条6項)</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>類型</th><th>条文</th><th>場面</th></tr>
+      <tr><td><span class="pk">①非申請型義務付け訴訟<br>(直接型)</span></td><td>37条の2</td><td>申請を前提としない場合<br>例:近隣住民が違法建築物への規制を求める</td></tr>
+      <tr><td><span class="pk">②申請型義務付け訴訟</span></td><td>37条の3</td><td>申請をしたのに処分されない・拒否された場合<br>例:営業許可申請が拒否された</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>📜 ①非申請型義務付け訴訟(37条の2)— 要件が厳しい!</h3>
+  <ol>
+    <li><span class="pk">重大な損害</span>を生ずるおそれがある(37条の2第1項)</li>
+    <li><span class="pk">他に適当な方法がない</span>(補充性)</li>
+    <li><span class="pk">法律上の利益</span>を有する者(原告適格)</li>
+    <li>処分すべきことが法令上明らか or 裁量権の逸脱・濫用</li>
+  </ol>
+  <div class="ex-box"><span class="label">具体例</span><p>違法建築物の近隣住民が、行政に<span class="pk">建築物の除却命令を出すよう求める</span>場合<br>→ 申請権がないので「非申請型」</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 ②申請型義務付け訴訟(37条の3)</h3>
+  <p>申請者が、自身の申請に対して処分を求める訴訟。以下の場合に提起可:</p>
+  <ul>
+    <li>当該申請に対し<span class="pk">相当の期間内に何らの処分もされない</span>場合(不作為型)<br>→ <span class="pk">不作為違法確認訴訟と併合提起</span>(必要的併合)</li>
+    <li>当該申請に対する<span class="pk">処分が拒否された</span>場合(拒否処分型)<br>→ <span class="pk">取消訴訟または無効等確認訴訟と併合提起</span>(必要的併合)</li>
+  </ul>
+  <div class="memo-box"><span class="label">必要的併合</span><p>申請型義務付け訴訟は、<span class="pk">単独では提起できない</span>。必ず取消訴訟・無効確認・不作為違法確認とセットで提起する!</p></div>
+</div>
+
+<!-- ミニテスト Section 3(義務付け訴訟・最重要) -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3・義務付け訴訟)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 義務付け訴訟は、平成16年の行訴法改正で新設された訴訟類型で、非申請型と申請型の2類型がある。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 改正の目玉。原告救済の手段として大きな進歩。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 非申請型義務付け訴訟は、一定の処分がされないことにより重大な損害を生ずるおそれがあり、かつ、その損害を避けるため他に適当な方法がないときに限り、提起することができる(行訴法37条の2第1項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「重大な損害+補充性」が要件。例:近隣住民が違法建築物に対する規制を求める場合。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 申請型義務付け訴訟は、関連する取消訴訟・無効等確認訴訟・不作為違法確認訴訟と併合する必要はなく、単独で提起することができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行訴法37条の3第3項。申請型義務付け訴訟は<span class="pk">必要的併合</span>。単独では提起できない。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">4</span>差止め訴訟(37条の4)</div>
+<div class="card">
+  <h3>📌 差止め訴訟とは?</h3>
+  <p>行政庁が一定の処分・裁決を<strong>すべきでないにかかわらず、これがされようとしている場合</strong>に、その処分等をしてはならないことを求める訴訟(3条7項)。</p>
+  <div class="memo-box"><span class="label">差止め訴訟の要件</span><p>① <span class="pk">重大な損害</span>を生ずるおそれ<br>② 他に適当な方法がない(補充性)<br>③ 法律上の利益(原告適格)<br>④ 処分が法令違反 or 裁量逸脱・濫用</p></div>
+  <div class="ex-box"><span class="label">具体例</span><p>公務員が懲戒処分されそうな状況で、事前にその差止めを求める。教科書検定で不合格処分が予想される場合の事前阻止など。</p></div>
+</div>
+
+<!-- ミニテスト Section 4(差止め訴訟) -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4・差止め訴訟)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 差止め訴訟は、行政庁が処分・裁決をすべきでないにもかかわらずされようとしている場合に、その処分等をしてはならないことを求める訴訟である(行訴法3条7項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「事前差止め」を可能にする訴訟。義務付け訴訟と並ぶ平成16年改正の目玉。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 差止め訴訟の要件として、重大な損害を生ずるおそれがあり、かつ、その損害を避けるため他に適当な方法がないこと(補充性)が必要である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行訴法37条の4第1項。「重大な損害+補充性」は非申請型義務付け訴訟と同じ構造。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">5</span>執行停止(超重要)</div>
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 執行不停止の原則と例外(25条)</h3>
+  <p><span class="pk">取消訴訟の提起は、処分の効力・執行・手続の続行を妨げない</span>(原則)<br>→ ただし<span class="pk">執行停止</span>を裁判所が決定できる(例外)</p>
+  <div class="memo-box"><span class="label">執行停止の要件(25条2項・3項)</span><p>① 取消訴訟が適法に提起されていること<br>② 申立てがあること(<span class="pk">職権ではダメ</span>)<br>③ <span class="pk">処分の取消しの申立て</span>があったこと<br>④ <span class="pk">重大な損害を避けるため緊急の必要</span>があること<br>⑤ <span class="pk">公共の福祉に重大な影響を及ぼすおそれがない</span>こと(消極要件)<br>⑥ 本案について理由がないとみえないこと(消極要件)</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 執行停止の内容(25条2項)</h3>
+  <ul>
+    <li>処分の<span class="pk">効力の停止</span>(最も強力)</li>
+    <li>処分の<span class="pk">執行の停止</span></li>
+    <li><span class="pk">手続の続行の停止</span></li>
+  </ul>
+  <div class="tip-box"><span class="label">処分の効力停止の補充性(25条2項但書)</span><p>処分の効力停止は、<span class="pk">執行停止または手続続行停止によって目的を達することができる場合にはすることができない</span>(=他で足りるなら、効力停止までしない)</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⚠️ 内閣総理大臣の異議(27条)— 引っかけ注意!</h3>
+  <p>裁判所が執行停止の決定をする前後を問わず、<span class="pk">内閣総理大臣は異議を述べることができる</span>。</p>
+  <div class="memo-box"><span class="label">異議の効果</span><p>・決定前 → 裁判所は執行停止<span class="pk">できない</span><br>・決定後 → 裁判所は執行停止を<span class="pk">取り消さなければならない</span><br>=<span class="pk">事実上、内閣総理大臣の意向で執行停止が左右される</span></p></div>
+  <div class="tip-box"><span class="label">国会への報告</span><p>内閣総理大臣は異議を述べたときは、<span class="pk">次の常会において国会に報告</span>しなければならない(27条6項)</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 仮の義務付け・仮の差止め(37条の5)</h3>
+  <p>義務付け・差止め訴訟においても、<span class="pk">緊急の必要がある場合に仮の処分</span>を求めることができる(平成16年改正で新設)。</p>
+  <div class="memo-box"><span class="label">要件</span><p>① 義務付け・差止め訴訟の提起<br>② <span class="pk">償うことのできない損害</span>を避けるため緊急の必要(執行停止より厳しい!)<br>③ 本案について理由があるとみえる<br>※ 内閣総理大臣の異議もあり</p></div>
+</div>
+
+<!-- ミニテスト Section 5(執行停止・最重要) -->
+<div class="mini-test" data-mini="s5">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション5・執行停止)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 取消訴訟の提起があったときは、当該処分の効力、処分の執行又は手続の続行は当然に停止する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行訴法25条1項。<span class="pk">執行不停止が原則</span>。当然には停止しない。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 執行停止は、裁判所が職権で行うことができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行訴法25条2項。執行停止は<span class="pk">申立てによる</span>。職権ではできない。これも試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 執行停止は、処分により生ずる重大な損害を避けるため緊急の必要があるときに、裁判所が決定する(行訴法25条2項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「重大な損害+緊急の必要」が積極要件。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 処分の効力停止は、処分の執行または手続の続行の停止によって目的を達することができる場合にはすることができない(補充性・25条2項但書)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 効力停止は最も強力なので、他で足りるならしない。「補充性」がポイント。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問5 執行停止の決定がされた場合でも、内閣総理大臣は異議を述べることができ、その異議があったときは、裁判所は執行停止を取り消さなければならない(行訴法27条)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 内閣総理大臣の異議は強力。決定後でも取消し義務あり。次の常会で国会報告も必要。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問6 義務付け・差止め訴訟においても、緊急の必要がある場合には、仮の義務付け・仮の差止めを求めることができる(行訴法37条の5)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 平成16年改正で新設。要件は執行停止より厳しい(「償うことのできない損害」)。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">6</span>判決の種類と効力</div>
+<div class="card">
+  <h3>📜 判決の種類</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>意味</th></tr>
+      <tr><td><span class="pk">却下判決</span></td><td>訴訟要件を欠く(門前払い)</td></tr>
+      <tr><td><span class="pk">棄却判決</span></td><td>本案審理の結果、処分は適法・原告主張に理由なし</td></tr>
+      <tr><td><span class="pk">認容判決</span></td><td>本案審理の結果、処分は違法 → 処分取消し</td></tr>
+      <tr><td><span class="pk">事情判決</span>(31条)</td><td>違法だが、取り消すと公共の福祉に著しい障害 → 棄却(主文で違法宣言)</td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">事情判決と事情裁決</span><p>行訴法31条=<span class="pk">事情判決</span>(裁判所)<br>行審法45条3項=<span class="pk">事情裁決</span>(審査庁)<br>→ どちらも違法の宣言+棄却の構造は同じ!</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 取消判決の効力(超重要!)</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>効力</th><th>内容</th><th>条文</th></tr>
+      <tr><td><span class="pk">①既判力</span></td><td>判決の判断内容に当事者・裁判所が拘束される</td><td>民訴法準用</td></tr>
+      <tr><td><span class="pk">②形成力</span></td><td>処分が遡って取り消され、効力を失う</td><td>(理論上)</td></tr>
+      <tr><td><span class="pk">③第三者効(対世効)</span></td><td>取消判決は<span class="pk">第三者にも効力</span>が及ぶ</td><td>32条1項</td></tr>
+      <tr><td><span class="pk">④拘束力</span></td><td>関係行政庁を拘束、同一処分の繰り返しは原則不可</td><td>33条1項</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">第三者効(32条)</span><p>建築確認の取消判決は、<span class="pk">建築主や近隣住民など第三者にも効力</span>が及ぶ。これにより画一的な紛争解決を図る!</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 拘束力(33条)— 同一理由での処分の繰り返し禁止</h3>
+  <p>取消判決は、その事件について<span class="pk">処分・裁決をした行政庁その他関係行政庁を拘束する</span>(33条1項)。<br>=<span class="pk">同じ理由で同じ処分をやり直すことは禁止</span></p>
+  <div class="ex-box"><span class="label">具体例</span><p>「申請書類が不備」を理由に拒否処分 → 取消判決確定<br>→ 行政は<span class="pk">「申請書類が不備」を理由に再度拒否することはできない</span>(別の理由ならOK)</p></div>
+  <div class="memo-box"><span class="label">手続の違法による取消し → やり直し義務(33条2項)</span><p>例:理由提示の不備で取消し → 行政は<span class="pk">理由をきちんと提示してやり直す義務</span>あり</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 第三者の再審の訴え(34条)</h3>
+  <p>取消判決の効力を受ける第三者が、<strong>自己の責めに帰さない理由で訴訟に参加できなかった</strong>ため、判決に影響を及ぼすべき攻撃防御方法を提出することができなかった場合、<span class="pk">確定の終局判決に対して再審の訴え</span>ができる。</p>
+</div>
+
+<!-- ミニテスト Section 6(判決の効力・最重要) -->
+<div class="mini-test" data-mini="s6">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション6・判決の種類と効力)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 取消判決は、第三者にも効力が及ぶ(行訴法32条1項・対世効)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 当事者間限りでなく、第三者にも判決の効力が及ぶ。画一的な紛争解決のため。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 取消判決は、その事件について処分または裁決をした行政庁その他の関係行政庁を拘束する(行訴法33条1項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 拘束力。同一の理由で同じ処分をやり直すことは禁止。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 拘束力により、取消判決を受けた行政庁は、判決の理由とは異なる理由であっても、同一の処分をすることはできない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 拘束力は<span class="pk">「同一の理由」での処分の繰り返し禁止</span>。<span class="pk">別の理由なら同じ処分をすることもできる</span>。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 事情判決は、処分または裁決が違法であることを主文で宣言した上で、当該請求を棄却するものである(行訴法31条1項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「違法を主文で宣言+棄却」の構造。行審法の事情裁決(45条3項)と同じ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問5 取消判決の効力を受ける第三者が、自己の責めに帰さない理由により訴訟に参加できなかったため攻撃防御方法を提出できなかったときは、確定の終局判決に対し再審の訴えを提起することができる(行訴法34条)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 第三者効を受ける者の救済策。第三者効と再審の訴えはセットで覚える。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問6 申請を却下し、または棄却した処分が手続上の違法を理由として取り消されたときは、行政庁は判決の趣旨に従い、改めて申請に対する処分をしなければならない(行訴法33条2項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 手続違法による取消しの場合、行政庁にやり直し義務あり。例:理由提示の不備で取り消されたら、きちんと理由を示してやり直す。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">7</span>当事者訴訟(4条)</div>
+<div class="card">
+  <h3>📌 当事者訴訟の2類型</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>類型</th><th>内容</th><th>具体例</th></tr>
+      <tr><td><span class="pk">①形式的当事者訴訟</span></td><td>処分・裁決に関する公法上の法律関係につき、<span class="pk">法令の規定により</span>当事者の一方を被告とする</td><td>土地収用の損失補償額に関する訴え(収用法133条)</td></tr>
+      <tr><td><span class="pk">②実質的当事者訴訟</span></td><td>公法上の法律関係に関する確認・給付の訴え</td><td>公務員の地位確認、給与請求</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">平成16年改正で「公法上の法律関係に関する確認の訴え」を明示</span><p>改正前は実質的当事者訴訟が活用されていなかったが、改正で活用が促進された。</p></div>
+</div>
+
+<!-- ミニテスト Section 7(当事者訴訟) -->
+<div class="mini-test" data-mini="s7">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション7・当事者訴訟)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 当事者訴訟には、形式的当事者訴訟と実質的当事者訴訟の2類型がある(行訴法4条)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 公法上の法律関係を対等当事者間で争う訴訟。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 公務員の給与請求訴訟は、実質的当事者訴訟(公法上の法律関係に関する給付の訴え)に分類される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 公務員と国・公共団体は対等な当事者として法律関係を争う。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第22章 総まとめ</h3>
+  <ol>
+    <li>無効等確認訴訟は<span class="pk">補充性</span>あり(現在の法律関係の訴えで足りないとき)</li>
+    <li>不作為違法確認訴訟は<span class="pk">申請をした者のみ</span>提起可</li>
+    <li>義務付け訴訟は<span class="pk">非申請型(37条の2)+申請型(37条の3)</span>。申請型は<span class="pk">必要的併合</span></li>
+    <li>差止め訴訟も<span class="pk">重大な損害+補充性</span></li>
+    <li>執行停止=<span class="pk">重大な損害を避ける緊急の必要</span>+申立て要(職権×)</li>
+    <li><span class="pk">内閣総理大臣の異議</span>で執行停止を阻止できる(国会報告必要)</li>
+    <li>取消判決の効力:<span class="pk">既判力・形成力・第三者効・拘束力</span></li>
+    <li>事情判決(行訴法31条)= 主文で違法宣言+棄却</li>
+  </ol>
+</div>
+
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch22_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第22章 行政事件訴訟法2" data-url="gyosei_ch22.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch21.html"><span class="label">◀ BACK</span><span class="title">第21章 行政事件訴訟法1</span></a>
+  <a href="gyosei_ch22_q.html" class="next"><span class="label">NEXT ▶</span><span class="title">第22章 演習問題</span></a>
+</nav>
+
+</main>
+</div>
+
+<!-- preview: app.js skipped -->
+<script>
+  (function() {
+    function run() { if (typeof gambaInit === 'function') { gambaInit('ch22'); } else { setTimeout(run, 50); } }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+  })();
+</script>
+</body>
+</html>

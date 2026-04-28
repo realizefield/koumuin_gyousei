@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第19章 行政不服審査法1 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch19">
+
+<nav class="topnav"><span class="brand">GAMBA 行政法</span><span class="sep">|</span><a href="index.html">目次</a><a href="review.html">復習リスト</a></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第19章 / 行政争訟</div>
+  <h1>行政不服審査法1<span class="stars">★★★</span></h1>
+  <p class="sub">超頻出!行政不服審査法は、<strong>行政庁の処分や不作為に対する不服申立て</strong>のルール。第4部の柱です。</p>
+</header>
+<main>
+
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>不服申立ての3類型:<span class="pk">審査請求・再調査の請求・再審査請求</span></li>
+    <li>審査請求が<span class="pk">原則</span>(自由選択ではない、再調査・再審査は法律に定めがある場合のみ)</li>
+    <li>審査請求期間:<span class="pk">処分があったことを知った日の翌日から3か月以内</span></li>
+  </ol>
+</section>
+
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none"><source src="audio/ch19.mp3" type="audio/mpeg"></audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<div class="sec"><span class="num">1</span>行政不服審査法の全体像</div>
+<div class="card">
+  <p><span class="kw" data-tip="行政庁の処分・不作為に対する不服申立てに関する一般法">行政不服審査法</span>(行審法)は、行政庁の違法・不当な処分等に対し、<strong>簡易迅速な手続による国民の権利救済</strong>を図る法律です(1条)。</p>
+  <div class="memo-box"><span class="label">行政争訟の2大ルート</span><p>① <span class="pk">行政不服審査法</span>(行政内部での救済)→ 簡易・迅速・無料<br>② <span class="pk">行政事件訴訟法</span>(裁判所による救済)→ 手間がかかるが厳格</p></div>
+  <div class="ex-box"><span class="label">改正(平成26年→平成28年4月施行)</span><p>大きな改正で公正性・使いやすさが向上。<span class="pk">審理員制度</span>と<span class="pk">行政不服審査会</span>が新設された!</p></div>
+</div>
+
+<div class="card">
+  <h3>📌 行政不服審査法の特徴</h3>
+  <ul>
+    <li><span class="pk">違法だけでなく不当</span>もチェック対象(行訴法は違法のみ)</li>
+    <li>裁判所ではなく<span class="pk">行政庁内部</span>での救済</li>
+    <li>原則<span class="pk">無料</span>(裁判は印紙代必要)</li>
+    <li>簡易・迅速(裁判より早い)</li>
+  </ul>
+</div>
+
+<!-- ミニテスト Section 1(全体像) -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1・全体像)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政不服審査法は、行政庁の違法な処分だけでなく、不当な処分に対する不服申立てをも認めている。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行審法1条。<span class="pk">違法+不当</span>が対象(行訴法は違法のみ)。これが超頻出の対比論点。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 行政不服審査法は、簡易迅速な手続による国民の権利救済を目的とし、原則として無料で利用できる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 裁判より使いやすい(無料・簡易・迅速)というのが行審法の特徴。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 平成26年改正(平成28年施行)で、審理員制度と行政不服審査会が新設された。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 公正性・使いやすさが大きく向上した重要な改正。第20章で詳しく学ぶ。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">2</span>不服申立ての3類型</div>
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 3つの不服申立て(超頻出!)</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>種類</th><th>誰に対して</th><th>いつ使う</th></tr>
+      <tr><td><span class="pk">①審査請求</span><br>(原則)</td><td>処分庁の<span class="pk">最上級行政庁</span><br>(上級庁ない場合は処分庁自身)</td><td><span class="pk">原則すべての</span>処分・不作為</td></tr>
+      <tr><td><span class="pk">②再調査の請求</span></td><td>処分庁</td><td><span class="pk">法律に定めがある場合のみ</span><br>(例:国税通則法、関税法)</td></tr>
+      <tr><td><span class="pk">③再審査請求</span></td><td>法律で定める行政庁</td><td><span class="pk">法律に定めがある場合のみ</span><br>(例:労災保険法)</td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">原則は「審査請求」!</span><p>2つ覚えるなら:<br>・<span class="pk">審査請求は誰でもいつでも</span>(原則)<br>・<span class="pk">再調査・再審査は法律に書いてある時だけ</span></p></div>
+</div>
+
+<div class="card">
+  <h3>📜 再調査の請求と審査請求の関係(自由選択主義、5条)</h3>
+  <p>法律で再調査の請求ができる旨が定められている場合、請求人は<strong>再調査の請求をするか審査請求をするかを自由に選択</strong>できる(5条1項)。</p>
+  <div class="tip-box"><span class="label">注意!</span><p>再調査の請求をした場合、<span class="pk">原則として審査請求はできない</span>(再調査の決定後は審査請求可)。<br>例外:再調査の決定が3か月経っても出ない、その他正当な理由など。</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 再審査請求(6条)</h3>
+  <p>再審査請求は、<strong>審査請求の裁決に不服がある場合</strong>に、法律に定めがあるときに限り行うことができる。</p>
+  <div class="ex-box"><span class="label">具体例</span><p>労災保険:労働者災害補償保険審査官の決定 → 労働保険審査会への再審査請求</p></div>
+</div>
+
+<!-- ミニテスト Section 2(3類型・★★★) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・3類型)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 不服申立ての3類型(審査請求・再調査の請求・再審査請求)は、すべて自由に選択して行うことができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 原則は<span class="pk">審査請求</span>。再調査の請求・再審査請求は<span class="pk">法律に定めがある場合のみ</span>できる。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 法律に再調査の請求ができる旨の定めがある場合、請求人は再調査の請求をするか審査請求をするかを自由に選択できる(自由選択主義)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行審法5条1項。再調査の請求が認められている分野では自由選択。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 平成26年改正後も、不服申立ての種類として「異議申立て」が残っている。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 平成26年改正で「異議申立て」は<span class="pk">廃止</span>。現在は審査請求・再調査の請求・再審査請求の3類型。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 再審査請求は、審査請求の裁決に不服がある場合に、法律に定めがあるときに限り行うことができる(行審法6条)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 労災保険などごく限られた分野のみ。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">3</span>不服申立ての対象</div>
+<div class="card">
+  <h3>📌 対象(2条・3条)</h3>
+  <ul>
+    <li><span class="pk">処分</span>(2条):行政庁の違法・不当な<strong>処分</strong>に対する不服申立て</li>
+    <li><span class="pk">不作為</span>(3条):法令に基づく申請に対する<strong>相当の期間</strong>内に何らの処分もしないこと</li>
+  </ul>
+  <div class="memo-box"><span class="label">「処分」とは?</span><p>処分とは、行政庁の<span class="pk">公権力の行使</span>に当たる行為。行訴法の処分概念(処分性)とほぼ同じ。</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⚠️ 不服申立ての適用除外(7条)</h3>
+  <p>以下の処分等は行政不服審査法の対象外:</p>
+  <ul>
+    <li>国会・地方議会の議決による処分</li>
+    <li>裁判所の裁判または裁判の執行による処分</li>
+    <li>外国人の出入国・帰化に関する処分</li>
+    <li>専ら人の学識技能に関する試験・検定の結果(<span class="pk">試験の合否</span>)</li>
+    <li>刑事訴訟・少年保護に関する処分</li>
+    <li><span class="pk">公務員の任免・懲戒</span>(国家公務員法等の特別法あり)</li>
+  </ul>
+  <div class="tip-box"><span class="label">ゴロ覚え</span><p>「<strong>議裁外試刑公</strong>」(ぎ・さい・がい・し・けい・こう)<br>議会・裁判・外国人・試験・刑事・公務員!</p></div>
+</div>
+
+<!-- ミニテスト Section 3(対象・適用除外) -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3・対象・適用除外)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 不服申立ての対象は、行政庁の処分のみならず、法令に基づく申請に対する相当の期間内に何らの処分もしない不作為も含む。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行審法2条・3条。処分+不作為が対象。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 外国人の出入国・帰化に関する処分についても、行政不服審査法に基づく審査請求をすることができる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行審法7条。<span class="pk">適用除外</span>。「議裁外試刑公」の中の「外」。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 国家公務員に対する懲戒処分は、行政不服審査法の対象として審査請求できる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 公務員の任免・懲戒は<span class="pk">適用除外</span>。国家公務員法等の特別法による。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">4</span>審査請求の手続(基本)</div>
+<div class="card">
+  <h3>📜 審査請求先(4条)</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>処分庁の状況</th><th>審査請求先</th></tr>
+      <tr><td>上級行政庁がある場合</td><td><span class="pk">最上級行政庁</span></td></tr>
+      <tr><td>上級行政庁がない(独立性のある委員会等)</td><td><span class="pk">処分庁・不作為庁自身</span></td></tr>
+      <tr><td>主任の大臣・宮内庁長官・庁の長官</td><td>当該機関(自身が審査庁となる)</td></tr>
+    </table>
+  </div>
+  <div class="ex-box"><span class="label">具体例</span><p>・税務署長の処分 → 国税不服審判所長(最上級庁系統)<br>・人事院規則による処分 → 人事院(独立性ある機関は自身)</p></div>
+</div>
+
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 審査請求期間(18条)</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>場合</th><th>期間</th></tr>
+      <tr><td>主観的期間(知った日の翌日から)</td><td><span class="pk">3か月以内</span></td></tr>
+      <tr><td>客観的期間(処分があった日の翌日から)</td><td><span class="pk">1年以内</span></td></tr>
+    </table>
+  </div>
+  <div class="memo-box"><span class="label">数字を覚える</span><p><strong>「サンガツ・イチネン」(3月・1年)</strong><br>知った日から3か月、あった日から1年!<br>※どちらか早い方の期間が経過すると不適法となる</p></div>
+  <div class="tip-box"><span class="label">行訴法との比較</span><p>取消訴訟の出訴期間=<span class="pk">6か月以内</span>(知った日)/1年(あった日)<br>→ 不服審査の方が「3か月」と短い!</p></div>
+</div>
+
+<div class="card">
+  <h3>📜 審査請求の方式(19条)</h3>
+  <p>審査請求は<span class="pk">原則書面</span>で行う。ただし、他の法律(条例を含む)に口頭でできる旨の定めがある場合は<span class="pk">口頭でも可</span>。</p>
+</div>
+
+<div class="card">
+  <h3>📜 標準審理期間(16条)</h3>
+  <p>審査庁となるべき行政庁は、審査請求がされてから裁決をするまでに<span class="pk">通常要すべき標準的な期間(標準審理期間)</span>を定めるよう<span class="pk">努める</span>(<span class="pk">努力義務</span>)。</p>
+  <div class="tip-box"><span class="label">注意</span><p>標準審理期間は<span class="pk">努力義務</span>(義務ではない)。「定めなければならない」は誤り!</p></div>
+</div>
+
+<!-- ミニテスト Section 4(手続・★★★) -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4・審査請求の手続)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 処分庁に上級行政庁がある場合、審査請求は当該処分庁の直近上級行政庁に対して行う。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行審法4条4号。「直近」ではなく<span class="pk">最上級行政庁</span>が原則の審査庁。試験頻出のひっかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 審査請求は、処分があったことを知った日の翌日から起算して6か月以内にしなければならない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 審査請求は<span class="pk">3か月以内</span>(行審法18条)。「6か月」は取消訴訟(行訴法14条)。混同に注意!</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 審査請求は、処分があった日の翌日から起算して1年を経過したときは、正当な理由がない限りすることができない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行審法18条2項。<span class="pk">客観的期間=1年</span>。「サンガツ・イチネン」(3月・1年)で覚える。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問4 審査請求は、すべての処分について必ず書面によらなければならず、口頭で行うことはできない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行審法19条1項。原則は書面だが、<span class="pk">他の法律(条例を含む)に口頭でできる定めがある場合は口頭OK</span>。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問5 標準審理期間を定めることは、審査庁となるべき行政庁の義務である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行審法16条。標準審理期間は<span class="pk">努力義務</span>。「定めなければならない」は誤り。「努めなければならない」が正しい。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">5</span>執行不停止の原則(25条)</div>
+<div class="card" style="border-left:5px solid #C0392B;background:#fbeae7;">
+  <h3>⭐ 執行不停止の原則</h3>
+  <p><span class="pk">審査請求は、処分の効力・執行・手続の続行を妨げない</span>(25条1項)。</p>
+  <div class="ex-box"><span class="label">趣旨</span><p>不服申立てがあるたびに処分が止まると行政が機能しないため、<strong>原則として執行は止まらない</strong>。</p></div>
+  <div class="memo-box"><span class="label">執行停止できる場合</span><p>① 処分庁の上級行政庁が審査庁の場合 → <span class="pk">職権または申立てにより</span>執行停止可<br>② 処分庁の上級行政庁以外が審査庁の場合 → <span class="pk">申立てにより</span>執行停止可(職権ではダメ)<br>③ <span class="pk">重大な損害を避けるため緊急の必要</span>がある等の場合は執行停止<span class="pk">義務</span></p></div>
+  <div class="tip-box"><span class="label">行訴法との対比</span><p>行訴法でも執行不停止が原則(25条)。試験では「執行不停止」が出ても、行審法・行訴法どちらでも同じ!</p></div>
+</div>
+
+<!-- ミニテスト Section 5(執行不停止) -->
+<div class="mini-test" data-mini="s5">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション5・執行不停止)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 審査請求がされたときは、当該処分の効力、処分の執行又は手続の続行は当然に停止する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行審法25条1項。<span class="pk">執行不停止が原則</span>!審査請求があっても処分の効力は止まらない。「当然に停止」は誤り。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 重大な損害を避けるため緊急の必要があるなど一定の場合には、執行停止が義務的に行われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 原則は執行不停止だが、緊急性が高い場合は執行停止が義務になる例外がある。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">6</span>不服申立て前置主義との関係</div>
+<div class="card">
+  <h3>📜 自由選択主義(原則)</h3>
+  <p>処分の取消しを求める場合、<strong>不服申立てと取消訴訟のいずれを選ぶかは原則として自由</strong>(行訴法8条1項)。</p>
+  <div class="memo-box"><span class="label">不服申立て前置主義(例外)</span><p>個別の法律で「<span class="pk">不服申立てに対する裁決を経た後でなければ取消訴訟を提起できない</span>」と定められている場合がある。<br>例:国税通則法、地方税法、生活保護法など</p></div>
+  <div class="tip-box"><span class="label">改正(平成26年)</span><p>不服申立て前置の対象となる処分は<span class="pk">大幅に削減</span>された。原則は<span class="pk">自由選択</span>!</p></div>
+</div>
+
+<!-- ミニテスト Section 6(自由選択主義と前置主義) -->
+<div class="mini-test" data-mini="s6">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション6・自由選択主義)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 処分の取消しを求める場合、不服申立てと取消訴訟のいずれを選ぶかは原則として自由である(自由選択主義)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行訴法8条1項。原則は自由選択。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 個別の法律に「不服申立てに対する裁決を経た後でなければ取消訴訟を提起できない」と定めがある場合は、不服申立て前置となる(例:国税通則法、地方税法)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 例外として前置主義が定められる場合がある。ただし平成26年改正で対象は大幅削減。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第19章 総まとめ</h3>
+  <ol>
+    <li>行政不服審査法は<span class="pk">違法+不当</span>に対する救済(行訴法は違法のみ)</li>
+    <li>不服申立て3類型:<span class="pk">審査請求(原則)・再調査の請求・再審査請求</span></li>
+    <li>審査請求先は<span class="pk">最上級行政庁</span>(原則)</li>
+    <li>期間:<span class="pk">知った日から3か月、あった日から1年</span>(サンガツ・イチネン)</li>
+    <li>原則<span class="pk">書面</span>で(口頭は法令に定めある場合のみ)</li>
+    <li>原則<span class="pk">執行不停止</span>(処分の効力は止まらない)</li>
+    <li>適用除外=<span class="pk">議・裁・外・試・刑・公</span></li>
+  </ol>
+</div>
+
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch19_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第19章 行政不服審査法1" data-url="gyosei_ch19.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch18.html"><span class="label">◀ BACK</span><span class="title">第18章 情報公開法</span></a>
+  <a href="gyosei_ch19_q.html" class="next"><span class="label">NEXT ▶</span><span class="title">第19章 演習問題</span></a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() { if (typeof gambaInit === 'function') { gambaInit('ch19'); } else { setTimeout(run, 50); } }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+  })();
+</script>
+</body>
+</html>
