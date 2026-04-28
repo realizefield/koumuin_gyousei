@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第15章 行政罰 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch15">
+
+<nav class="topnav"><span class="brand">GAMBA 行政法</span><span class="sep">|</span><a href="index.html">目次</a><a href="review.html">復習リスト</a></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第15章 / 行政作用</div>
+  <h1>行政罰<span class="stars">★★☆</span></h1>
+  <p class="sub">義務違反者に対する<strong>過去の制裁</strong>。行政刑罰(前科あり)と行政上の秩序罰(過料)の区別が重要!</p>
+</header>
+<main>
+
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>行政罰=<span class="pk">行政刑罰</span>(前科あり)と<span class="pk">秩序罰(過料)</span>(前科なし)の2種類</li>
+    <li>行政刑罰は<span class="pk">刑法総則</span>が適用される/秩序罰は適用されない</li>
+    <li>両者の併科は<span class="pk">可能</span>(目的が異なるため、二重処罰の禁止に反しない)</li>
+  </ol>
+</section>
+
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none"><source src="audio/ch15.mp3" type="audio/mpeg"></audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<div class="sec"><span class="num">1</span>行政罰の全体像</div>
+<div class="card">
+  <p><span class="kw" data-tip="行政上の義務違反に対して制裁として科される罰">行政罰</span>とは、行政上の義務違反に対して<strong>制裁として科される罰</strong>です。</p>
+  <div class="ex-box"><span class="label">強制執行との違い</span><p>強制執行=<strong>将来</strong>の義務実現(代わりに壊す/徴収する)<br>行政罰=<strong>過去</strong>の義務違反に対する制裁(罰金/過料)</p></div>
+  <div class="memo-box"><span class="label">行政罰の2種類</span><p>①<span class="pk">行政刑罰</span>=刑法典に定める刑(懲役・罰金など)。前科あり<br>②<span class="pk">秩序罰(過料)</span>=軽微な義務違反への制裁。前科なし</p></div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 行政罰は、将来の義務を実現するために科される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行政罰は<span class="pk">過去の義務違反</span>に対する制裁。将来の義務実現は強制執行(代執行など)の役目。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 行政罰は、行政刑罰と秩序罰(過料)の2種類に分けられる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 2種類の名称・特徴・違いを確実に押さえる。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">2</span>行政刑罰</div>
+<div class="card">
+  <h3>🔨 行政刑罰の特徴</h3>
+  <p><span class="pk">行政刑罰</span>とは、行政上の義務違反に対して、刑法典所定の刑名(懲役・禁錮・罰金・拘留・科料・没収)を科す行政罰です。</p>
+  <div class="memo-box"><span class="label">重要</span><p>行政刑罰には<span class="pk">刑法総則が原則として適用</span>される!<br>→ 責任主義(故意・過失が必要)、罪刑法定主義などが適用</p></div>
+  <div class="ex-box"><span class="label">例</span><p>道路交通法違反(酒気帯び運転)=行政刑罰(懲役・罰金)/脱税=行政刑罰(懲役・罰金)</p></div>
+  <div class="tip-box"><span class="label">手続</span><p>行政刑罰は<span class="pk">刑事訴訟法</span>に基づき、裁判所で科されます。</p></div>
+</div>
+
+<!-- ミニテスト Section 2 -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・行政刑罰)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政刑罰は刑法典所定の刑名を科すものであり、刑法総則が原則として適用される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 刑罰の一種なので、責任主義(故意・過失)、罪刑法定主義などが適用される。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 行政刑罰の手続は、刑事訴訟法に基づき裁判所で行われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 通常の犯罪と同じ刑事手続。前科がつく。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">3</span>両罰規定</div>
+<div class="card">
+  <h3>👥 両罰規定とは</h3>
+  <p><span class="pk">両罰規定</span>とは、行為者本人だけでなく、その<strong>事業主(法人・個人)</strong>も罰する規定のこと。</p>
+  <div class="ex-box"><span class="label">例</span><p>会社の従業員が業務に関して違法行為 → 従業員本人も、会社も両方処罰される</p></div>
+  <div class="hanrei">
+    <h4>【両罰規定の責任】(最大判昭32・11・27)</h4>
+    <p>両罰規定による法人の処罰は、法人の<span class="pk">選任・監督上の過失</span>を根拠とするもので、責任主義に反しない。</p>
+    <p><span class="label">ポイント</span>法人は自動的に罰されるのではなく、「選任・監督を怠った」という過失責任で処罰される!</p>
+  </div>
+</div>
+
+<!-- ミニテスト Section 3 -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3・両罰規定)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 両罰規定とは、行為者本人だけでなく、その事業主(法人・個人)も罰する規定をいう。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 会社の従業員が違法行為を行ったとき、従業員と会社の両方が処罰される。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 判例によれば、両罰規定による法人の処罰は、法人を自動的に処罰するものであり、責任主義に反する。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最大判昭32・11・27。判例は両罰規定による法人処罰を、法人の<span class="pk">選任・監督上の過失</span>を根拠とするもので<span class="pk">責任主義に反しない</span>とした。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">4</span>秩序罰(過料)</div>
+<div class="card">
+  <h3>📜 秩序罰の特徴</h3>
+  <p><span class="pk">秩序罰</span>とは、軽微な義務違反(届出義務違反等)に対する<span class="pk">過料</span>。</p>
+  <div class="memo-box"><span class="label">秩序罰のポイント</span><p>①<span class="pk">刑罰ではない</span>ので前科にならない<br>②<span class="pk">刑法総則の適用なし</span><br>③国の法律による過料=<span class="pk">非訟事件手続法</span>で裁判所が科す<br>④地方公共団体の条例による過料=<span class="pk">地方公共団体の長</span>が科す(地自法231条の3)</p></div>
+  <div class="ex-box"><span class="label">例</span><p>住民票の届出義務違反、戸籍届出の遅延など</p></div>
+</div>
+
+<!-- ミニテスト Section 4 -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4・秩序罰)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 秩序罰は刑罰の一種であり、前科がつく。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 秩序罰は<span class="pk">刑罰ではない</span>ので<span class="pk">前科はつかない</span>し、刑法総則の適用もない。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 国の法律による過料は、非訟事件手続法に基づき裁判所が科す。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 国の法律=非訟事件手続法→裁判所、というルートを覚える。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 地方公共団体の条例による過料は、裁判所が科す。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 条例による過料は<span class="pk">地方公共団体の長</span>が科す(地自法231条の3)。「国=裁判所、地方=長」と整理する。試験頻出の引っかけ。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">5</span>行政刑罰と秩序罰の比較(超重要)</div>
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 比較表</h3>
+  <div class="tbl">
+    <table>
+      <tr><th></th><th><span class="pk">行政刑罰</span></th><th><span class="pk">秩序罰(過料)</span></th></tr>
+      <tr><td>性質</td><td>刑罰</td><td>刑罰ではない</td></tr>
+      <tr><td>前科</td><td><span class="pk">つく</span></td><td><span class="pk">つかない</span></td></tr>
+      <tr><td>刑法総則</td><td><span class="pk">適用あり</span></td><td>適用なし</td></tr>
+      <tr><td>手続</td><td>刑事訴訟法(裁判所)</td><td>非訟事件手続法(国)or 長(条例)</td></tr>
+      <tr><td>代表例</td><td>道路交通法違反の罰金、脱税の懲役</td><td>住民票等の届出遅延の過料</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ミニテスト Section 5(比較・超重要) -->
+<div class="mini-test" data-mini="s5">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション5・比較)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政刑罰は刑罰なので前科がつくが、秩序罰は刑罰ではないので前科がつかない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 前科の有無が大きな違い。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 行政刑罰の手続も秩序罰の手続も、いずれも非訟事件手続法に基づき行われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 行政刑罰は<span class="pk">刑事訴訟法</span>(裁判所)、国の法律による過料は非訟事件手続法(裁判所)、条例による過料は<span class="pk">地方公共団体の長</span>。手続は3パターン。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">6</span>二重処罰の問題</div>
+<div class="card">
+  <h3>⚖️ 行政刑罰と秩序罰の併科</h3>
+  <p>行政刑罰と秩序罰を<strong>両方科すこと</strong>は、二重処罰の禁止(憲法39条)に反するか?</p>
+  <div class="memo-box"><span class="label">結論</span><p>両者の<span class="pk">目的が異なる</span>ため、併科しても<span class="pk">二重処罰に当たらない</span>!</p></div>
+
+  <div class="hanrei">
+    <h4>【追徴金と刑罰の併科】(最大判昭33・4・30)</h4>
+    <p>行政上の秩序維持のための追徴金と、犯罪に対する刑罰との併科は、<span class="pk">二重処罰の禁止に違反しない</span>。目的が異なる別個の制裁だから。</p>
+  </div>
+</div>
+
+<!-- ミニテスト Section 6 -->
+<div class="mini-test" data-mini="s6">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション6・二重処罰)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問1 行政刑罰と秩序罰を同一事案について併科することは、二重処罰の禁止(憲法39条)に違反するため許されない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 最大判昭33・4・30。両者の<span class="pk">目的が異なる</span>ため、併科しても<span class="pk">二重処罰に当たらない</span>。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 行政刑罰は犯罪に対する制裁、秩序罰は秩序維持のための制裁という性格の違いから、両者の併科は二重処罰の禁止に反しない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「目的が異なる別個の制裁」だから併科OK。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第15章 総まとめ</h3>
+  <ol>
+    <li>行政罰=<span class="pk">行政刑罰</span>と<span class="pk">秩序罰(過料)</span>の2種類</li>
+    <li>行政刑罰=刑法総則適用・前科あり/秩序罰=適用なし・前科なし</li>
+    <li>両罰規定による法人の処罰=<span class="pk">選任・監督上の過失</span>による責任</li>
+    <li>行政刑罰と秩序罰の併科は<span class="pk">可能</span>(二重処罰に当たらない)</li>
+  </ol>
+</div>
+
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch15_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第15章 行政罰" data-url="gyosei_ch15.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch14.html"><span class="label">◀ BACK</span><span class="title">第14章 行政上の強制</span></a>
+  <a href="gyosei_ch15_q.html" class="next"><span class="label">NEXT ▶</span><span class="title">第15章 演習問題</span></a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() { if (typeof gambaInit === 'function') { gambaInit('ch15'); } else { setTimeout(run, 50); } }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第14章 行政上の強制 | GAMBA行政法</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="ch14">
+
+<nav class="topnav"><span class="brand">GAMBA 行政法</span><span class="sep">|</span><a href="index.html">目次</a><a href="review.html">復習リスト</a></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="crumb">第14章 / 行政作用</div>
+  <h1>行政上の強制<span class="stars">★★★</span></h1>
+  <p class="sub">超頻出!国民が義務を守らないとき、行政が<strong>実力で</strong>義務を実現する手段。代執行・直接強制・執行罰・強制徴収、そして即時強制があります。</p>
+</header>
+<main>
+
+<div class="challenge-bar">
+  <div class="cb-title">📝 穴埋めチャレンジ<span id="cb-status" class="cb-status"></span></div>
+  <div class="cb-buttons">
+    <button class="cb-btn" id="cb-start">チャレンジ開始</button>
+    <button class="cb-btn" id="cb-judge" style="display:none;">判定</button>
+    <button class="cb-btn" id="cb-reset" style="display:none;">リセット</button>
+    <button class="cb-btn" id="cb-cancel" style="display:none;">中止</button>
+  </div>
+</div>
+
+<section class="goals">
+  <h2>この単元で押さえる3つのポイント</h2>
+  <ol>
+    <li>行政上の強制執行=<span class="pk">代執行・執行罰・直接強制・強制徴収</span>の4種類</li>
+    <li>代執行の手続:<span class="pk">戒告→通知→実行→費用徴収</span>の流れ</li>
+    <li><span class="pk">即時強制</span>は義務を前提としない(目の前の危険に対応)。代表例:消防・感染症法・警察官職務執行法</li>
+  </ol>
+</section>
+
+<div class="audio-section">
+  <div class="audio-title">🎧 聞き流し音声(準備中)</div>
+  <audio id="ch-audio" controls preload="none"><source src="audio/ch14.mp3" type="audio/mpeg"></audio>
+  <div class="audio-credit">VOICEVOX:四国めたん</div>
+</div>
+
+<div class="sec"><span class="num">1</span>行政上の強制の全体像</div>
+<div class="card">
+  <p>国民が行政上の義務を守らない場合や、目の前に急な危険がある場合、行政は<strong>実力で</strong>対応することがあります。これが「行政上の強制」です。</p>
+  <div class="svg-box">
+    <svg viewBox="0 0 650 270" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+      <rect x="10" y="10" width="630" height="250" fill="#fff" stroke="#1B2A4A" stroke-width="2" rx="6"/>
+      <text x="325" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B2A4A">行政上の強制の全体像</text>
+      <rect x="30" y="60" width="300" height="190" fill="#e8eef5" stroke="#1B2A4A" stroke-width="1.5" rx="4"/>
+      <text x="180" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#1B2A4A">行政上の強制執行</text>
+      <text x="180" y="105" text-anchor="middle" font-size="11" fill="#555">(義務の不履行 → 実力で実現)</text>
+      <text x="180" y="135" text-anchor="middle" font-size="12" fill="#333">・代執行(代わりにやる)</text>
+      <text x="180" y="155" text-anchor="middle" font-size="12" fill="#333">・執行罰(過料で圧力)</text>
+      <text x="180" y="175" text-anchor="middle" font-size="12" fill="#333">・直接強制(直接実力)</text>
+      <text x="180" y="195" text-anchor="middle" font-size="12" fill="#333">・強制徴収(金銭を強制徴収)</text>
+      <text x="180" y="225" text-anchor="middle" font-size="11" fill="#C0392B">義務の不履行を前提</text>
+      <rect x="350" y="60" width="270" height="190" fill="#fbeae7" stroke="#C0392B" stroke-width="1.5" rx="4"/>
+      <text x="485" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#C0392B">即時強制</text>
+      <text x="485" y="105" text-anchor="middle" font-size="11" fill="#555">(目の前の危険に直接対応)</text>
+      <text x="485" y="135" text-anchor="middle" font-size="12" fill="#333">例:消防法の破壊消防</text>
+      <text x="485" y="155" text-anchor="middle" font-size="12" fill="#333">感染症法の強制入院</text>
+      <text x="485" y="175" text-anchor="middle" font-size="12" fill="#333">警職法の保護措置</text>
+      <text x="485" y="225" text-anchor="middle" font-size="11" fill="#C0392B">義務の不履行を前提としない</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ミニテスト Section 1 -->
+<div class="mini-test" data-mini="s1">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション1)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 行政上の強制執行は、代執行・執行罰・直接強制・強制徴収の4種類である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 4種類すべての名前と特徴を確実に押さえる必要あり。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 即時強制は、国民が義務を履行しないことを前提として行われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 即時強制は<span class="pk">義務の不履行を前提としない</span>。目の前の危険にいきなり実力行使する点が、強制執行との最大の違い。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 強制執行は義務の不履行を前提とするが、即時強制は義務を前提としない点で両者は区別される。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ この区別が出発点。「義務がある→強制執行」「義務なし・目の前の危険→即時強制」。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">2</span>代執行(超重要)</div>
+<div class="card">
+  <h3>🏗 代執行の要件</h3>
+  <p><span class="pk">代執行</span>とは、国民が<span class="pk">代替的作為義務</span>を履行しないとき、行政庁が代わりに義務を実現し、費用を徴収する制度(行政代執行法2条)。</p>
+  <div class="memo-box"><span class="label">代執行の要件(行政代執行法2条)</span><p>①法律・条例または行政行為による義務<br>②<span class="pk">代替的作為義務</span>(他人が代わってできる義務)<br>③<span class="pk">他の手段では履行確保困難</span><br>④<span class="pk">放置が著しく公益に反する</span></p></div>
+  <div class="ex-box"><span class="label">例え話</span><p>違法建築物の除却命令に従わない → 役所が業者に依頼して取り壊し → 費用は所有者に請求!</p></div>
+</div>
+
+<div class="card">
+  <h3>📋 代執行の手続(4ステップ)</h3>
+  <div class="svg-box">
+    <svg viewBox="0 0 650 130" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;">
+      <rect x="10" y="30" width="130" height="60" fill="#e8eef5" stroke="#1B2A4A" rx="4"/>
+      <text x="75" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A4A">①戒告</text>
+      <text x="75" y="75" text-anchor="middle" font-size="10" fill="#555">期限までに履行を</text>
+      <rect x="170" y="30" width="130" height="60" fill="#e8eef5" stroke="#1B2A4A" rx="4"/>
+      <text x="235" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A4A">②通知</text>
+      <text x="235" y="75" text-anchor="middle" font-size="10" fill="#555">代執行令書</text>
+      <rect x="330" y="30" width="130" height="60" fill="#fbeae7" stroke="#C0392B" rx="4"/>
+      <text x="395" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">③実行</text>
+      <text x="395" y="75" text-anchor="middle" font-size="10" fill="#555">代執行</text>
+      <rect x="490" y="30" width="130" height="60" fill="#e8eef5" stroke="#1B2A4A" rx="4"/>
+      <text x="555" y="55" text-anchor="middle" font-size="13" font-weight="bold" fill="#1B2A4A">④費用徴収</text>
+      <text x="555" y="75" text-anchor="middle" font-size="10" fill="#555">国税滞納処分例</text>
+      <path d="M 140 60 L 170 60" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+      <path d="M 300 60 L 330 60" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+      <path d="M 460 60 L 490 60" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+      <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker></defs>
+    </svg>
+  </div>
+  <div class="tip-box"><span class="label">緊急の場合</span><p>非常の場合または危険切迫の場合で、戒告・通知の手続を取る<strong>暇がない</strong>ときは、これらを経ずに代執行できる(行政代執行法3条3項)。</p></div>
+</div>
+
+<!-- ミニテスト Section 2(超重要・代執行) -->
+<div class="mini-test" data-mini="s2">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション2・代執行)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 代執行の対象となるのは、他人が代わって履行することができる「代替的作為義務」に限られる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 行政代執行法2条。違法建築物の除却(代替可能)はOKだが、医師の診療(本人でないと不可)はNG。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問2 代執行を行うには、義務違反があれば足り、他の手段で履行を確保することが困難であるかどうかは要件にならない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ <span class="pk">他の手段では履行確保困難</span>+<span class="pk">放置が著しく公益に反する</span>こと、両方が要件。代執行は最後の手段。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 代執行の手続は、原則として「戒告→代執行令書による通知→実行→費用徴収」の4段階で行われる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 4段階の流れは確実に押さえる。費用は<span class="pk">国税滞納処分の例</span>により徴収される。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問4 非常の場合または危険切迫の場合で戒告・通知の暇がないときは、これらを経ずに代執行できる(行政代執行法3条3項)。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 緊急時の例外。原則は戒告・通知が必要だが、緊急時はスキップOK。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問5 代執行の費用は、行政が負担し、義務者から徴収することはできない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 代執行の費用は<span class="pk">義務者から徴収</span>する(国税滞納処分の例による強制徴収が可能)。「タダで代わりに片付けてくれる」わけではない。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">3</span>その他の強制執行手段</div>
+
+<div class="card">
+  <h3>💰 執行罰</h3>
+  <p><span class="pk">執行罰</span>とは、義務不履行の者に対し、<span class="pk">過料</span>を課して心理的圧力をかける制度。</p>
+  <div class="tip-box"><span class="label">注意</span><p>現在、執行罰は<span class="pk">砂防法36条</span>にのみ残っており、実務ではほぼ使われていません。</p></div>
+</div>
+
+<div class="card">
+  <h3>💪 直接強制</h3>
+  <p><span class="pk">直接強制</span>とは、義務者の身体や財産に<span class="pk">直接実力</span>を加え、義務を強制的に実現する手段。</p>
+  <div class="tip-box"><span class="label">例</span><p>成田国際空港の安全確保に関する緊急措置法に基づく工作物の使用禁止など。直接強制も現代では<strong>極めて限定的</strong>にしか認められていません。</p></div>
+</div>
+
+<div class="card">
+  <h3>💴 強制徴収</h3>
+  <p><span class="pk">強制徴収</span>とは、金銭債務の履行がない場合に、財産を差押え・公売して強制的に徴収する手段。</p>
+  <div class="ex-box"><span class="label">例</span><p>税金の滞納処分(国税徴収法)。最も活用されている強制執行!</p></div>
+</div>
+
+<!-- ミニテスト Section 3 -->
+<div class="mini-test" data-mini="s3">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション3)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 執行罰は義務不履行者に過料を課して心理的圧力をかける制度であり、現行法上は砂防法36条にのみ残っており、実務でほぼ使われていない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 執行罰=ほぼ砂防法のみ、というのがポイント。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 直接強制は義務者の身体や財産に直接実力を加える手段で、現代では極めて限定的にしか認められていない。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 人権侵害が大きいため、現代では極めて限定。成田緊急措置法など。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問3 強制徴収は金銭債務の履行がない場合に財産を差押え・公売して強制的に徴収する手段で、税金の滞納処分が代表例である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 強制徴収は実務で最も活用されている強制執行。国税徴収法に基づく。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="sec"><span class="num">4</span>即時強制</div>
+<div class="card">
+  <h3>🚨 即時強制とは?</h3>
+  <p><span class="pk">即時強制</span>とは、<strong>義務を課すことなく</strong>、直接、国民の身体や財産に実力を加えて行政目的を達成する手段。</p>
+  <div class="ex-box"><span class="label">イメージ</span><p>目の前に突然の危険 → 「義務を命じる暇もない」 → いきなり実力行使!</p></div>
+  <div class="memo-box"><span class="label">代表例</span><p>①<span class="pk">消防法29条</span>(破壊消防):延焼のおそれがあるとき建物を壊す<br>②<span class="pk">感染症法</span>:感染者の強制入院<br>③<span class="pk">警察官職務執行法3条</span>:泥酔者等の保護措置</p></div>
+</div>
+
+<div class="card">
+  <h3>⚖️ 即時強制と令状主義</h3>
+  <p>即時強制は個人の権利を大きく制約するので、原則として<strong>令状</strong>(憲法35条)が必要と考えられます。ただし、<span class="pk">行政目的のための緊急性</span>がある場合は、令状なしでも許される場合があります(最大判昭47・11・22 川崎民商事件)。</p>
+</div>
+
+<!-- ミニテスト Section 4(即時強制) -->
+<div class="mini-test" data-mini="s4">
+  <button class="mini-btn">✏️ ミニテストに挑戦(セクション4・即時強制)</button>
+  <div class="mini-body">
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問1 即時強制とは、義務を課すことなく、直接、国民の身体や財産に実力を加えて行政目的を達成する手段である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「義務を経由しない」のがポイント。目の前の危険に即対応するための制度。</div>
+    </div>
+    <div class="mini-q" data-correct="o">
+      <div class="mini-stem">問2 消防法29条による破壊消防、感染症法による強制入院、警察官職務執行法3条による泥酔者等の保護措置は、いずれも即時強制の代表例である。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">○ 「消防・感染症・警職法」の3点セット。試験頻出。</div>
+    </div>
+    <div class="mini-q" data-correct="x">
+      <div class="mini-stem">問3 即時強制は緊急性が高いため、相手方に義務を履行する機会を与えることが要件となる。</div>
+      <div class="mini-choices">
+        <button class="mini-c" data-v="o">○</button>
+        <button class="mini-c" data-v="x">×</button>
+      </div>
+      <div class="mini-exp">✕ 即時強制は<span class="pk">義務を経由しない</span>ので、義務履行の機会を与える必要はない。これが強制執行との最大の違い。</div>
+    </div>
+    <div class="mini-actions">
+      <button class="mini-judge">答え合わせ</button>
+      <button class="mini-reset" style="display:none;">もう一度挑戦</button>
+    </div>
+    <div class="mini-result"></div>
+  </div>
+</div>
+
+<div class="card" style="border-left:5px solid #f4a62a;background:#fff9ed;">
+  <h3>⭐ 第14章 総まとめ</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>手段</th><th>内容</th><th>対象義務</th></tr>
+      <tr><td><span class="pk">代執行</span></td><td>代わりにやって費用徴収</td><td>代替的作為義務</td></tr>
+      <tr><td>執行罰</td><td>過料で心理的圧力</td><td>不作為義務等(ほぼ使用なし)</td></tr>
+      <tr><td>直接強制</td><td>直接実力を加える</td><td>あらゆる義務(極めて限定)</td></tr>
+      <tr><td><span class="pk">強制徴収</span></td><td>財産差押え・公売</td><td>金銭債務</td></tr>
+      <tr><td><span class="pk">即時強制</span></td><td>義務なしに実力行使</td><td>-(目の前の危険)</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="sec" style="margin-top:40px;"><span class="num">★</span>学習ツール</div>
+<div class="card" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+  <a href="gyosei_ch14_q.html" class="btn accent" style="text-decoration:none;">▶ 演習問題へ</a>
+  <button class="btn outline add-review" data-title="第14章 行政上の強制" data-url="gyosei_ch14.html">📌 復習リストに追加</button>
+  <a href="index.html" class="btn outline" style="text-decoration:none;">目次へ戻る</a>
+</div>
+
+<nav class="pagenav">
+  <a href="gyosei_ch13.html"><span class="label">◀ BACK</span><span class="title">第13章 行政計画</span></a>
+  <a href="gyosei_ch14_q.html" class="next"><span class="label">NEXT ▶</span><span class="title">第14章 演習問題</span></a>
+</nav>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+<script>
+  (function() {
+    function run() { if (typeof gambaInit === 'function') { gambaInit('ch14'); } else { setTimeout(run, 50); } }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', run); } else { run(); }
+  })();
+</script>
+</body>
+</html>
